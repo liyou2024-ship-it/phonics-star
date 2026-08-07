@@ -1,0 +1,3 @@
+<view class="tile {{tileClass}}" bind:tap="onTap">
+  <text class="tile__letter">{{letter}}</text>
+</view>
