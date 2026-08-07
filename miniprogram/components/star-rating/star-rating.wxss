@@ -1,0 +1,6 @@
+.stars { display: flex; gap: 4rpx; align-items: center; }
+.stars--normal .star { font-size: 40rpx; }
+.stars--small .star { font-size: 28rpx; }
+.stars--large .star { font-size: 56rpx; }
+.star { opacity: 0.3; }
+.star.active { opacity: 1; }
