@@ -1,0 +1,5 @@
+<view class="stars stars--{{size}}">
+  <text wx:for="{{filled}}" wx:key="index" class="star {{item ? 'active' : ''}}">
+    {{item ? '⭐' : '☆'}}
+  </text>
+</view>
