@@ -1,0 +1,49 @@
+<view class="game-step">
+  <!-- 开始界面 -->
+  <view wx:if="{{!playing && !completed}}" class="start-section">
+    <text class="game-title">🎯 打地鼠</text>
+    <text class="game-desc">听音选词，点击正确的单词卡片！</text>
+    <button class="start-btn" bindtap="onStartGame">开始游戏</button>
+  </view>
+
+  <!-- 游戏界面 -->
+  <view wx:if="{{playing}}" class="game-section">
+    <view class="game-hud">
+      <text class="round-text">第 {{currentRound}} / {{totalRounds}} 轮</text>
+      <text class="score-text">⭐ {{score}}</text>
+    </view>
+
+    <view class="mole-grid">
+      <view
+        wx:for="{{moles}}" wx:key="id"
+        class="mole-card {{item.hit ? (item.isTarget ? 'hit-correct' : 'hit-wrong') : ''}} {{item.active ? 'active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="onHitMole"
+      >
+        <text class="mole-word">{{item.word}}</text>
+        <view wx:if="{{item.hit && item.isTarget}}" class="hit-mark">✅</view>
+        <view wx:if="{{item.hit && !item.isTarget}}" class="hit-mark">❌</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 结果界面 -->
+  <view wx:if="{{completed}}" class="result-section">
+    <text class="result-title">🎉 游戏结束</text>
+    <view class="result-stats">
+      <view class="stat-item">
+        <text class="stat-value">{{gameResult.score}}</text>
+        <text class="stat-label">总分</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{gameResult.correct}}</text>
+        <text class="stat-label">正确</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{gameResult.wrong}}</text>
+        <text class="stat-label">错误</text>
+      </view>
+    </view>
+    <button class="play-again-btn" bindtap="onPlayAgain">🔄 再来一局</button>
+  </view>
+</view>
