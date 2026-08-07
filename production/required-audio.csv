@@ -1,0 +1,24 @@
+序号,resourceId,类型,内容,目标音素,目标单词,课程,录制方式,预期时长(s),文件名,目录,真人审核,阻断reviewing,阻断published,状态
+1,audio_ph_s,字母音,字母S音 /s/,S,,SATPI全单元,人工录制,,s.mp3,/assets/audio/phonemes,是,是,是,missing
+2,audio_ph_a,字母音,字母A短音 /æ/,A,,SATPI全单元,人工录制,,a.mp3,/assets/audio/phonemes,是,是,是,missing
+3,audio_ph_t,字母音,字母T音 /t/,T,,SATPI全单元,人工录制,,t.mp3,/assets/audio/phonemes,是,是,是,missing
+4,audio_ph_p,字母音,字母P音 /p/,P,,SATPI全单元,人工录制,,p.mp3,/assets/audio/phonemes,是,是,是,missing
+5,audio_ph_i,字母音,字母I短音 /ɪ/,I,,SATPI全单元,人工录制,,i.mp3,/assets/audio/phonemes,是,是,是,missing
+6,audio_w_sat_n,单词正常发音,sat 正常发音,,sat,SATPI全单元,TTS,,sat-normal.mp3,/assets/audio/words,否,是,是,missing
+7,audio_w_sit_n,单词正常发音,sit 正常发音,,sit,SATPI全单元,TTS,,sit-normal.mp3,/assets/audio/words,否,是,是,missing
+8,audio_w_tap_n,单词正常发音,tap 正常发音,,tap,SATPI全单元,TTS,,tap-normal.mp3,/assets/audio/words,否,是,是,missing
+9,audio_w_pat_n,单词正常发音,pat 正常发音,,pat,SATPI全单元,TTS,,pat-normal.mp3,/assets/audio/words,否,是,是,missing
+10,audio_w_pit_n,单词正常发音,pit 正常发音,,pit,SATPI全单元,TTS,,pit-normal.mp3,/assets/audio/words,否,是,是,missing
+11,audio_w_tip_n,单词正常发音,tip 正常发音,,tip,SATPI全单元,TTS,,tip-normal.mp3,/assets/audio/words,否,是,是,missing
+12,audio_w_sip_n,单词正常发音,sip 正常发音,,sip,SATPI全单元,TTS,,sip-normal.mp3,/assets/audio/words,否,是,是,missing
+13,audio_w_sap_n,单词正常发音,sap 正常发音,,sap,SATPI全单元,TTS,,sap-normal.mp3,/assets/audio/words,否,是,是,missing
+14,audio_w_sat_b,慢速拼读,sat 慢速拼读 /s/ /æ/ /t/,,sat,SATPI全单元,人工录制,,sat-blend.mp3,/assets/audio/words,是,是,是,missing
+15,audio_w_sit_b,慢速拼读,sit 慢速拼读 /s/ /ɪ/ /t/,,sit,SATPI全单元,人工录制,,sit-blend.mp3,/assets/audio/words,是,是,是,missing
+16,audio_w_tap_b,慢速拼读,tap 慢速拼读 /t/ /æ/ /p/,,tap,SATPI全单元,人工录制,,tap-blend.mp3,/assets/audio/words,是,是,是,missing
+17,audio_w_pat_b,慢速拼读,pat 慢速拼读 /p/ /æ/ /t/,,pat,SATPI全单元,人工录制,,pat-blend.mp3,/assets/audio/words,是,是,是,missing
+18,audio_w_pit_b,慢速拼读,pit 慢速拼读 /p/ /ɪ/ /t/,,pit,SATPI全单元,人工录制,,pit-blend.mp3,/assets/audio/words,是,是,是,missing
+19,audio_w_tip_b,慢速拼读,tip 慢速拼读 /t/ /ɪ/ /p/,,tip,SATPI全单元,人工录制,,tip-blend.mp3,/assets/audio/words,是,是,是,missing
+20,audio_w_sip_b,慢速拼读,sip 慢速拼读 /s/ /ɪ/ /p/,,sip,SATPI全单元,人工录制,,sip-blend.mp3,/assets/audio/words,是,是,是,missing
+21,audio_w_sap_b,慢速拼读,sap 慢速拼读 /s/ /æ/ /p/,,sap,SATPI全单元,人工录制,,sap-blend.mp3,/assets/audio/words,是,是,是,missing
+22,audio_sent_dr01,句子朗读,Sat and Sit 第1句,,,SATPI全单元,TTS,,dr01-s01.mp3,/assets/audio/sentences,否,是,是,missing
+23,audio_sent_dr02,句子朗读,Tap and Pat 第1句,,,SATPI全单元,TTS,,dr02-s01.mp3,/assets/audio/sentences,否,是,是,missing
