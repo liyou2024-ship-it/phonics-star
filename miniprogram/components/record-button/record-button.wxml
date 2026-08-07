@@ -1,0 +1,10 @@
+<view class="record {{isRecording ? 'record--active' : ''}} {{disabled ? 'record--disabled' : ''}}" bind:tap="onTap">
+  <view class="record__circle {{isRecording ? 'record__circle--pulse' : ''}}">
+    <text class="record__icon" wx:if="{{!isRecording && !hasRecording}}">🎤</text>
+    <text class="record__icon" wx:elif="{{isRecording}}">⏹</text>
+    <text class="record__icon" wx:else>▶️</text>
+  </view>
+  <text class="record__label" wx:if="{{isRecording}}">录制中 {{duration}}s</text>
+  <text class="record__label" wx:elif="{{hasRecording}}">播放录音</text>
+  <text class="record__label" wx:else>点击录音</text>
+</view>
