@@ -1,0 +1,20 @@
+node_modules/
+miniprogram_npm/
+.DS_Store
+*.log
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 编译产物
+miniprogram/**/*.js
+miniprogram/**/*.js.map
+
+# 机器/临时文件
+temp_audio/
+project.private.config.json
+*.tsbuildinfo
