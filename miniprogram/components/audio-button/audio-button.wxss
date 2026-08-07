@@ -1,0 +1,5 @@
+.audio-btn { display: flex; align-items: center; gap: 6rpx; padding: 16rpx 32rpx; border: none; border-radius: 40rpx; font-size: 28rpx; font-weight: 600; }
+.audio-btn--primary { background: linear-gradient(135deg, #7C3AED, #A78BFA); color: #fff; box-shadow: 0 4rpx 12rpx rgba(124,58,237,0.3); }
+.audio-btn--secondary { background: #F3E8FF; color: #7C3AED; }
+.audio-btn--outline { background: #fff; color: #7C3AED; border: 2rpx solid #7C3AED; }
+.audio-btn[disabled] { opacity: 0.5; }
