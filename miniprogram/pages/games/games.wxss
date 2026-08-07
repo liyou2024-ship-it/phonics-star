@@ -1,0 +1,21 @@
+.page{padding:0;background:#FAFAFA;min-height:100vh}
+
+/* Game Selection */
+.game-select{padding:24rpx 24rpx 120rpx}
+.page-header{margin-bottom:24rpx}
+.page-title{font-size:36rpx;font-weight:800;color:#1F2937}
+
+.game-list{display:flex;flex-direction:column;gap:16rpx}
+.game-card{display:flex;align-items:center;background:#fff;border-radius:20rpx;padding:28rpx 24rpx;gap:16rpx;box-shadow:0 2rpx 12rpx rgba(0,0,0,0.04);transition:transform 0.15s}
+.game-card:active{transform:scale(0.98);background:#F9FAFB}
+.game-icon{font-size:56rpx}
+.game-info{flex:1}
+.game-name{font-size:30rpx;font-weight:700;color:#1F2937;display:block}
+.game-desc{font-size:24rpx;color:#9CA3AF;margin-top:4rpx;display:block}
+.game-arrow{font-size:28rpx;color:#D1D5DB}
+
+/* Active Game */
+.game-active{padding-bottom:120rpx}
+.game-topbar{display:flex;align-items:center;justify-content:space-between;padding:16rpx 24rpx;background:#fff;border-bottom:1rpx solid #F3F4F6}
+.back-btn{font-size:28rpx;color:#7C3AED;padding:8rpx 0}
+.game-title{font-size:30rpx;font-weight:700;color:#1F2937}
