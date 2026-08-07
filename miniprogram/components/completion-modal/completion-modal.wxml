@@ -1,0 +1,14 @@
+<view class="modal" wx:if="{{show}}">
+  <view class="modal__overlay" bind:tap="onClose"></view>
+  <view class="modal__card">
+    <view class="modal__stars">
+      <text class="modal__star {{index < stars ? 'modal__star--active' : ''}}" wx:for="{{[0,1,2]}}" wx:key="*this">⭐</text>
+    </view>
+    <text class="modal__title">{{title}}</text>
+    <text class="modal__message" wx:if="{{message}}">{{message}}</text>
+    <view class="modal__badges" wx:if="{{badges.length > 0}}">
+      <text class="modal__badge" wx:for="{{badges}}" wx:key="id">🏅 {{item.name}}</text>
+    </view>
+    <button class="modal__btn" bind:tap="onClose">确定</button>
+  </view>
+</view>
