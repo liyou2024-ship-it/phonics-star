@@ -1,0 +1,111 @@
+<view class="lesson-page">
+  <!-- Loading -->
+  <view wx:if="{{engineState.loading}}" class="state"><text>加载中...</text></view>
+
+  <!-- Error -->
+  <view wx:elif="{{engineState.error}}" class="state">
+    <empty-state icon="😵" title="加载失败" desc="{{engineState.error}}"></empty-state>
+    <button bindtap="onBack">返回</button>
+  </view>
+
+  <!-- Normal -->
+  <view wx:else>
+    <!-- Header: lesson title + progress -->
+    <view class="lesson-header">
+      <text class="back-btn" bindtap="onBack">←</text>
+      <view class="lesson-title-area">
+        <text class="lesson-title">{{engineState.lesson.title}}</text>
+      </view>
+    </view>
+
+    <!-- Step progress bar -->
+    <view wx:if="{{engineState.lesson}}" class="step-progress">
+      <progress-bar
+        value="{{engineState.currentStepIndex + 1}}"
+        max="{{engineState.lesson.steps.length}}"
+        label="步骤 {{engineState.currentStepIndex + 1}} / {{engineState.lesson.steps.length}}"
+      ></progress-bar>
+    </view>
+
+    <!-- Dynamic step component rendering -->
+    <view wx:if="{{engineState.lesson}}" class="step-area">
+      <!-- phoneme_intro -->
+      <phoneme-intro
+        wx:if="{{currentComponent.indexOf('phoneme-intro') > -1}}"
+        step="{{currentComponentProps.step}}"
+        lesson="{{currentComponentProps.lesson}}"
+        state="{{currentComponentProps.state}}"
+        bind:complete="onStepComplete"
+      ></phoneme-intro>
+
+      <!-- sound_discrimination / audio_choice -->
+      <audio-choice
+        wx:elif="{{currentComponent.indexOf('audio-choice') > -1}}"
+        step="{{currentComponentProps.step}}"
+        lesson="{{currentComponentProps.lesson}}"
+        state="{{currentComponentProps.state}}"
+        bind:complete="onStepComplete"
+      ></audio-choice>
+
+      <!-- phoneme_blending / blend_word -->
+      <blend-builder
+        wx:elif="{{currentComponent.indexOf('blend-builder') > -1}}"
+        step="{{currentComponentProps.step}}"
+        lesson="{{currentComponentProps.lesson}}"
+        state="{{currentComponentProps.state}}"
+        bind:complete="onStepComplete"
+      ></blend-builder>
+
+      <!-- word_segmenting / segment_word -->
+      <sound-segmenter
+        wx:elif="{{currentComponent.indexOf('sound-segmenter') > -1}}"
+        step="{{currentComponentProps.step}}"
+        lesson="{{currentComponentProps.lesson}}"
+        state="{{currentComponentProps.state}}"
+        bind:complete="onStepComplete"
+      ></sound-segmenter>
+
+      <!-- pronunciation -->
+      <pronunciation-practice
+        wx:elif="{{currentComponent.indexOf('pronunciation-practice') > -1}}"
+        step="{{currentComponentProps.step}}"
+        lesson="{{currentComponentProps.lesson}}"
+        state="{{currentComponentProps.state}}"
+        bind:complete="onStepComplete"
+      ></pronunciation-practice>
+
+      <!-- mini_game -->
+      <game-step
+        wx:elif="{{currentComponent.indexOf('game-step') > -1}}"
+        step="{{currentComponentProps.step}}"
+        lesson="{{currentComponentProps.lesson}}"
+        state="{{currentComponentProps.state}}"
+        bind:complete="onStepComplete"
+      ></game-step>
+
+      <!-- decodable_reading -->
+      <decodable-reader
+        wx:elif="{{currentComponent.indexOf('decodable-reader') > -1}}"
+        step="{{currentComponentProps.step}}"
+        lesson="{{currentComponentProps.lesson}}"
+        state="{{currentComponentProps.state}}"
+        bind:complete="onStepComplete"
+      ></decodable-reader>
+
+      <!-- lesson_reward -->
+      <lesson-reward
+        wx:elif="{{currentComponent.indexOf('lesson-reward') > -1}}"
+        step="{{currentComponentProps.step}}"
+        lesson="{{currentComponentProps.lesson}}"
+        state="{{currentComponentProps.state}}"
+        stepResults="{{currentComponentProps.stepResults}}"
+        bind:complete="onStepComplete"
+      ></lesson-reward>
+
+      <!-- Fallback -->
+      <view wx:else class="step-fallback">
+        <text>未知步骤类型</text>
+      </view>
+    </view>
+  </view>
+</view>
