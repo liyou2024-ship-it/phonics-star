@@ -1,0 +1,15 @@
+{
+  "name": "ziran-pinduo-xing-backend",
+  "version": "0.1.0",
+  "description": "自然拼读星 微信云托管后端（登录 + 账户管理）",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

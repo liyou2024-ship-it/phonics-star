@@ -1,0 +1,15 @@
+# 构建镜像时排除，减小上下文体积
+node_modules
+**/node_modules
+miniprogram
+temp_audio
+production
+reports
+scripts
+assets
+.git
+.DS_Store
+*.log
+*.md
+*.tsbuildinfo
+project.private.config.json
