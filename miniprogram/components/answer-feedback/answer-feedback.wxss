@@ -1,0 +1,29 @@
+.feedback {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+.feedback__overlay {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.feedback__card {
+  position: relative;
+  padding: 48rpx 64rpx;
+  border-radius: 24rpx;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 8rpx 32rpx rgba(0,0,0,0.15);
+  min-width: 400rpx;
+}
+.feedback__icon { font-size: 64rpx; display: block; margin-bottom: 16rpx; }
+.feedback__message { font-size: 32rpx; font-weight: 600; display: block; }
+.feedback__answer { font-size: 26rpx; color: #999; margin-top: 12rpx; display: block; }
+
+.feedback--correct .feedback__card { border: 4rpx solid #52c41a; }
+.feedback--incorrect .feedback__card { border: 4rpx solid #ff4d4f; }
+.feedback--retry .feedback__card { border: 4rpx solid #faad14; }
+.feedback--completed {
+  .feedback__card { border: 4rpx solid #7C3AED; padding: 64rpx 80rpx; }
+  .feedback__icon { font-size: 96rpx; }
+}
