@@ -1,0 +1,9 @@
+resourceId,对应单词,单词含义,预期文件名,规格,制作方式,内容要求,当前状态,是否阻断发布
+img_w_sat,sat,坐(过去式),sat.webp,512×512 WebP ≤150KB sRGB,人工绘制或AI辅助+人工修图,"儿童友好插画，单一主体，简洁背景，不含文字水印。需表现""坐(过去式)""，避免歧义。",missing,否（可回退Emoji）
+img_w_sit,sit,坐,sit.webp,512×512 WebP ≤150KB sRGB,人工绘制或AI辅助+人工修图,"儿童友好插画，单一主体，简洁背景，不含文字水印。需表现""坐""，避免歧义。",missing,否（可回退Emoji）
+img_w_tap,tap,轻敲,tap.webp,512×512 WebP ≤150KB sRGB,人工绘制或AI辅助+人工修图,"儿童友好插画，单一主体，简洁背景，不含文字水印。需表现""轻敲""，避免歧义。",missing,否（可回退Emoji）
+img_w_pat,pat,轻拍,pat.webp,512×512 WebP ≤150KB sRGB,人工绘制或AI辅助+人工修图,"儿童友好插画，单一主体，简洁背景，不含文字水印。需表现""轻拍""，避免歧义。",missing,否（可回退Emoji）
+img_w_pit,pit,坑/果核,pit.webp,512×512 WebP ≤150KB sRGB,人工绘制或AI辅助+人工修图,"儿童友好插画，单一主体，简洁背景，不含文字水印。需表现""坑/果核""，避免歧义。",missing,否（可回退Emoji）
+img_w_tip,tip,尖端/小费,tip.webp,512×512 WebP ≤150KB sRGB,人工绘制或AI辅助+人工修图,"儿童友好插画，单一主体，简洁背景，不含文字水印。需表现""尖端/小费""，避免歧义。",missing,否（可回退Emoji）
+img_w_sip,sip,小口喝,sip.webp,512×512 WebP ≤150KB sRGB,人工绘制或AI辅助+人工修图,"儿童友好插画，单一主体，简洁背景，不含文字水印。需表现""小口喝""，避免歧义。",missing,否（可回退Emoji）
+img_w_sap,sap,树液,sap.webp,512×512 WebP ≤150KB sRGB,人工绘制或AI辅助+人工修图,"儿童友好插画，单一主体，简洁背景，不含文字水印。需表现""树液""，避免歧义。",missing,否（可回退Emoji）
