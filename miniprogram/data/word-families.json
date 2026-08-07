@@ -1,0 +1,12 @@
+[
+  { "id":"wf_at", "name":"-at", "rule":"短元音 a /æ/", "wordIds":["w_cat","w_bat","w_hat","w_mat","w_rat","w_sat","w_fat"], "difficulty":1 },
+  { "id":"wf_an", "name":"-an", "rule":"短元音 a /æ/", "wordIds":["w_man","w_can","w_fan","w_pan","w_van"],             "difficulty":1 },
+  { "id":"wf_ap", "name":"-ap", "rule":"短元音 a /æ/", "wordIds":["w_map","w_cap","w_nap","w_tap"],                      "difficulty":1 },
+  { "id":"wf_ig", "name":"-ig", "rule":"短元音 i /ɪ/",  "wordIds":["w_big","w_pig","w_dig","w_wig"],                      "difficulty":1 },
+  { "id":"wf_in", "name":"-in", "rule":"短元音 i /ɪ/",  "wordIds":["w_pin","w_win","w_fin","w_bin"],                      "difficulty":1 },
+  { "id":"wf_it", "name":"-it", "rule":"短元音 i /ɪ/",  "wordIds":["w_sit","w_hit","w_fit","w_bit","w_kit"],              "difficulty":1 },
+  { "id":"wf_op", "name":"-op", "rule":"短元音 o /ɒ/",  "wordIds":["w_hop","w_top","w_mop","w_pop"],                      "difficulty":1 },
+  { "id":"wf_og", "name":"-og", "rule":"短元音 o /ɒ/",  "wordIds":["w_dog","w_log","w_fog","w_jog"],                      "difficulty":2 },
+  { "id":"wf_un", "name":"-un", "rule":"短元音 u /ʌ/",  "wordIds":["w_sun","w_run","w_fun","w_bun"],                      "difficulty":1 },
+  { "id":"wf_ut", "name":"-ut", "rule":"短元音 u /ʌ/",  "wordIds":["w_cut","w_hut","w_nut","w_but"],                      "difficulty":1 }
+]
