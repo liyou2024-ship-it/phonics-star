@@ -1,0 +1,41 @@
+<view class="audio-choice">
+  <view wx:if="{{error}}" class="state-error"><text>{{error}}</text></view>
+  <view wx:elif="{{completed}}" class="state-completed">
+    <text class="result-icon">🎉</text>
+    <text class="result-score">{{correctCount}}/{{questions.length}}</text>
+    <text class="result-text">听音辨别完成！</text>
+  </view>
+  <view wx:else>
+    <!-- 题目进度 -->
+    <view class="choice-progress">
+      <text>第 {{currentQuestionIndex + 1}} / {{questions.length}} 题</text>
+      <text>✅ {{correctCount}}</text>
+    </view>
+
+    <!-- 播放按钮 -->
+    <button class="play-btn" bindtap="onPlayAudio">
+      🔊 播放声音
+    </button>
+
+    <!-- 选项 -->
+    <view class="choice-options">
+      <view
+        wx:for="{{questions[currentQuestionIndex].options}}" wx:key="index"
+        class="option-card {{showResult && index === questions[currentQuestionIndex].correctIndex ? 'correct' : ''}} {{showResult && selectedIndex === index && !isCorrect ? 'wrong' : ''}}"
+        data-index="{{index}}"
+        bindtap="onSelect"
+      >
+        <text class="option-letter">{{item.toUpperCase()}}</text>
+        <text class="option-sound">/{{item}}/</text>
+      </view>
+    </view>
+
+    <!-- 反馈 -->
+    <view wx:if="{{showResult}}" class="choice-feedback {{isCorrect ? 'correct' : 'wrong'}}">
+      <text class="feedback-icon">{{isCorrect ? '✅' : '❌'}}</text>
+      <text class="feedback-text">
+        {{isCorrect ? '答对了！' : '再试一次'}}
+      </text>
+    </view>
+  </view>
+</view>
