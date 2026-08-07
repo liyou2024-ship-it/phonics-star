@@ -1,0 +1,52 @@
+<view class="blend-builder">
+  <view wx:if="{{completed}}" class="state-completed">
+    <text class="icon">🎉</text><text>拼读完成！</text>
+  </view>
+  <view wx:else>
+    <view class="blend-header">
+      <text class="blend-target-label">目标单词：</text>
+      <text class="blend-target-word">{{targetWords[currentWordIndex].text}}</text>
+      <text class="blend-progress">{{currentWordIndex + 1}}/{{targetWords.length}}</text>
+    </view>
+
+    <!-- 已选音块 -->
+    <view class="blend-selected">
+      <view wx:for="{{selectedIndices}}" wx:key="index" class="selected-block">
+        <text class="sb-letter">{{allPhonemes[item].letter}}</text>
+        <text class="sb-sound">{{allPhonemes[item].sound}}</text>
+      </view>
+      <view wx:if="{{selectedIndices.length === 0}}" class="selected-empty">
+        <text>👆 点击下方音块</text>
+      </view>
+    </view>
+
+    <!-- 音块选择区 -->
+    <view class="blend-phonemes">
+      <view
+        wx:for="{{targetWords[currentWordIndex].phonemes}}" wx:key="index"
+        class="phoneme-btn {{selectedIndices.indexOf(index) > -1 ? 'active' : ''}}"
+        data-index="{{index}}"
+        bindtap="onSelectPhoneme"
+      >
+        <text class="pb-letter">{{item.letter}}</text>
+        <text class="pb-sound">{{item.sound}}</text>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="blend-actions">
+      <button class="btn-blend" bindtap="onBlend" disabled="{{selectedIndices.length === 0}}">
+        🔊 连起来读
+      </button>
+      <button class="btn-reset" bindtap="onReset">🔄 重置</button>
+    </view>
+
+    <view wx:if="{{blended}}" class="blend-trajectory">
+      <!-- 拼读轨迹 -->
+      <text wx:for="{{selectedIndices}}" wx:key="index" class="traj-item">
+        {{allPhonemes[item].sound}}{{index < selectedIndices.length - 1 ? ' → ' : ''}}
+      </text>
+      <text> = {{targetWords[currentWordIndex].text}}</text>
+    </view>
+  </view>
+</view>
