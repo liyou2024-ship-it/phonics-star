@@ -1,7 +1,7 @@
 {
   "name": "phonics-star",
   "version": "0.1.0",
-  "description": "拼读星球 - 小学自然拼读微信小程序",
+  "description": "自然拼读星 - 小学自然拼读微信小程序",
   "main": "miniprogram/app.ts",
   "scripts": {
     "tsc": "tsc --noEmit",

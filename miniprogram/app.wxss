@@ -1,4 +1,4 @@
-/* 拼读星球 - 全局样式 */
+/* 自然拼读星 - 全局样式 */
 page {
   --primary: #7C3AED;
   --primary-light: #A78BFA;

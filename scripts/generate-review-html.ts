@@ -90,7 +90,7 @@ function generateHTML(): string {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>资源审核 — 拼读星球 SATPI</title>
+<title>资源审核 — 自然拼读星 SATPI</title>
 <style>
 body{font-family:-apple-system,sans-serif;max-width:1200px;margin:0 auto;padding:20px;background:#fafafa}
 h1{color:#7C3AED}
@@ -116,7 +116,7 @@ button:hover{background:#6D28D9}
 </style>
 </head>
 <body>
-<h1>🎵 资源审核 — 拼读星球 SATPI</h1>
+<h1>🎵 资源审核 — 自然拼读星 SATPI</h1>
 <div class="summary">
   <div class="summary-item"><span class="summary-value">${resources.length}</span><br><span class="summary-label">总资源</span></div>
   <div class="summary-item"><span class="summary-value">${resources.filter(r => r.status === 'ready' || r.status === 'approved').length}</span><br><span class="summary-label">已就绪</span></div>

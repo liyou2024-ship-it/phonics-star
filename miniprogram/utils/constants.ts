@@ -1,5 +1,5 @@
 /** 应用名称 */
-export const APP_NAME = '拼读星球';
+export const APP_NAME = '自然拼读星';
 
 /** 应用口号 */
 export const APP_SLOGAN = '每天10分钟，看词会读，听音会拼';

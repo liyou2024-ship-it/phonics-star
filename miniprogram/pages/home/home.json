@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "拼读星球",
+  "navigationBarTitleText": "自然拼读星",
   "usingComponents": {
     "bottom-nav": "/components/bottom-nav/bottom-nav",
     "progress-bar": "/components/progress-bar/progress-bar",
