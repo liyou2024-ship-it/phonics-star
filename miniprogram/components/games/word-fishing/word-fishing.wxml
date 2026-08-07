@@ -1,0 +1,55 @@
+<view class="word-fishing">
+  <!-- HUD -->
+  <view class="hud">
+    <text class="hud-round">第 {{currentRound}}/{{totalRounds}} 轮</text>
+    <text class="hud-score">得分: {{score}}</text>
+    <text class="hud-caught">已钓: {{caughtCount}} 🐟</text>
+  </view>
+
+  <view wx:if="{{!gameOver}}" class="game-area">
+    <!-- Target -->
+    <view class="target-section">
+      <text class="target-label">听单词，钓出正确的鱼</text>
+      <view class="target-word-box">
+        <text class="target-word">🎯 {{currentTarget}}</text>
+      </view>
+      <view class="replay-btn" bindtap="onReplayAudio">
+        <text>🔊 再听一次</text>
+      </view>
+    </view>
+
+    <!-- Feedback Toast -->
+    <view wx:if="{{feedbackVisible}}" class="feedback-toast {{feedbackType}}">
+      <text class="feedback-emoji">{{feedbackType === 'correct' ? '✅' : '❌'}}</text>
+      <text class="feedback-word">{{feedbackWord}}</text>
+    </view>
+
+    <!-- Pond with Fish -->
+    <view class="pond">
+      <view
+        wx:for="{{fishes}}"
+        wx:key="word"
+        wx:for-item="fish"
+        data-index="{{index}}"
+        class="fish-card {{fish.caught ? (fish.word === currentTarget ? 'fish-correct' : 'fish-wrong') : ''}}"
+        bindtap="onCatchFish"
+      >
+        <text class="fish-emoji">🐟</text>
+        <text class="fish-word">{{fish.word}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Game Over -->
+  <view wx:if="{{gameOver}}" class="game-over">
+    <text class="go-title">钓鱼结束！</text>
+    <view class="go-summary">
+      <text class="go-score">得分: {{score}}</text>
+      <text class="go-stat">钓到: {{caughtCount}} 条 | 失手: {{wrongCount}} 次</text>
+      <text class="go-stat">最高连击: {{maxCombo}}</text>
+    </view>
+    <view class="go-btn" bindtap="onRestart">
+      <text>再来一局</text>
+    </view>
+  </view>
+</view>
