@@ -1,0 +1,56 @@
+<view class="page">
+  <!-- Game Selection -->
+  <view wx:if="{{!activeGame}}" class="game-select">
+    <view class="page-header">
+      <text class="page-title">🎮 游戏中心</text>
+    </view>
+    <view class="game-list">
+      <view
+        wx:for="{{games}}"
+        wx:key="id"
+        wx:for-item="g"
+        class="game-card"
+        data-id="{{g.id}}"
+        bindtap="onSelectGame"
+      >
+        <text class="game-icon">{{g.icon}}</text>
+        <view class="game-info">
+          <text class="game-name">{{g.name}}</text>
+          <text class="game-desc">{{g.desc}}</text>
+        </view>
+        <text class="game-arrow">→</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Active Game -->
+  <view wx:if="{{activeGame}}" class="game-active">
+    <view class="game-topbar">
+      <view class="back-btn" bindtap="onBackToList">
+        <text>← 返回</text>
+      </view>
+      <text class="game-title">
+        {{activeGame === 'whack' ? '🐹 听音打地鼠' : activeGame === 'fishing' ? '🎣 单词钓鱼' : '🚂 拼读小火车'}}
+      </text>
+      <view style="width:80rpx"></view>
+    </view>
+
+    <whack-mole
+      wx:if="{{activeGame === 'whack'}}"
+      gameData="{{gameData}}"
+      bind:complete="onGameComplete"
+    />
+    <word-fishing
+      wx:if="{{activeGame === 'fishing'}}"
+      gameData="{{gameData}}"
+      bind:complete="onGameComplete"
+    />
+    <phoneme-train
+      wx:if="{{activeGame === 'train'}}"
+      gameData="{{gameData}}"
+      bind:complete="onGameComplete"
+    />
+  </view>
+
+  <bottom-nav activeTab="practice" bind:change="onTabChange"></bottom-nav>
+</view>
