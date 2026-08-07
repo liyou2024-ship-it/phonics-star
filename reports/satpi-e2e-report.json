@@ -1,0 +1,44 @@
+{
+  "testName": "SATPI 单元完整通关测试",
+  "testDate": "",
+  "tester": "",
+  "environment": "微信开发者工具",
+  "packId": "starter-satpi",
+  "status": "not_run",
+  "summary": {
+    "totalChecks": 15,
+    "passed": 0,
+    "failed": 0,
+    "blocked": 0
+  },
+  "checklist": [
+    { "id": 1, "item": "从第一课开始", "status": "pending", "note": "" },
+    { "id": 2, "item": "完成全部10节主课 (S001-S010)", "status": "pending", "note": "" },
+    { "id": 3, "item": "完成2节复习课 (R001-R002)", "status": "pending", "note": "" },
+    { "id": 4, "item": "完成2篇阅读 (dr_sat_sit, dr_tap_pat)", "status": "pending", "note": "" },
+    { "id": 5, "item": "完成单元测试 (A001)", "status": "pending", "note": "" },
+    { "id": 6, "item": "所有音频正常播放", "status": "pending", "note": "" },
+    { "id": 7, "item": "所有图片正常显示", "status": "pending", "note": "" },
+    { "id": 8, "item": "课程进度正确保存", "status": "pending", "note": "" },
+    { "id": 9, "item": "星星和能量正确累加", "status": "pending", "note": "" },
+    { "id": 10, "item": "错音本正确记录", "status": "pending", "note": "" },
+    { "id": 11, "item": "家长报告显示真实数据", "status": "pending", "note": "" },
+    { "id": 12, "item": "退出后重新进入进度恢复", "status": "pending", "note": "" },
+    { "id": 13, "item": "无'音频资源待配置'提示", "status": "pending", "note": "" },
+    { "id": 14, "item": "核心单词不使用Emoji回退", "status": "pending", "note": "" },
+    { "id": 15, "item": "Mock语音评测提示存在", "status": "pending", "note": "" }
+  ],
+  "issues": {
+    "brokenResourceIds": [],
+    "failedLessonIds": [],
+    "playbackErrors": [],
+    "incorrectMappings": [],
+    "contentIssues": [],
+    "uiBlockingIssues": []
+  },
+  "conclusion": {
+    "canPublish": false,
+    "reason": "测试尚未执行",
+    "recommendations": []
+  }
+}
