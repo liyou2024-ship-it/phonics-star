@@ -1,0 +1,44 @@
+<view class="page">
+  <view wx:if="{{loading}}" class="state"><text>加载中...</text></view>
+  <view wx:elif="{{error}}" class="state">
+    <empty-state icon="😵" title="加载失败" desc="{{error}}"></empty-state>
+  </view>
+  <view wx:else>
+    <view class="page-header">
+      <text class="page-title">🗺️ 课程地图</text>
+      <text class="page-subtitle">字母森林 → 阅读星球</text>
+    </view>
+
+    <view wx:for="{{levels}}" wx:key="id" wx:for-item="level" class="level-card">
+      <view class="level-header">
+        <text class="level-icon">{{level.icon}}</text>
+        <view class="level-info">
+          <text class="level-name">{{level.name}}</text>
+          <text class="level-desc">{{level.description}}</text>
+        </view>
+        <view wx:if="{{level.locked}}" class="level-lock">🔒</view>
+      </view>
+
+      <progress-bar value="{{level.completedCount}}" max="{{level.lessonCount}}" label="{{level.completedCount}}/{{level.lessonCount}} 课"></progress-bar>
+
+      <!-- 单元下的课节 -->
+      <view wx:for="{{level.units}}" wx:key="id" wx:for-item="unit" class="unit-section">
+        <text class="unit-title">{{unit.title}}</text>
+        <view class="lesson-grid">
+          <view
+            wx:for="{{unit.lessons}}" wx:key="id" wx:for-item="lesson"
+            class="lesson-node {{lesson.completed ? 'done' : ''}} {{lesson.isCurrent ? 'current' : ''}}"
+            data-lesson-id="{{lesson.id}}"
+            bindtap="onLessonTap"
+          >
+            <text class="node-title">{{lesson.title}}</text>
+            <star-rating wx:if="{{lesson.completed}}" stars="{{lesson.stars}}" maxStars="{{3}}" size="small"></star-rating>
+            <text wx:elif="{{lesson.isCurrent}}" class="node-current">当前</text>
+            <text wx:else class="node-start">▶</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <bottom-nav activeTab="course" bind:change="onTabChange"></bottom-nav>
+</view>
