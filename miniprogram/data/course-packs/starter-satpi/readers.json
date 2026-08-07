@@ -1,0 +1,64 @@
+{
+  "dr_sat_sit": {
+    "id": "dr_sat_sit",
+    "title": "Sat and Sit",
+    "description": "通过 sat 和 sit 的简单句子，练习短元音 a 和 i 的辨别",
+    "coverImageUrl": "/assets/images/readers/sat-sit-cover.webp",
+    "audioUrl": "/assets/audio/readers/sat-sit.mp3",
+    "sentences": [
+      "Sat, sat, sat.",
+      "Sit, sit, sit.",
+      "Pat sat.",
+      "Pat sits."
+    ],
+    "rules": ["CVC short a", "CVC short i"],
+    "targetWordIds": ["w_sat", "w_sit", "w_pat"],
+    "sightWords": [],
+    "difficulty": 1,
+    "estimatedTime": 2,
+    "decodabilityRate": 1.0,
+    "comprehensionQuestions": [
+      {
+        "question": "Who sat?",
+        "answer": "Pat",
+        "type": "literal"
+      },
+      {
+        "question": "What does Pat do?",
+        "answer": "Pat sits",
+        "type": "literal"
+      }
+    ]
+  },
+  "dr_tap_pat": {
+    "id": "dr_tap_pat",
+    "title": "Tap and Pat",
+    "description": "通过 tap 和 pat 的简单句子，巩固短元音 a 的拼读",
+    "coverImageUrl": "/assets/images/readers/tap-pat-cover.webp",
+    "audioUrl": "/assets/audio/readers/tap-pat.mp3",
+    "sentences": [
+      "Tap, tap, tap.",
+      "Pat, pat, pat.",
+      "Tap it, Pat.",
+      "Pat sat."
+    ],
+    "rules": ["CVC short a"],
+    "targetWordIds": ["w_tap", "w_pat", "w_it", "w_sat"],
+    "sightWords": [],
+    "difficulty": 1,
+    "estimatedTime": 2,
+    "decodabilityRate": 1.0,
+    "comprehensionQuestions": [
+      {
+        "question": "What should Pat do?",
+        "answer": "Tap it",
+        "type": "literal"
+      },
+      {
+        "question": "What did Pat do at the end?",
+        "answer": "Pat sat",
+        "type": "literal"
+      }
+    ]
+  }
+}
