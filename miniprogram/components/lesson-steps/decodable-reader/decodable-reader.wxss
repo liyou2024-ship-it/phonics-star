@@ -1,0 +1,27 @@
+.decodable-reader{padding:24rpx 0}
+.state-error{text-align:center;padding:60rpx;color:#EF4444;font-size:28rpx}
+
+/* 进度条 */
+.progress-bar{height:12rpx;background:#E5E7EB;border-radius:6rpx;overflow:hidden;margin-bottom:8rpx}
+.progress-fill{height:100%;background:linear-gradient(90deg,#7C3AED,#A78BFA);border-radius:6rpx;transition:width 0.4s ease}
+.progress-text{font-size:22rpx;color:#9CA3AF;text-align:center;margin-bottom:32rpx}
+
+/* 阅读内容 */
+.reader-content{display:flex;flex-direction:column;gap:32rpx;margin-bottom:32rpx}
+.sentence-block{background:#fff;border-radius:16rpx;padding:24rpx;box-shadow:0 2rpx 8rpx rgba(0,0,0,0.04)}
+.sentence-row{display:flex;flex-wrap:wrap;gap:12rpx;line-height:1.8}
+.word-tap{font-size:36rpx;font-weight:700;color:#374151;padding:4rpx 8rpx;border-radius:8rpx;transition:background 0.15s,color 0.15s}
+.word-tap.clicked{color:#7C3AED;background:rgba(124,58,237,0.08)}
+.word-tap.highlighted{background:#EDE9FE;transform:scale(1.1)}
+.sentence-actions{margin-top:16rpx;text-align:right}
+.read-sentence-btn{font-size:24rpx;color:#7C3AED;padding:8rpx 16rpx}
+.sentence-done{font-size:24rpx}
+
+/* Sight words */
+.sight-words-bar{display:flex;flex-wrap:wrap;align-items:center;gap:12rpx;background:#F5F3FF;border-radius:16rpx;padding:20rpx;margin-bottom:24rpx}
+.sw-label{font-size:22rpx;color:#7C3AED;font-weight:700}
+.sw-tag{font-size:22rpx;color:#6B7280;background:#fff;border-radius:8rpx;padding:4rpx 12rpx}
+
+/* 完成按钮 */
+.complete-section{padding:16rpx 0}
+.complete-btn{width:100%;background:linear-gradient(135deg,#10B981,#34D399);color:#fff;border:none;border-radius:40rpx;padding:24rpx;font-size:32rpx;font-weight:800}
