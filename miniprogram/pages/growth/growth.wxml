@@ -1,0 +1,31 @@
+<view class="page">
+  <view wx:if="{{loading}}" class="state"><text>加载中...</text></view>
+  <view wx:elif="{{error}}" class="state"><empty-state icon="😵" title="加载失败" desc="{{error}}"></empty-state></view>
+  <view wx:else>
+    <view class="page-header"><text class="page-title">🌟 成长中心</text></view>
+    <view class="level-card">
+      <text class="level-emoji">{{level.emoji}}</text>
+      <text class="level-name">{{level.name}}</text>
+      <text class="level-stars">⭐ {{totalStars}} 颗星星</text>
+      <view class="pet-info">
+        <text class="pet-emoji">{{pet.emoji}}</text>
+        <text>{{pet.name}} Lv.{{pet.level}}</text>
+      </view>
+    </view>
+    <view class="stats-row">
+      <view class="stat-card"><text class="sv">{{completedCount}}</text><text class="sl">完成课程</text></view>
+      <view class="stat-card"><text class="sv">{{masteredPhonemes}}</text><text class="sl">掌握发音</text></view>
+      <view class="stat-card"><text class="sv">{{masteredWords}}</text><text class="sl">掌握单词</text></view>
+    </view>
+    <view class="badge-section">
+      <text class="section-title">🏅 徽章墙</text>
+      <view class="badge-list">
+        <view wx:for="{{badges}}" wx:key="name" wx:for-item="b" class="badge {{b.earned ? 'earned' : ''}}">
+          <text class="badge-icon">{{b.earned ? b.icon : '🔒'}}</text>
+          <text class="badge-name">{{b.earned ? b.name : '???'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <bottom-nav activeTab="growth" bind:change="onTabChange"></bottom-nav>
+</view>
