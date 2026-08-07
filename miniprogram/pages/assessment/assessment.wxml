@@ -1,0 +1,67 @@
+<view class="page">
+  <!-- Intro -->
+  <view wx:if="{{phase === 'intro'}}" class="intro">
+    <text class="intro-icon">📝</text>
+    <text class="intro-title">SATPI 单元测试</text>
+    <text class="intro-desc">共 {{questions.length}} 题，测试你的听音、拼读和拆音能力</text>
+    <view class="intro-rules">
+      <text>• 听音辨字母 6 题</text>
+      <text>• 拼读合成 2 题</text>
+      <text>• 单词拆音 2 题</text>
+    </view>
+    <button class="start-btn" bindtap="onStart">开始测试</button>
+  </view>
+
+  <!-- Testing -->
+  <view wx:elif="{{phase === 'testing'}}" class="testing">
+    <progress-bar value="{{currentIndex + 1}}" max="{{6}}" label="第 {{currentIndex + 1}}/6 题"></progress-bar>
+
+    <view class="question-card">
+      <text class="q-prompt">{{questions[currentIndex].prompt}}</text>
+      <view class="q-options">
+        <view
+          wx:for="{{questions[currentIndex].options}}" wx:key="index"
+          class="q-option"
+          data-index="{{index}}"
+          bindtap="onSelectAnswer"
+        >
+          <text class="q-option-text">{{item.toUpperCase()}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Result -->
+  <view wx:elif="{{phase === 'result'}}" class="result">
+    <score-summary
+      score="{{result.totalScore}}"
+      totalQuestions="{{6}}"
+      correctCount="{{correctCount}}"
+      timeSpent="{{0}}"
+      bind:retry="onRetry"
+    ></score-summary>
+
+    <view class="result-detail card">
+      <text class="section-title">📊 能力评估</text>
+      <view class="ability-item">
+        <text>听音能力</text>
+        <text class="ability-value">{{result.soundAbility}}</text>
+      </view>
+      <view class="ability-item">
+        <text>拼读能力</text>
+        <text class="ability-value">{{result.blendAbility}}</text>
+      </view>
+      <view class="ability-item">
+        <text>拆音能力</text>
+        <text class="ability-value">{{result.segmentAbility}}</text>
+      </view>
+    </view>
+
+    <view class="result-suggestion card">
+      <text class="section-title">💡 建议</text>
+      <text class="suggestion-text">{{result.suggestion}}</text>
+    </view>
+
+    <button class="btn btn-secondary" bindtap="onBack">返回</button>
+  </view>
+</view>
