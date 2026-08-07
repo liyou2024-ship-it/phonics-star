@@ -1,0 +1,21 @@
+.page{padding:24rpx 24rpx 120rpx;background:#FAFAFA;min-height:100vh}
+.state{display:flex;align-items:center;justify-content:center;height:60vh}
+.page-header{margin-bottom:24rpx}
+.page-title{font-size:36rpx;font-weight:800;color:#1F2937}
+.level-card{background:linear-gradient(135deg,#7C3AED,#A78BFA);border-radius:24rpx;padding:32rpx;text-align:center;color:#fff;margin-bottom:20rpx}
+.level-emoji{font-size:72rpx;display:block}
+.level-name{font-size:36rpx;font-weight:800;display:block;margin:12rpx 0}
+.level-stars{font-size:26rpx;opacity:0.9;display:block}
+.pet-info{display:flex;align-items:center;justify-content:center;gap:8rpx;margin-top:16rpx;font-size:28rpx}
+.pet-emoji{font-size:48rpx}
+.stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12rpx;margin-bottom:20rpx}
+.stat-card{background:#fff;border-radius:20rpx;padding:24rpx 12rpx;text-align:center;box-shadow:0 2rpx 12rpx rgba(0,0,0,0.04)}
+.sv{font-size:36rpx;font-weight:900;color:#7C3AED;display:block}
+.sl{font-size:22rpx;color:#9CA3AF;margin-top:4rpx;display:block}
+.badge-section{margin-top:8rpx}
+.section-title{font-size:30rpx;font-weight:800;display:block;margin-bottom:16rpx}
+.badge-list{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12rpx}
+.badge{background:#fff;border-radius:20rpx;padding:20rpx 12rpx;text-align:center;opacity:0.4}
+.badge.earned{opacity:1}
+.badge-icon{font-size:44rpx;display:block}
+.badge-name{font-size:22rpx;color:#1F2937;font-weight:600;margin-top:8rpx;display:block}
