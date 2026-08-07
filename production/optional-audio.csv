@@ -1,0 +1,9 @@
+序号,resourceId,类型,内容,文件名,目录,阻断reviewing,阻断published,状态
+1,audio_ln_s,字母名称,字母S名称 ess,s.mp3,/assets/audio/letter-names,否,否,missing
+2,audio_ln_a,字母名称,字母A名称 ay,a.mp3,/assets/audio/letter-names,否,否,missing
+3,audio_ln_t,字母名称,字母T名称 tee,t.mp3,/assets/audio/letter-names,否,否,missing
+4,audio_ln_p,字母名称,字母P名称 pee,p.mp3,/assets/audio/letter-names,否,否,missing
+5,audio_ln_i,字母名称,字母I名称 eye,i.mp3,/assets/audio/letter-names,否,否,missing
+6,audio_ui_correct,UI音效,正确反馈音效,correct.mp3,/assets/audio/ui,否,否,missing
+7,audio_ui_incorrect,UI音效,错误反馈音效,incorrect.mp3,/assets/audio/ui,否,否,missing
+8,audio_ui_complete,UI音效,课程完成音效,complete.mp3,/assets/audio/ui,否,否,missing
