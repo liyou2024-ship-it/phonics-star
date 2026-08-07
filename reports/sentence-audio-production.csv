@@ -1,0 +1,3 @@
+resourceId,类型,对应读物,文本内容,预期文件名,预期目录,口音,录制方式,当前状态,是否阻断发布
+audio_sent_dr01,句子朗读,dr_sat_sit,Sat and Sit 第1句,dr01-s01.mp3,/assets/audio/sentences,us,商业授权TTS + 人工抽检,missing,是
+audio_sent_dr02,句子朗读,dr_tap_pat,Tap and Pat 第1句,dr02-s01.mp3,/assets/audio/sentences,us,商业授权TTS + 人工抽检,missing,是
