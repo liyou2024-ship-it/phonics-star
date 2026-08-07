@@ -1,0 +1,72 @@
+{
+  "gr_s": {
+    "id": "gr_s",
+    "grapheme": "s",
+    "letter": "S",
+    "letterLower": "s",
+    "phonemeId": "ph_s",
+    "phonemeIds": ["ph_s"],
+    "type": "single_letter",
+    "positionRules": ["initial", "medial", "final"],
+    "exampleWordIds": ["w_sat", "w_sip"],
+    "strokeOrder": "一笔写成，从左上向右下画弧线",
+    "imageUrl": "/assets/images/graphemes/s.webp",
+    "order": 1
+  },
+  "gr_a": {
+    "id": "gr_a",
+    "grapheme": "a",
+    "letter": "A",
+    "letterLower": "a",
+    "phonemeId": "ph_a",
+    "phonemeIds": ["ph_a"],
+    "type": "single_letter",
+    "positionRules": ["initial", "medial"],
+    "exampleWordIds": ["w_at", "w_sat"],
+    "strokeOrder": "先画圆再写竖，共两笔",
+    "imageUrl": "/assets/images/graphemes/a.webp",
+    "order": 2
+  },
+  "gr_t": {
+    "id": "gr_t",
+    "grapheme": "t",
+    "letter": "T",
+    "letterLower": "t",
+    "phonemeId": "ph_t",
+    "phonemeIds": ["ph_t"],
+    "type": "single_letter",
+    "positionRules": ["initial", "final"],
+    "exampleWordIds": ["w_tap", "w_tip"],
+    "strokeOrder": "先写竖弯钩，再写横，共两笔",
+    "imageUrl": "/assets/images/graphemes/t.webp",
+    "order": 3
+  },
+  "gr_p": {
+    "id": "gr_p",
+    "grapheme": "p",
+    "letter": "P",
+    "letterLower": "p",
+    "phonemeId": "ph_p",
+    "phonemeIds": ["ph_p"],
+    "type": "single_letter",
+    "positionRules": ["initial", "final"],
+    "exampleWordIds": ["w_pat", "w_pit"],
+    "strokeOrder": "先写竖，再画半圆，共两笔",
+    "imageUrl": "/assets/images/graphemes/p.webp",
+    "order": 4
+  },
+  "gr_i": {
+    "id": "gr_i",
+    "grapheme": "i",
+    "letter": "I",
+    "letterLower": "i",
+    "phonemeId": "ph_i",
+    "phonemeIds": ["ph_i"],
+    "type": "single_letter",
+    "positionRules": ["initial", "medial"],
+    "exampleWordIds": ["w_sit", "w_it"],
+    "strokeOrder": "先写竖，再点上面一点，共两笔",
+    "imageUrl": "/assets/images/graphemes/i.webp",
+    "order": 5
+  }
+}
