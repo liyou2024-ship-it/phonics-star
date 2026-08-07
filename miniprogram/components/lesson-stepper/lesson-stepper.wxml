@@ -1,0 +1,17 @@
+<view class="stepper">
+  <view
+    wx:for="{{stages}}" wx:key="index" wx:for-item="stage"
+    class="stage {{stage.locked ? 'locked' : ''}} {{stage.current ? 'current' : ''}}"
+    data-index="{{index}}"
+    bindtap="onStageTap"
+  >
+    <view class="stage-header">
+      <text class="stage-icon">{{stage.icon}}</text>
+      <text class="stage-name">{{stage.name}}</text>
+    </view>
+    <view class="stage-progress">{{stage.progress}}</view>
+    <star-rating stars="{{stage.stars}}" maxStars="{{3}}" size="small"></star-rating>
+    <view wx:if="{{stage.current}}" class="stage-current-badge">当前</view>
+    <view wx:if="{{stage.locked}}" class="stage-lock">🔒</view>
+  </view>
+</view>
