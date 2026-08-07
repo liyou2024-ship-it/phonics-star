@@ -1,0 +1,1 @@
+{"navigationBarTitleText":"游戏中心","usingComponents":{"bottom-nav":"/components/bottom-nav/bottom-nav","empty-state":"/components/empty-state/empty-state","whack-mole":"/components/games/whack-mole/whack-mole","word-fishing":"/components/games/word-fishing/word-fishing","phoneme-train":"/components/games/phoneme-train/phoneme-train"}}
