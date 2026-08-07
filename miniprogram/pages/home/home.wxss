@@ -1,0 +1,30 @@
+.page{padding-bottom:120rpx;min-height:100vh;background:#FAFAFA}
+.loading-state,.error-state{display:flex;align-items:center;justify-content:center;height:60vh}
+.home-header{background:linear-gradient(135deg,#7C3AED,#A78BFA);border-radius:0 0 40rpx 40rpx;padding:48rpx 32rpx 40rpx;color:#fff}
+.home-greeting{margin-bottom:16rpx}
+.greeting-text{font-size:40rpx;font-weight:800;display:block}
+.greeting-stage{font-size:26rpx;opacity:0.8;margin-top:8rpx;display:block}
+.home-stats{display:flex;gap:16rpx}
+.stat-item{display:flex;align-items:center;gap:6rpx;background:rgba(255,255,255,0.2);padding:8rpx 24rpx;border-radius:32rpx;font-size:26rpx;font-weight:700}
+.home-progress{margin:24rpx 24rpx 0}
+.card{background:#fff;border-radius:24rpx;padding:24rpx;margin:16rpx 24rpx;box-shadow:0 2rpx 12rpx rgba(0,0,0,0.06)}
+.home-section{margin:24rpx 24rpx 0}
+.section-title{font-size:30rpx;font-weight:800;color:#1F2937;display:block;margin-bottom:16rpx}
+.today-card{display:flex;align-items:center;background:#fff;border-radius:24rpx;padding:24rpx;box-shadow:0 4rpx 16rpx rgba(124,58,237,0.1);border:2rpx solid #F5F3FF}
+.today-icon{font-size:64rpx;margin-right:20rpx}
+.today-info{flex:1}
+.today-label{font-size:22rpx;color:#7C3AED;font-weight:700;display:block}
+.today-lesson{font-size:30rpx;font-weight:800;color:#1F2937;display:block;margin:4rpx 0}
+.today-desc{font-size:24rpx;color:#9CA3AF;display:block}
+.today-arrow{font-size:32rpx;color:#A78BFA}
+.assess-cta{display:flex;align-items:center;background:linear-gradient(135deg,#7C3AED,#A78BFA);border-radius:24rpx;padding:28rpx 24rpx;box-shadow:0 6rpx 20rpx rgba(124,58,237,0.25)}
+.assess-cta-text{flex:1}
+.assess-cta-title{font-size:32rpx;font-weight:800;color:#fff;display:block}
+.assess-cta-desc{font-size:24rpx;color:rgba(255,255,255,0.85);margin-top:6rpx;display:block}
+.assess-cta-arrow{font-size:32rpx;color:#fff}
+.quick-actions{display:grid;grid-template-columns:1fr 1fr;gap:16rpx}
+.quick-action{display:flex;flex-direction:column;align-items:center;background:#fff;border-radius:24rpx;padding:24rpx 16rpx;box-shadow:0 2rpx 12rpx rgba(0,0,0,0.04)}
+.action-icon{font-size:56rpx}
+.action-label{font-size:26rpx;font-weight:700;color:#1F2937;margin-top:8rpx}
+.btn{padding:20rpx 32rpx;border-radius:40rpx;font-size:28rpx;font-weight:700;width:100%}
+.btn-secondary{background:#F3E8FF;color:#7C3AED;border:none}
