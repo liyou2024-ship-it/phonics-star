@@ -1,0 +1,10 @@
+<view class="feedback {{themeClass}}" wx:if="{{show}}">
+  <view class="feedback__overlay" bind:tap="onClose"></view>
+  <view class="feedback__card">
+    <text class="feedback__icon">{{icon}}</text>
+    <text class="feedback__message">{{message}}</text>
+    <text class="feedback__answer" wx:if="{{type === 'incorrect' && correctAnswer}}">
+      正确答案: {{correctAnswer}}
+    </text>
+  </view>
+</view>
