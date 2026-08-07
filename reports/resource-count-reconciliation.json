@@ -1,0 +1,1037 @@
+{
+  "generatedAt": "2026-08-06T19:20:00",
+  "summary": {
+    "manifestTotal": 39,
+    "manifestAudio": 31,
+    "manifestImages": 8,
+    "referencedInCode": 21,
+    "unreferencedInCode": 18,
+    "orphanedRefs": 183,
+    "requiredAudio": 13,
+    "optionalAudio": 18,
+    "requiredImages": 8,
+    "optionalImages": 0
+  },
+  "explanation_53_vs_31": {
+    "previous_53_count": "Phase 3 最初估算时，将全部课程的预估资源数（包括未创建的 L002-L402 课程资源）计入了\"缺失\"统计",
+    "current_31_count": "当前 SATPI 课程包实际引用的必需音频数为 13（不含 UI 音效和未引用资源）",
+    "remaining_22": "包含：UI音效3个 + 未在课程包中引用的音频（L001的旧数据引用、主数据文件引用等）",
+    "actual_required_for_satpi": 13,
+    "actual_required_for_satpi_plus_ui": 31,
+    "conclusion": "SATPI 单元完整体验需要 13 个必需音频 + 3 个 UI 音效（非阻断）= 16 个音频。8 个图片可回退 Emoji（不阻断）。"
+  },
+  "requiredAudio": [
+    {
+      "resourceId": "audio_ph_s",
+      "expectedPath": "/assets/audio/phonemes/s.mp3",
+      "resourceType": "audio_phoneme",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/phonemes",
+          "field": "ph_s.audioUrl",
+          "value": "/assets/audio/phonemes/s.mp3"
+        },
+        {
+          "source": "main/phonemes",
+          "field": "[0].audioUrl",
+          "value": "/assets/audio/phonemes/s.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_ph_a",
+      "expectedPath": "/assets/audio/phonemes/a.mp3",
+      "resourceType": "audio_phoneme",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/phonemes",
+          "field": "ph_a.audioUrl",
+          "value": "/assets/audio/phonemes/a.mp3"
+        },
+        {
+          "source": "main/phonemes",
+          "field": "[1].audioUrl",
+          "value": "/assets/audio/phonemes/a.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_ph_t",
+      "expectedPath": "/assets/audio/phonemes/t.mp3",
+      "resourceType": "audio_phoneme",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/phonemes",
+          "field": "ph_t.audioUrl",
+          "value": "/assets/audio/phonemes/t.mp3"
+        },
+        {
+          "source": "main/phonemes",
+          "field": "[2].audioUrl",
+          "value": "/assets/audio/phonemes/t.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_ph_p",
+      "expectedPath": "/assets/audio/phonemes/p.mp3",
+      "resourceType": "audio_phoneme",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/phonemes",
+          "field": "ph_p.audioUrl",
+          "value": "/assets/audio/phonemes/p.mp3"
+        },
+        {
+          "source": "main/phonemes",
+          "field": "[3].audioUrl",
+          "value": "/assets/audio/phonemes/p.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_ph_i",
+      "expectedPath": "/assets/audio/phonemes/i.mp3",
+      "resourceType": "audio_phoneme",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/phonemes",
+          "field": "ph_i.audioUrl",
+          "value": "/assets/audio/phonemes/i.mp3"
+        },
+        {
+          "source": "main/phonemes",
+          "field": "[4].audioUrl",
+          "value": "/assets/audio/phonemes/i.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_w_sat_n",
+      "expectedPath": "/assets/audio/words/sat-normal.mp3",
+      "resourceType": "audio_word_normal",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_sat.audioUrl",
+          "value": "/assets/audio/words/sat-normal.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_w_sit_n",
+      "expectedPath": "/assets/audio/words/sit-normal.mp3",
+      "resourceType": "audio_word_normal",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_sit.audioUrl",
+          "value": "/assets/audio/words/sit-normal.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_w_tap_n",
+      "expectedPath": "/assets/audio/words/tap-normal.mp3",
+      "resourceType": "audio_word_normal",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_tap.audioUrl",
+          "value": "/assets/audio/words/tap-normal.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_w_pat_n",
+      "expectedPath": "/assets/audio/words/pat-normal.mp3",
+      "resourceType": "audio_word_normal",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_pat.audioUrl",
+          "value": "/assets/audio/words/pat-normal.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_w_pit_n",
+      "expectedPath": "/assets/audio/words/pit-normal.mp3",
+      "resourceType": "audio_word_normal",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_pit.audioUrl",
+          "value": "/assets/audio/words/pit-normal.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_w_tip_n",
+      "expectedPath": "/assets/audio/words/tip-normal.mp3",
+      "resourceType": "audio_word_normal",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_tip.audioUrl",
+          "value": "/assets/audio/words/tip-normal.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_w_sip_n",
+      "expectedPath": "/assets/audio/words/sip-normal.mp3",
+      "resourceType": "audio_word_normal",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_sip.audioUrl",
+          "value": "/assets/audio/words/sip-normal.mp3"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "audio_w_sap_n",
+      "expectedPath": "/assets/audio/words/sap-normal.mp3",
+      "resourceType": "audio_word_normal",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_sap.audioUrl",
+          "value": "/assets/audio/words/sap-normal.mp3"
+        }
+      ],
+      "referenced": true
+    }
+  ],
+  "optionalAudio": [
+    {
+      "resourceId": "audio_ln_s",
+      "expectedPath": "/assets/audio/letter-names/s.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ln_a",
+      "expectedPath": "/assets/audio/letter-names/a.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ln_t",
+      "expectedPath": "/assets/audio/letter-names/t.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ln_p",
+      "expectedPath": "/assets/audio/letter-names/p.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ln_i",
+      "expectedPath": "/assets/audio/letter-names/i.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_sat_b",
+      "expectedPath": "/assets/audio/words/sat-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_sit_b",
+      "expectedPath": "/assets/audio/words/sit-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_tap_b",
+      "expectedPath": "/assets/audio/words/tap-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_pat_b",
+      "expectedPath": "/assets/audio/words/pat-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_pit_b",
+      "expectedPath": "/assets/audio/words/pit-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_tip_b",
+      "expectedPath": "/assets/audio/words/tip-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_sip_b",
+      "expectedPath": "/assets/audio/words/sip-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_sap_b",
+      "expectedPath": "/assets/audio/words/sap-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_sent_dr01",
+      "expectedPath": "/assets/audio/sentences/dr01-s01.mp3",
+      "resourceType": "audio_sentence",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_sent_dr02",
+      "expectedPath": "/assets/audio/sentences/dr02-s01.mp3",
+      "resourceType": "audio_sentence",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ui_correct",
+      "expectedPath": "/assets/audio/ui/correct.mp3",
+      "resourceType": "audio_ui",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ui_incorrect",
+      "expectedPath": "/assets/audio/ui/incorrect.mp3",
+      "resourceType": "audio_ui",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ui_complete",
+      "expectedPath": "/assets/audio/ui/complete.mp3",
+      "resourceType": "audio_ui",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    }
+  ],
+  "requiredImages": [
+    {
+      "resourceId": "img_w_sat",
+      "expectedPath": "/assets/images/words/sat.webp",
+      "resourceType": "image_word",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_sat.imageUrl",
+          "value": "/assets/images/words/sat.webp"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "img_w_sit",
+      "expectedPath": "/assets/images/words/sit.webp",
+      "resourceType": "image_word",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_sit.imageUrl",
+          "value": "/assets/images/words/sit.webp"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "img_w_tap",
+      "expectedPath": "/assets/images/words/tap.webp",
+      "resourceType": "image_word",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_tap.imageUrl",
+          "value": "/assets/images/words/tap.webp"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "img_w_pat",
+      "expectedPath": "/assets/images/words/pat.webp",
+      "resourceType": "image_word",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_pat.imageUrl",
+          "value": "/assets/images/words/pat.webp"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "img_w_pit",
+      "expectedPath": "/assets/images/words/pit.webp",
+      "resourceType": "image_word",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_pit.imageUrl",
+          "value": "/assets/images/words/pit.webp"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "img_w_tip",
+      "expectedPath": "/assets/images/words/tip.webp",
+      "resourceType": "image_word",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_tip.imageUrl",
+          "value": "/assets/images/words/tip.webp"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "img_w_sip",
+      "expectedPath": "/assets/images/words/sip.webp",
+      "resourceType": "image_word",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_sip.imageUrl",
+          "value": "/assets/images/words/sip.webp"
+        }
+      ],
+      "referenced": true
+    },
+    {
+      "resourceId": "img_w_sap",
+      "expectedPath": "/assets/images/words/sap.webp",
+      "resourceType": "image_word",
+      "status": "missing",
+      "referencedBy": [
+        {
+          "source": "satpi/words",
+          "field": "w_sap.imageUrl",
+          "value": "/assets/images/words/sap.webp"
+        }
+      ],
+      "referenced": true
+    }
+  ],
+  "optionalImages": [],
+  "unreferenced": [
+    {
+      "resourceId": "audio_ln_s",
+      "expectedPath": "/assets/audio/letter-names/s.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ln_a",
+      "expectedPath": "/assets/audio/letter-names/a.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ln_t",
+      "expectedPath": "/assets/audio/letter-names/t.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ln_p",
+      "expectedPath": "/assets/audio/letter-names/p.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ln_i",
+      "expectedPath": "/assets/audio/letter-names/i.mp3",
+      "resourceType": "audio_letter_name",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_sat_b",
+      "expectedPath": "/assets/audio/words/sat-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_sit_b",
+      "expectedPath": "/assets/audio/words/sit-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_tap_b",
+      "expectedPath": "/assets/audio/words/tap-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_pat_b",
+      "expectedPath": "/assets/audio/words/pat-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_pit_b",
+      "expectedPath": "/assets/audio/words/pit-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_tip_b",
+      "expectedPath": "/assets/audio/words/tip-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_sip_b",
+      "expectedPath": "/assets/audio/words/sip-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_w_sap_b",
+      "expectedPath": "/assets/audio/words/sap-blend.mp3",
+      "resourceType": "audio_word_blend",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_sent_dr01",
+      "expectedPath": "/assets/audio/sentences/dr01-s01.mp3",
+      "resourceType": "audio_sentence",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_sent_dr02",
+      "expectedPath": "/assets/audio/sentences/dr02-s01.mp3",
+      "resourceType": "audio_sentence",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ui_correct",
+      "expectedPath": "/assets/audio/ui/correct.mp3",
+      "resourceType": "audio_ui",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ui_incorrect",
+      "expectedPath": "/assets/audio/ui/incorrect.mp3",
+      "resourceType": "audio_ui",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    },
+    {
+      "resourceId": "audio_ui_complete",
+      "expectedPath": "/assets/audio/ui/complete.mp3",
+      "resourceType": "audio_ui",
+      "status": "missing",
+      "referencedBy": [],
+      "referenced": false
+    }
+  ],
+  "orphanedRefs": [
+    "/assets/images/words/pop.png",
+    "/assets/images/words/fat.png",
+    "/assets/audio/words/big.mp3",
+    "/assets/audio/phonemes/x.mp3",
+    "/assets/audio/words/hut.mp3",
+    "/assets/images/readers/tap-pat-cover.webp",
+    "/assets/images/words/rat.png",
+    "/assets/audio/words/top.mp3",
+    "/assets/images/words/fun.png",
+    "/assets/audio/words/win.mp3",
+    "/assets/audio/words/ship.mp3",
+    "/assets/audio/words/mop.mp3",
+    "/assets/audio/words/bat.mp3",
+    "/assets/audio/words/cap.mp3",
+    "/assets/images/words/hit.png",
+    "/assets/audio/words/jog.mp3",
+    "/assets/images/words/six.png",
+    "/assets/audio/words/mat.mp3",
+    "/assets/images/words/sat.png",
+    "/assets/audio/phonemes/f.mp3",
+    "/assets/images/words/pig.png",
+    "/assets/audio/words/dig.mp3",
+    "/assets/audio/words/duck.mp3",
+    "/assets/audio/words/bin.mp3",
+    "/assets/images/words/bin.png",
+    "/assets/audio/words/sits-normal.mp3",
+    "/assets/audio/words/six.mp3",
+    "/assets/audio/words/past-normal.mp3",
+    "/assets/audio/phonemes/o.mp3",
+    "/assets/images/graphemes/s.webp",
+    "/assets/images/words/cap.png",
+    "/assets/audio/phonemes/m.mp3",
+    "/assets/images/words/but.png",
+    "/assets/audio/words/hop.mp3",
+    "/assets/images/words/sun.png",
+    "/assets/images/graphemes/t.webp",
+    "/assets/images/phonemes/p.webp",
+    "/assets/audio/phonemes/b.mp3",
+    "/assets/audio/words/pop.mp3",
+    "/assets/images/words/tips.webp",
+    "/assets/images/words/ant.png",
+    "/assets/images/readers/sat-sit-cover.webp",
+    "/assets/images/words/top.png",
+    "/assets/audio/words/fish.mp3",
+    "/assets/audio/words/kit.mp3",
+    "/assets/images/words/man.png",
+    "/assets/audio/words/pan.mp3",
+    "/assets/audio/words/rug.mp3",
+    "/assets/audio/phonemes/d.mp3",
+    "/assets/audio/phonemes/j.mp3",
+    "/assets/audio/words/fit.mp3",
+    "/assets/audio/phonemes/r.mp3",
+    "/assets/images/words/taps.webp",
+    "/assets/audio/words/it-normal.mp3",
+    "/assets/images/words/as.webp",
+    "/assets/audio/words/taps-normal.mp3",
+    "/assets/audio/phonemes/v.mp3",
+    "/assets/images/words/dog.png",
+    "/assets/images/phonemes/t.webp",
+    "/assets/images/words/fish.png",
+    "/assets/audio/words/but.mp3",
+    "/assets/images/words/net.png",
+    "/assets/images/graphemes/a.webp",
+    "/assets/audio/phonemes/k.mp3",
+    "/assets/images/words/can.png",
+    "/assets/audio/words/bed.mp3",
+    "/assets/audio/words/fun.mp3",
+    "/assets/audio/phonemes/g.mp3",
+    "/assets/images/words/big.png",
+    "/assets/audio/words/sun.mp3",
+    "/assets/images/words/bat.png",
+    "/assets/audio/words/fox.mp3",
+    "/assets/images/words/spat.webp",
+    "/assets/images/words/is.webp",
+    "/assets/images/words/fin.png",
+    "/assets/images/words/nap.png",
+    "/assets/audio/words/log.mp3",
+    "/assets/audio/words/net.mp3",
+    "/assets/images/words/bed.png",
+    "/assets/audio/words/ant.mp3",
+    "/assets/images/phonemes/a.webp",
+    "/assets/images/words/pen.png",
+    "/assets/audio/phonemes/q.mp3",
+    "/assets/audio/words/nap.mp3",
+    "/assets/images/words/hut.png",
+    "/assets/images/phonemes/s.webp",
+    "/assets/audio/words/van.mp3",
+    "/assets/audio/words/tap.mp3",
+    "/assets/audio/words/pin.mp3",
+    "/assets/audio/words/fan.mp3",
+    "/assets/images/words/bit.png",
+    "/assets/images/words/pan.png",
+    "/assets/audio/words/hen.mp3",
+    "/assets/audio/words/man.mp3",
+    "/assets/images/words/hop.png",
+    "/assets/images/words/cut.png",
+    "/assets/images/words/past.webp",
+    "/assets/audio/words/dog.mp3",
+    "/assets/audio/phonemes/c.mp3",
+    "/assets/audio/words/box.mp3",
+    "/assets/audio/words/pass-normal.mp3",
+    "/assets/images/words/jam.png",
+    "/assets/images/words/win.png",
+    "/assets/audio/words/rat.mp3",
+    "/assets/images/words/cup.png",
+    "/assets/audio/words/red.mp3",
+    "/assets/images/words/sit.png",
+    "/assets/audio/words/hit.mp3",
+    "/assets/images/words/bug.png",
+    "/assets/images/words/jog.png",
+    "/assets/images/words/nut.png",
+    "/assets/audio/words/nut.mp3",
+    "/assets/images/words/van.png",
+    "/assets/audio/phonemes/h.mp3",
+    "/assets/audio/words/cat.mp3",
+    "/assets/audio/phonemes/n.mp3",
+    "/assets/images/words/mop.png",
+    "/assets/audio/words/pen.mp3",
+    "/assets/audio/phonemes/l.mp3",
+    "/assets/images/words/hen.png",
+    "/assets/audio/words/spat-normal.mp3",
+    "/assets/audio/words/fog.mp3",
+    "/assets/audio/words/is-normal.mp3",
+    "/assets/audio/words/can.mp3",
+    "/assets/images/graphemes/p.webp",
+    "/assets/audio/words/cup.mp3",
+    "/assets/images/words/fox.png",
+    "/assets/audio/phonemes/y.mp3",
+    "/assets/audio/phonemes/u.mp3",
+    "/assets/images/words/dig.png",
+    "/assets/audio/words/pig.mp3",
+    "/assets/audio/readers/tap-pat.mp3",
+    "/assets/images/words/wig.png",
+    "/assets/audio/words/fin.mp3",
+    "/assets/audio/words/hat.mp3",
+    "/assets/images/words/log.png",
+    "/assets/images/words/map.png",
+    "/assets/images/words/ham.png",
+    "/assets/audio/words/bus.mp3",
+    "/assets/images/words/duck.png",
+    "/assets/images/graphemes/i.webp",
+    "/assets/images/words/bus.png",
+    "/assets/audio/words/sit.mp3",
+    "/assets/audio/phonemes/z.mp3",
+    "/assets/audio/readers/sat-sit.mp3",
+    "/assets/audio/words/fat.mp3",
+    "/assets/images/words/pass.webp",
+    "/assets/images/words/sock.png",
+    "/assets/audio/words/wig.mp3",
+    "/assets/images/words/pin.png",
+    "/assets/audio/words/ham.mp3",
+    "/assets/images/words/bun.png",
+    "/assets/images/phonemes/i.webp",
+    "/assets/audio/words/jam.mp3",
+    "/assets/images/words/fan.png",
+    "/assets/images/words/run.png",
+    "/assets/audio/phonemes/w.mp3",
+    "/assets/images/words/box.png",
+    "/assets/audio/words/sat.mp3",
+    "/assets/images/words/hat.png",
+    "/assets/images/words/tap.png",
+    "/assets/audio/words/run.mp3",
+    "/assets/audio/words/bun.mp3",
+    "/assets/audio/words/bit.mp3",
+    "/assets/audio/words/tips-normal.mp3",
+    "/assets/images/words/fit.png",
+    "/assets/images/words/kit.png",
+    "/assets/images/words/at.webp",
+    "/assets/audio/words/bug.mp3",
+    "/assets/images/words/cat.png",
+    "/assets/audio/words/map.mp3",
+    "/assets/images/words/red.png",
+    "/assets/audio/phonemes/e.mp3",
+    "/assets/audio/words/sock.mp3",
+    "/assets/audio/words/at-normal.mp3",
+    "/assets/images/words/sits.webp",
+    "/assets/images/words/mat.png",
+    "/assets/audio/words/cut.mp3",
+    "/assets/images/words/fog.png",
+    "/assets/images/words/rug.png",
+    "/assets/audio/words/as-normal.mp3",
+    "/assets/images/words/ship.png",
+    "/assets/images/words/it.webp"
+  ],
+  "publishBlockers": {
+    "missingRequiredAudio": [
+      {
+        "resourceId": "audio_ph_s",
+        "expectedPath": "/assets/audio/phonemes/s.mp3",
+        "resourceType": "audio_phoneme",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/phonemes",
+            "field": "ph_s.audioUrl",
+            "value": "/assets/audio/phonemes/s.mp3"
+          },
+          {
+            "source": "main/phonemes",
+            "field": "[0].audioUrl",
+            "value": "/assets/audio/phonemes/s.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_ph_a",
+        "expectedPath": "/assets/audio/phonemes/a.mp3",
+        "resourceType": "audio_phoneme",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/phonemes",
+            "field": "ph_a.audioUrl",
+            "value": "/assets/audio/phonemes/a.mp3"
+          },
+          {
+            "source": "main/phonemes",
+            "field": "[1].audioUrl",
+            "value": "/assets/audio/phonemes/a.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_ph_t",
+        "expectedPath": "/assets/audio/phonemes/t.mp3",
+        "resourceType": "audio_phoneme",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/phonemes",
+            "field": "ph_t.audioUrl",
+            "value": "/assets/audio/phonemes/t.mp3"
+          },
+          {
+            "source": "main/phonemes",
+            "field": "[2].audioUrl",
+            "value": "/assets/audio/phonemes/t.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_ph_p",
+        "expectedPath": "/assets/audio/phonemes/p.mp3",
+        "resourceType": "audio_phoneme",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/phonemes",
+            "field": "ph_p.audioUrl",
+            "value": "/assets/audio/phonemes/p.mp3"
+          },
+          {
+            "source": "main/phonemes",
+            "field": "[3].audioUrl",
+            "value": "/assets/audio/phonemes/p.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_ph_i",
+        "expectedPath": "/assets/audio/phonemes/i.mp3",
+        "resourceType": "audio_phoneme",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/phonemes",
+            "field": "ph_i.audioUrl",
+            "value": "/assets/audio/phonemes/i.mp3"
+          },
+          {
+            "source": "main/phonemes",
+            "field": "[4].audioUrl",
+            "value": "/assets/audio/phonemes/i.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_w_sat_n",
+        "expectedPath": "/assets/audio/words/sat-normal.mp3",
+        "resourceType": "audio_word_normal",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/words",
+            "field": "w_sat.audioUrl",
+            "value": "/assets/audio/words/sat-normal.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_w_sit_n",
+        "expectedPath": "/assets/audio/words/sit-normal.mp3",
+        "resourceType": "audio_word_normal",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/words",
+            "field": "w_sit.audioUrl",
+            "value": "/assets/audio/words/sit-normal.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_w_tap_n",
+        "expectedPath": "/assets/audio/words/tap-normal.mp3",
+        "resourceType": "audio_word_normal",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/words",
+            "field": "w_tap.audioUrl",
+            "value": "/assets/audio/words/tap-normal.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_w_pat_n",
+        "expectedPath": "/assets/audio/words/pat-normal.mp3",
+        "resourceType": "audio_word_normal",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/words",
+            "field": "w_pat.audioUrl",
+            "value": "/assets/audio/words/pat-normal.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_w_pit_n",
+        "expectedPath": "/assets/audio/words/pit-normal.mp3",
+        "resourceType": "audio_word_normal",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/words",
+            "field": "w_pit.audioUrl",
+            "value": "/assets/audio/words/pit-normal.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_w_tip_n",
+        "expectedPath": "/assets/audio/words/tip-normal.mp3",
+        "resourceType": "audio_word_normal",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/words",
+            "field": "w_tip.audioUrl",
+            "value": "/assets/audio/words/tip-normal.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_w_sip_n",
+        "expectedPath": "/assets/audio/words/sip-normal.mp3",
+        "resourceType": "audio_word_normal",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/words",
+            "field": "w_sip.audioUrl",
+            "value": "/assets/audio/words/sip-normal.mp3"
+          }
+        ],
+        "referenced": true
+      },
+      {
+        "resourceId": "audio_w_sap_n",
+        "expectedPath": "/assets/audio/words/sap-normal.mp3",
+        "resourceType": "audio_word_normal",
+        "status": "missing",
+        "referencedBy": [
+          {
+            "source": "satpi/words",
+            "field": "w_sap.audioUrl",
+            "value": "/assets/audio/words/sap-normal.mp3"
+          }
+        ],
+        "referenced": true
+      }
+    ],
+    "blockingCount": 13,
+    "warningOnly": 8
+  }
+}
