@@ -1,0 +1,11 @@
+<view class="slots">
+  <view
+    class="slot {{item.filled ? 'slot--filled' : 'slot--empty'}}"
+    wx:for="{{slotList}}"
+    wx:key="index"
+    data-index="{{item.index}}"
+    bind:tap="onSlotTap"
+  >
+    <text class="slot__text">{{item.filled ? item.value : '_'}}</text>
+  </view>
+</view>
