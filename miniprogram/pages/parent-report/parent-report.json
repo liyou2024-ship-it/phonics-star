@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "家长报告",
+  "usingComponents": {
+    "progress-bar": "/components/progress-bar/progress-bar",
+    "empty-state": "/components/empty-state/empty-state",
+    "star-rating": "/components/star-rating/star-rating"
+  }
+}
