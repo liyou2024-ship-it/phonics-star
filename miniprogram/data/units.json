@@ -1,0 +1,114 @@
+[
+  {
+    "id": "unit_alphabet_1",
+    "title": "字母音启蒙（一）",
+    "levelId": "lvl_alphabet_forest",
+    "order": 1,
+    "objectives": "学习 s, a, t, p, i, n, m, d 的字母音",
+    "lessonIds": ["L001", "L002", "L003"]
+  },
+  {
+    "id": "unit_alphabet_2",
+    "title": "字母音启蒙（二）",
+    "levelId": "lvl_alphabet_forest",
+    "order": 2,
+    "objectives": "学习 g, o, c, k, e, r, h, b 的字母音",
+    "lessonIds": ["L004", "L005", "L006"]
+  },
+  {
+    "id": "unit_alphabet_3",
+    "title": "字母音启蒙（三）",
+    "levelId": "lvl_alphabet_forest",
+    "order": 3,
+    "objectives": "学习 f, l, u, j, v, w, x, y, z, q 的字母音",
+    "lessonIds": ["L007", "L008"]
+  },
+  {
+    "id": "unit_cvc_1",
+    "title": "短元音 a 词族",
+    "levelId": "lvl_short_vowel_village",
+    "order": 1,
+    "objectives": "掌握 -at, -an, -ap 词族的拼读",
+    "lessonIds": ["L101", "L102", "L103"]
+  },
+  {
+    "id": "unit_cvc_2",
+    "title": "短元音 i 词族",
+    "levelId": "lvl_short_vowel_village",
+    "order": 2,
+    "objectives": "掌握 -ig, -in, -it 词族的拼读",
+    "lessonIds": ["L201", "L202", "L203"]
+  },
+  {
+    "id": "unit_cvc_3",
+    "title": "短元音 o / u 词族",
+    "levelId": "lvl_short_vowel_village",
+    "order": 3,
+    "objectives": "掌握 -op, -og, -un, -ut 词族的拼读",
+    "lessonIds": ["L301", "L302", "L401", "L402"]
+  },
+  {
+    "id": "unit_blend_1",
+    "title": "辅音组合（一）",
+    "levelId": "lvl_consonant_castle",
+    "order": 1,
+    "objectives": "学习 sh, ch, th, ck 辅音组合",
+    "lessonIds": []
+  },
+  {
+    "id": "unit_blend_2",
+    "title": "辅音连缀",
+    "levelId": "lvl_consonant_castle",
+    "order": 2,
+    "objectives": "学习 bl, cl, fl, st, tr 等辅音连缀",
+    "lessonIds": []
+  },
+  {
+    "id": "unit_long_vowel_1",
+    "title": "Magic E",
+    "levelId": "lvl_long_vowel_ocean",
+    "order": 1,
+    "objectives": "学习 a_e, i_e, o_e, u_e 规则",
+    "lessonIds": []
+  },
+  {
+    "id": "unit_long_vowel_2",
+    "title": "长元音组合",
+    "levelId": "lvl_long_vowel_ocean",
+    "order": 2,
+    "objectives": "学习 ee, ea, ai, ay, oa 组合",
+    "lessonIds": []
+  },
+  {
+    "id": "unit_vowel_combo_1",
+    "title": "R 控制元音",
+    "levelId": "lvl_vowel_combo_valley",
+    "order": 1,
+    "objectives": "学习 ar, er, ir, or, ur 发音",
+    "lessonIds": []
+  },
+  {
+    "id": "unit_vowel_combo_2",
+    "title": "双元音",
+    "levelId": "lvl_vowel_combo_valley",
+    "order": 2,
+    "objectives": "学习 oo, ou, ow, oi, oy 发音",
+    "lessonIds": []
+  },
+  {
+    "id": "unit_reading_1",
+    "title": "基础阅读（一）",
+    "levelId": "lvl_reading_planet",
+    "order": 1,
+    "objectives": "阅读 CVC 词汇可解码短文",
+    "lessonIds": []
+  },
+  {
+    "id": "unit_reading_2",
+    "title": "基础阅读（二）",
+    "levelId": "lvl_reading_planet",
+    "order": 2,
+    "objectives": "阅读包含组合音的可解码短文",
+    "lessonIds": []
+  }
+]
