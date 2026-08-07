@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "学习课程",
+  "usingComponents": {
+    "progress-bar": "/components/progress-bar/progress-bar",
+    "empty-state": "/components/empty-state/empty-state",
+    "phoneme-intro": "/components/lesson-steps/phoneme-intro/phoneme-intro",
+    "audio-choice": "/components/lesson-steps/audio-choice/audio-choice",
+    "blend-builder": "/components/lesson-steps/blend-builder/blend-builder",
+    "sound-segmenter": "/components/lesson-steps/sound-segmenter/sound-segmenter",
+    "pronunciation-practice": "/components/lesson-steps/pronunciation-practice/pronunciation-practice",
+    "game-step": "/components/lesson-steps/game-step/game-step",
+    "decodable-reader": "/components/lesson-steps/decodable-reader/decodable-reader",
+    "lesson-reward": "/components/lesson-steps/lesson-reward/lesson-reward"
+  }
+}
