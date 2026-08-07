@@ -1,0 +1,2154 @@
+{
+  "S001": {
+    "id": "S001",
+    "title": "字母音 S",
+    "type": "main",
+    "order": 1,
+    "objectives": "认识字母S，掌握常见发音 /s/，能辨别单词开头的 /s/",
+    "targetPhonemeIds": ["ph_s"],
+    "targetWordIds": ["w_sat", "w_sit", "w_sap"],
+    "prerequisiteLessonIds": [],
+    "estimatedTime": 12,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S001_s1",
+        "type": "phoneme_intro",
+        "order": 1,
+        "title": "认识字母 S",
+        "instruction": "认识字母 S 的发音 /s/",
+        "content": {
+          "phonemeId": "ph_s",
+          "showLetterName": true,
+          "showMouthTip": true,
+          "showExampleWords": true,
+          "autoPlayAudio": true
+        },
+        "completionRule": "至少播放一次发音并点击确认"
+      },
+      {
+        "id": "S001_s2",
+        "type": "audio_choice",
+        "order": 2,
+        "title": "听音辩 S",
+        "instruction": "听一听，选出正确的字母",
+        "content": {
+          "questions": [
+            {
+              "id": "S001_s2_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_s",
+              "playText": null,
+              "prompt": "听一听，这是哪个字母的声音？",
+              "options": ["s", "a", "p"],
+              "correctAnswer": "s",
+              "difficulty": 1,
+              "feedbackCorrect": "太棒了！这就是 /s/ 的声音！",
+              "feedbackIncorrect": "再听一次，注意听嘶嘶的声音。"
+            },
+            {
+              "id": "S001_s2_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_s",
+              "playText": null,
+              "prompt": "再听一次，哪个字母发这个音？",
+              "options": ["t", "s", "i"],
+              "correctAnswer": "s",
+              "difficulty": 1,
+              "feedbackCorrect": "很好！你记住 S 的发音了！",
+              "feedbackIncorrect": "注意 /s/ 像蛇发出的嘶嘶声。"
+            },
+            {
+              "id": "S001_s2_q3",
+              "type": "word_initial_sound",
+              "playWordId": "w_sat",
+              "playText": null,
+              "prompt": "听单词 'sat'，开头的音是哪个字母发的？",
+              "options": ["s", "a", "t"],
+              "correctAnswer": "s",
+              "difficulty": 2,
+              "feedbackCorrect": "没错！sat 开头就是 /s/！",
+              "feedbackIncorrect": "sat 的开头是 /s/，试试再说一遍。"
+            }
+          ]
+        },
+        "completionRule": "回答至少2题正确"
+      },
+      {
+        "id": "S001_s3",
+        "type": "blend_word",
+        "order": 3,
+        "title": "拼读 sat",
+        "instruction": "跟我一起拼读单词 sat",
+        "content": {
+          "wordId": "w_sat",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "slow",
+          "showAnimation": true
+        },
+        "completionRule": "完整跟读拼读过程"
+      },
+      {
+        "id": "S001_s4",
+        "type": "segment_word",
+        "order": 4,
+        "title": "拆分 sat",
+        "instruction": "把 sat 拆分成单独的音素",
+        "content": {
+          "wordId": "w_sat",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "S001_s5",
+        "type": "pronunciation",
+        "order": 5,
+        "title": "朗读 sat",
+        "instruction": "大声朗读单词 sat",
+        "content": {
+          "wordId": "w_sat",
+          "showGuide": true,
+          "recordAudio": true,
+          "showWaveform": true,
+          "provideModelAudio": true,
+          "scoringEnabled": true
+        },
+        "completionRule": "完成录音并获得评分"
+      },
+      {
+        "id": "S001_s6",
+        "type": "mini_game",
+        "order": 6,
+        "title": "打地鼠",
+        "instruction": "听到 /s/ 发音时，点击标有 S 的地鼠！",
+        "content": {
+          "gameType": "whack_mole",
+          "rounds": 3,
+          "config": {
+            "phonemeIds": ["ph_s", "ph_a"],
+            "distractorPhonemeIds": ["ph_a"],
+            "moleCount": 5,
+            "durationPerRound": 30,
+            "targetPhonemeId": "ph_s",
+            "showPhonemeLetter": true,
+            "playAudioOnAppear": true
+          }
+        },
+        "completionRule": "3轮中每轮至少打中1只目标地鼠"
+      },
+      {
+        "id": "S001_s7",
+        "type": "decodable_reading",
+        "order": 7,
+        "title": "阅读小故事",
+        "instruction": "阅读解码小故事 Sat and Sit",
+        "content": {
+          "readerId": "dr_sat_sit",
+          "showHighlight": true,
+          "allowAudio": true,
+          "showComprehension": true,
+          "highlightTargetWords": true,
+          "readAloudMode": true
+        },
+        "completionRule": "完成阅读并答对理解题"
+      },
+      {
+        "id": "S001_s8",
+        "type": "lesson_reward",
+        "order": 8,
+        "title": "课程完成",
+        "instruction": "恭喜完成本课！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "你学会了字母 S 的发音 /s/！快去看看下一个字母吧！",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "S002"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "S002": {
+    "id": "S002",
+    "title": "字母音 A",
+    "type": "main",
+    "order": 2,
+    "objectives": "认识字母A，掌握短元音发音 /æ/，能在单词中辨别 /æ/",
+    "targetPhonemeIds": ["ph_a"],
+    "targetWordIds": ["w_at", "w_as", "w_sat", "w_pat", "w_tap"],
+    "prerequisiteLessonIds": ["S001"],
+    "estimatedTime": 12,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S002_s1",
+        "type": "phoneme_intro",
+        "order": 1,
+        "title": "认识字母 A",
+        "instruction": "认识字母 A 的短元音发音 /æ/",
+        "content": {
+          "phonemeId": "ph_a",
+          "showLetterName": true,
+          "showMouthTip": true,
+          "showExampleWords": true,
+          "autoPlayAudio": true
+        },
+        "completionRule": "至少播放一次发音并点击确认"
+      },
+      {
+        "id": "S002_s2",
+        "type": "audio_choice",
+        "order": 2,
+        "title": "听音辩 A",
+        "instruction": "听一听，选出正确的字母",
+        "content": {
+          "questions": [
+            {
+              "id": "S002_s2_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_a",
+              "playText": null,
+              "prompt": "听一听，这是哪个字母的声音？",
+              "options": ["s", "a", "t"],
+              "correctAnswer": "a",
+              "difficulty": 1,
+              "feedbackCorrect": "对了！这就是短元音 /æ/！",
+              "feedbackIncorrect": "嘴巴张大，像医生检查时那样。"
+            },
+            {
+              "id": "S002_s2_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_a",
+              "playText": null,
+              "prompt": "再听一次，这是哪个字母？",
+              "options": ["i", "a", "p"],
+              "correctAnswer": "a",
+              "difficulty": 1,
+              "feedbackCorrect": "很好！你记住了 A 的发音！",
+              "feedbackIncorrect": "短元音 /æ/ 嘴巴要张大。"
+            },
+            {
+              "id": "S002_s2_q3",
+              "type": "word_middle_sound",
+              "playWordId": "w_sat",
+              "playText": null,
+              "prompt": "听单词 'sat'，中间的发音 /æ/ 是哪个字母？",
+              "options": ["s", "a", "t"],
+              "correctAnswer": "a",
+              "difficulty": 2,
+              "feedbackCorrect": "没错！sat 的中间就是 a！",
+              "feedbackIncorrect": "sat 是 s-a-t，中间是 a。"
+            }
+          ]
+        },
+        "completionRule": "回答至少2题正确"
+      },
+      {
+        "id": "S002_s3",
+        "type": "blend_word",
+        "order": 3,
+        "title": "拼读 at",
+        "instruction": "跟我一起拼读单词 at",
+        "content": {
+          "wordId": "w_at",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "slow",
+          "showAnimation": true
+        },
+        "completionRule": "完整跟读拼读过程"
+      },
+      {
+        "id": "S002_s4",
+        "type": "segment_word",
+        "order": 4,
+        "title": "拆分 tap",
+        "instruction": "把 tap 拆分成 t-a-p 三个音素",
+        "content": {
+          "wordId": "w_tap",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "S002_s5",
+        "type": "pronunciation",
+        "order": 5,
+        "title": "朗读 sat",
+        "instruction": "大声朗读单词 sat",
+        "content": {
+          "wordId": "w_sat",
+          "showGuide": true,
+          "recordAudio": true,
+          "showWaveform": true,
+          "provideModelAudio": true,
+          "scoringEnabled": true
+        },
+        "completionRule": "完成录音并获得评分"
+      },
+      {
+        "id": "S002_s6",
+        "type": "mini_game",
+        "order": 6,
+        "title": "打地鼠",
+        "instruction": "听到 /æ/ 发音时，点击标有 A 的地鼠！",
+        "content": {
+          "gameType": "whack_mole",
+          "rounds": 3,
+          "config": {
+            "phonemeIds": ["ph_s", "ph_a", "ph_t"],
+            "distractorPhonemeIds": ["ph_s", "ph_t"],
+            "moleCount": 5,
+            "durationPerRound": 30,
+            "targetPhonemeId": "ph_a",
+            "showPhonemeLetter": true,
+            "playAudioOnAppear": true
+          }
+        },
+        "completionRule": "3轮中每轮至少打中1只目标地鼠"
+      },
+      {
+        "id": "S002_s7",
+        "type": "lesson_reward",
+        "order": 7,
+        "title": "课程完成",
+        "instruction": "恭喜完成本课！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "你学会了字母 A 的短元音发音 /æ/！s-a-t 拼起来就是 sat！",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "S003"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "S003": {
+    "id": "S003",
+    "title": "字母音 T",
+    "type": "main",
+    "order": 3,
+    "objectives": "认识字母T，掌握发音 /t/，能辨别单词中 /t/ 的位置",
+    "targetPhonemeIds": ["ph_t"],
+    "targetWordIds": ["w_tap", "w_tip", "w_pat", "w_pit", "w_sat", "w_sit"],
+    "prerequisiteLessonIds": ["S002"],
+    "estimatedTime": 12,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S003_s1",
+        "type": "phoneme_intro",
+        "order": 1,
+        "title": "认识字母 T",
+        "instruction": "认识字母 T 的发音 /t/",
+        "content": {
+          "phonemeId": "ph_t",
+          "showLetterName": true,
+          "showMouthTip": true,
+          "showExampleWords": true,
+          "autoPlayAudio": true
+        },
+        "completionRule": "至少播放一次发音并点击确认"
+      },
+      {
+        "id": "S003_s2",
+        "type": "audio_choice",
+        "order": 2,
+        "title": "听音辩 T",
+        "instruction": "听一听，选出正确的字母",
+        "content": {
+          "questions": [
+            {
+              "id": "S003_s2_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_t",
+              "playText": null,
+              "prompt": "听一听，这是哪个字母的声音？",
+              "options": ["s", "a", "t"],
+              "correctAnswer": "t",
+              "difficulty": 1,
+              "feedbackCorrect": "对！这就是爆破音 /t/！",
+              "feedbackIncorrect": "舌尖顶住上齿龈，突然松开。"
+            },
+            {
+              "id": "S003_s2_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_t",
+              "playText": null,
+              "prompt": "哪个字母发这个清脆的声音？",
+              "options": ["p", "t", "i"],
+              "correctAnswer": "t",
+              "difficulty": 1,
+              "feedbackCorrect": "很好！你分辨出 /t/ 了！",
+              "feedbackIncorrect": "像轻微的爆破声。"
+            },
+            {
+              "id": "S003_s2_q3",
+              "type": "word_final_sound",
+              "playWordId": "w_pat",
+              "playText": null,
+              "prompt": "听单词 'pat'，结尾的音 /t/ 是哪个字母？",
+              "options": ["p", "a", "t"],
+              "correctAnswer": "t",
+              "difficulty": 2,
+              "feedbackCorrect": "没错！pat 结尾是 t！",
+              "feedbackIncorrect": "pat 是 p-a-t，结尾是 t。"
+            }
+          ]
+        },
+        "completionRule": "回答至少2题正确"
+      },
+      {
+        "id": "S003_s3",
+        "type": "blend_word",
+        "order": 3,
+        "title": "拼读 tap",
+        "instruction": "跟我一起拼读 tap：t-a-p",
+        "content": {
+          "wordId": "w_tap",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "slow",
+          "showAnimation": true
+        },
+        "completionRule": "完整跟读拼读过程"
+      },
+      {
+        "id": "S003_s4",
+        "type": "segment_word",
+        "order": 4,
+        "title": "拆分 pat",
+        "instruction": "把 pat 拆分成 p-a-t 三个音素",
+        "content": {
+          "wordId": "w_pat",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "S003_s5",
+        "type": "pronunciation",
+        "order": 5,
+        "title": "朗读 pat",
+        "instruction": "大声朗读 pat，注意结尾的 /t/",
+        "content": {
+          "wordId": "w_pat",
+          "showGuide": true,
+          "recordAudio": true,
+          "showWaveform": true,
+          "provideModelAudio": true,
+          "scoringEnabled": true
+        },
+        "completionRule": "完成录音并获得评分"
+      },
+      {
+        "id": "S003_s6",
+        "type": "mini_game",
+        "order": 6,
+        "title": "打地鼠",
+        "instruction": "听到 /t/ 发音时，点击标有 T 的地鼠！",
+        "content": {
+          "gameType": "whack_mole",
+          "rounds": 3,
+          "config": {
+            "phonemeIds": ["ph_s", "ph_a", "ph_t", "ph_p"],
+            "distractorPhonemeIds": ["ph_s", "ph_a", "ph_p"],
+            "moleCount": 6,
+            "durationPerRound": 30,
+            "targetPhonemeId": "ph_t",
+            "showPhonemeLetter": true,
+            "playAudioOnAppear": true
+          }
+        },
+        "completionRule": "3轮中每轮至少打中1只目标地鼠"
+      },
+      {
+        "id": "S003_s7",
+        "type": "lesson_reward",
+        "order": 7,
+        "title": "课程完成",
+        "instruction": "恭喜完成本课！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "你学会了字母 T 的发音 /t/！现在你已经认识 s, a, t 三个字母啦！",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "S004"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "S004": {
+    "id": "S004",
+    "title": "S+A+T 拼读",
+    "type": "main",
+    "order": 4,
+    "objectives": "综合运用 s/a/t 三个字母音，拼读 CVC 单词 sat, pat, tap, at",
+    "targetPhonemeIds": ["ph_s", "ph_a", "ph_t"],
+    "targetWordIds": ["w_sat", "w_pat", "w_tap", "w_at"],
+    "prerequisiteLessonIds": ["S003"],
+    "estimatedTime": 10,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S004_s1",
+        "type": "blend_word",
+        "order": 1,
+        "title": "拼读 sat",
+        "instruction": "用 s-a-t 拼读出 sat",
+        "content": {
+          "wordId": "w_sat",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "normal",
+          "showAnimation": true
+        },
+        "completionRule": "完整跟读拼读过程"
+      },
+      {
+        "id": "S004_s2",
+        "type": "segment_word",
+        "order": 2,
+        "title": "拆分 tap",
+        "instruction": "听 tap 的发音，把它拆分成音素",
+        "content": {
+          "wordId": "w_tap",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "S004_s3",
+        "type": "audio_choice",
+        "order": 3,
+        "title": "综合听力辨析",
+        "instruction": "听音选择正确的字母或单词",
+        "content": {
+          "questions": [
+            {
+              "id": "S004_s3_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_s",
+              "playText": null,
+              "prompt": "听一听，这是哪个字母？",
+              "options": ["s", "a", "t"],
+              "correctAnswer": "s",
+              "difficulty": 1,
+              "feedbackCorrect": "对！嘶嘶声是 /s/！",
+              "feedbackIncorrect": "听嘶嘶声的就是 s。"
+            },
+            {
+              "id": "S004_s3_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_a",
+              "playText": null,
+              "prompt": "哪个字母发这个音？",
+              "options": ["t", "a", "s"],
+              "correctAnswer": "a",
+              "difficulty": 1,
+              "feedbackCorrect": "没错！张大嘴是 a！",
+              "feedbackIncorrect": "张嘴 /æ/ 是 a。"
+            },
+            {
+              "id": "S004_s3_q3",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_t",
+              "playText": null,
+              "prompt": "这个清脆的音是哪个字母？",
+              "options": ["a", "s", "t"],
+              "correctAnswer": "t",
+              "difficulty": 1,
+              "feedbackCorrect": "很好！爆破音是 t！",
+              "feedbackIncorrect": "舌尖爆破是 /t/。"
+            },
+            {
+              "id": "S004_s3_q4",
+              "type": "blend_to_word",
+              "playText": null,
+              "phonemeSequence": ["ph_s", "ph_a", "ph_t"],
+              "prompt": "s-a-t 拼起来是什么单词？",
+              "options": ["sat", "pat", "tap"],
+              "correctAnswer": "sat",
+              "difficulty": 2,
+              "feedbackCorrect": "太棒了！s-a-t 就是 sat！",
+              "feedbackIncorrect": "s-a-t 连起来读是 sat。"
+            }
+          ]
+        },
+        "completionRule": "回答至少3题正确"
+      },
+      {
+        "id": "S004_s4",
+        "type": "pronunciation",
+        "order": 4,
+        "title": "朗读 pat",
+        "instruction": "大声朗读 pat，试试自己能拼吗",
+        "content": {
+          "wordId": "w_pat",
+          "showGuide": true,
+          "recordAudio": true,
+          "showWaveform": true,
+          "provideModelAudio": true,
+          "scoringEnabled": true
+        },
+        "completionRule": "完成录音并获得评分"
+      },
+      {
+        "id": "S004_s5",
+        "type": "mini_game",
+        "order": 5,
+        "title": "打地鼠",
+        "instruction": "练习辨音，听到发音点击正确的地鼠",
+        "content": {
+          "gameType": "whack_mole",
+          "rounds": 3,
+          "config": {
+            "phonemeIds": ["ph_s", "ph_a", "ph_t"],
+            "distractorPhonemeIds": [],
+            "moleCount": 4,
+            "durationPerRound": 30,
+            "targetPhonemeId": null,
+            "showPhonemeLetter": true,
+            "playAudioOnAppear": true,
+            "randomTarget": true
+          }
+        },
+        "completionRule": "3轮每轮至少答对2题"
+      },
+      {
+        "id": "S004_s6",
+        "type": "lesson_reward",
+        "order": 6,
+        "title": "课程完成",
+        "instruction": "恭喜完成本课！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "你已经会用 s, a, t 拼读单词了！sat, pat, tap 都能读出来，太厉害了！",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "S005"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "S005": {
+    "id": "S005",
+    "title": "字母音 P",
+    "type": "main",
+    "order": 5,
+    "objectives": "认识字母P，掌握发音 /p/，能在单词中辨别 /p/",
+    "targetPhonemeIds": ["ph_p"],
+    "targetWordIds": ["w_pat", "w_pit", "w_tap", "w_tip", "w_sap", "w_sip"],
+    "prerequisiteLessonIds": ["S004"],
+    "estimatedTime": 12,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S005_s1",
+        "type": "phoneme_intro",
+        "order": 1,
+        "title": "认识字母 P",
+        "instruction": "认识字母 P 的发音 /p/",
+        "content": {
+          "phonemeId": "ph_p",
+          "showLetterName": true,
+          "showMouthTip": true,
+          "showExampleWords": true,
+          "autoPlayAudio": true
+        },
+        "completionRule": "至少播放一次发音并点击确认"
+      },
+      {
+        "id": "S005_s2",
+        "type": "audio_choice",
+        "order": 2,
+        "title": "听音辩 P",
+        "instruction": "听一听，选出正确的字母",
+        "content": {
+          "questions": [
+            {
+              "id": "S005_s2_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_p",
+              "playText": null,
+              "prompt": "听一听，这是哪个字母的声音？",
+              "options": ["t", "p", "s"],
+              "correctAnswer": "p",
+              "difficulty": 1,
+              "feedbackCorrect": "对！双唇爆破音 /p/！",
+              "feedbackIncorrect": "闭紧嘴唇，突然张开。"
+            },
+            {
+              "id": "S005_s2_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_p",
+              "playText": null,
+              "prompt": "哪个字母发这个爆破音？",
+              "options": ["a", "p", "i"],
+              "correctAnswer": "p",
+              "difficulty": 1,
+              "feedbackCorrect": "很好！你记住 /p/ 了！",
+              "feedbackIncorrect": "/p/ 像气球爆掉的声音。"
+            },
+            {
+              "id": "S005_s2_q3",
+              "type": "word_initial_sound",
+              "playWordId": "w_pat",
+              "playText": null,
+              "prompt": "听单词 'pat'，开头是哪个字母的声音？",
+              "options": ["s", "p", "t"],
+              "correctAnswer": "p",
+              "difficulty": 2,
+              "feedbackCorrect": "没错！pat 开头就是 /p/！",
+              "feedbackIncorrect": "pat 是 p-a-t，p 开头。"
+            }
+          ]
+        },
+        "completionRule": "回答至少2题正确"
+      },
+      {
+        "id": "S005_s3",
+        "type": "blend_word",
+        "order": 3,
+        "title": "拼读 pat",
+        "instruction": "拼读 pat：p-a-t",
+        "content": {
+          "wordId": "w_pat",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "slow",
+          "showAnimation": true
+        },
+        "completionRule": "完整跟读拼读过程"
+      },
+      {
+        "id": "S005_s4",
+        "type": "segment_word",
+        "order": 4,
+        "title": "拆分 sap",
+        "instruction": "把 sap 拆分成 s-a-p 三个音素",
+        "content": {
+          "wordId": "w_sap",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "S005_s5",
+        "type": "pronunciation",
+        "order": 5,
+        "title": "朗读 tap",
+        "instruction": "大声朗读 tap，注意结尾的 /p/",
+        "content": {
+          "wordId": "w_tap",
+          "showGuide": true,
+          "recordAudio": true,
+          "showWaveform": true,
+          "provideModelAudio": true,
+          "scoringEnabled": true
+        },
+        "completionRule": "完成录音并获得评分"
+      },
+      {
+        "id": "S005_s6",
+        "type": "mini_game",
+        "order": 6,
+        "title": "打地鼠",
+        "instruction": "听到 /p/ 发音时，点击标有 P 的地鼠！",
+        "content": {
+          "gameType": "whack_mole",
+          "rounds": 3,
+          "config": {
+            "phonemeIds": ["ph_s", "ph_a", "ph_t", "ph_p"],
+            "distractorPhonemeIds": ["ph_s", "ph_a", "ph_t"],
+            "moleCount": 6,
+            "durationPerRound": 30,
+            "targetPhonemeId": "ph_p",
+            "showPhonemeLetter": true,
+            "playAudioOnAppear": true
+          }
+        },
+        "completionRule": "3轮中每轮至少打中1只目标地鼠"
+      },
+      {
+        "id": "S005_s7",
+        "type": "lesson_reward",
+        "order": 7,
+        "title": "课程完成",
+        "instruction": "恭喜完成本课！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "你学会了字母 P 的发音 /p/！现在可以用 s, a, t, p 拼出更多单词了！",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "S006"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "S006": {
+    "id": "S006",
+    "title": "字母音 I",
+    "type": "main",
+    "order": 6,
+    "objectives": "认识字母I，掌握短元音发音 /ɪ/，能区分 /æ/ 和 /ɪ/",
+    "targetPhonemeIds": ["ph_i"],
+    "targetWordIds": ["w_sit", "w_pit", "w_tip", "w_sip", "w_it", "w_is"],
+    "prerequisiteLessonIds": ["S005"],
+    "estimatedTime": 12,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S006_s1",
+        "type": "phoneme_intro",
+        "order": 1,
+        "title": "认识字母 I",
+        "instruction": "认识字母 I 的短元音发音 /ɪ/",
+        "content": {
+          "phonemeId": "ph_i",
+          "showLetterName": true,
+          "showMouthTip": true,
+          "showExampleWords": true,
+          "autoPlayAudio": true
+        },
+        "completionRule": "至少播放一次发音并点击确认"
+      },
+      {
+        "id": "S006_s2",
+        "type": "audio_choice",
+        "order": 2,
+        "title": "听音辩 I",
+        "instruction": "听一听，选出正确的字母",
+        "content": {
+          "questions": [
+            {
+              "id": "S006_s2_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_i",
+              "playText": null,
+              "prompt": "听一听，这是哪个字母的声音？",
+              "options": ["a", "i", "p"],
+              "correctAnswer": "i",
+              "difficulty": 1,
+              "feedbackCorrect": "对！这就是短元音 /ɪ/！",
+              "feedbackIncorrect": "嘴巴微微张开，舌面抬高。"
+            },
+            {
+              "id": "S006_s2_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_i",
+              "playText": null,
+              "prompt": "哪个字母发这个短促的音？",
+              "options": ["s", "i", "t"],
+              "correctAnswer": "i",
+              "difficulty": 1,
+              "feedbackCorrect": "很好！你分清 /ɪ/ 了！",
+              "feedbackIncorrect": "比 /æ/ 嘴巴小一点。"
+            },
+            {
+              "id": "S006_s2_q3",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_a",
+              "playText": null,
+              "prompt": "听这个音，是 a 还是 i？",
+              "options": ["a", "i"],
+              "correctAnswer": "a",
+              "difficulty": 2,
+              "feedbackCorrect": "没错！张嘴大的是 a！",
+              "feedbackIncorrect": "嘴巴张大是 /æ/ (a)，轻微张开是 /ɪ/ (i)。"
+            }
+          ]
+        },
+        "completionRule": "回答至少2题正确"
+      },
+      {
+        "id": "S006_s3",
+        "type": "blend_word",
+        "order": 3,
+        "title": "拼读 sit",
+        "instruction": "拼读 sit：s-i-t",
+        "content": {
+          "wordId": "w_sit",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "slow",
+          "showAnimation": true
+        },
+        "completionRule": "完整跟读拼读过程"
+      },
+      {
+        "id": "S006_s4",
+        "type": "segment_word",
+        "order": 4,
+        "title": "拆分 tip",
+        "instruction": "把 tip 拆分成 t-i-p 三个音素",
+        "content": {
+          "wordId": "w_tip",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "S006_s5",
+        "type": "pronunciation",
+        "order": 5,
+        "title": "朗读 pit",
+        "instruction": "大声朗读 pit，注意短元音 /ɪ/",
+        "content": {
+          "wordId": "w_pit",
+          "showGuide": true,
+          "recordAudio": true,
+          "showWaveform": true,
+          "provideModelAudio": true,
+          "scoringEnabled": true
+        },
+        "completionRule": "完成录音并获得评分"
+      },
+      {
+        "id": "S006_s6",
+        "type": "mini_game",
+        "order": 6,
+        "title": "打地鼠",
+        "instruction": "听到 /ɪ/ 发音时，点击标有 I 的地鼠！",
+        "content": {
+          "gameType": "whack_mole",
+          "rounds": 3,
+          "config": {
+            "phonemeIds": ["ph_s", "ph_a", "ph_t", "ph_p", "ph_i"],
+            "distractorPhonemeIds": ["ph_s", "ph_a", "ph_t", "ph_p"],
+            "moleCount": 6,
+            "durationPerRound": 30,
+            "targetPhonemeId": "ph_i",
+            "showPhonemeLetter": true,
+            "playAudioOnAppear": true
+          }
+        },
+        "completionRule": "3轮中每轮至少打中1只目标地鼠"
+      },
+      {
+        "id": "S006_s7",
+        "type": "lesson_reward",
+        "order": 7,
+        "title": "课程完成",
+        "instruction": "恭喜完成本课！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "你学会了字母 I 的短元音发音 /ɪ/！五个字母音全部学完啦！sat 和 sit 的区别你发现了吗？",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "S007"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "S007": {
+    "id": "S007",
+    "title": "短元音 A 拼读",
+    "type": "main",
+    "order": 7,
+    "objectives": "掌握 -at 和 -ap 词族，强化短元音 a 的拼读能力",
+    "targetPhonemeIds": ["ph_a"],
+    "targetWordIds": ["w_sat", "w_pat", "w_tap", "w_sap", "w_at"],
+    "wordFamily": "wf_at",
+    "prerequisiteLessonIds": ["S006"],
+    "estimatedTime": 10,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S007_s1",
+        "type": "phoneme_intro",
+        "order": 1,
+        "title": "复习短元音 A",
+        "instruction": "复习短元音 /æ/，认识 -at 和 -ap 词族",
+        "content": {
+          "phonemeId": "ph_a",
+          "showLetterName": false,
+          "showMouthTip": true,
+          "showExampleWords": true,
+          "autoPlayAudio": true,
+          "focusWordFamily": "wf_at"
+        },
+        "completionRule": "点击确认已复习"
+      },
+      {
+        "id": "S007_s2",
+        "type": "blend_word",
+        "order": 2,
+        "title": "拼读 -at 词族",
+        "instruction": "-at 词族：at, sat, pat，注意它们结尾都一样！",
+        "content": {
+          "wordId": "w_sat",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "normal",
+          "showAnimation": true,
+          "wordFamilyMode": true,
+          "additionalWords": ["w_pat", "w_at"]
+        },
+        "completionRule": "完整跟读所有例词"
+      },
+      {
+        "id": "S007_s3",
+        "type": "segment_word",
+        "order": 3,
+        "title": "拆分 tap",
+        "instruction": "把 tap 拆分成音素，注意中间是 a",
+        "content": {
+          "wordId": "w_tap",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "S007_s4",
+        "type": "audio_choice",
+        "order": 4,
+        "title": "短元音 A 辨析",
+        "instruction": "听单词，辨别是否包含 /æ/ 音",
+        "content": {
+          "questions": [
+            {
+              "id": "S007_s4_q1",
+              "type": "word_has_phoneme",
+              "playWordId": "w_sat",
+              "playText": null,
+              "targetPhonemeId": "ph_a",
+              "prompt": "sat 里有没有 /æ/ 音？",
+              "options": ["有", "没有"],
+              "correctAnswer": "有",
+              "difficulty": 1,
+              "feedbackCorrect": "对！sat 中间就是 /æ/！",
+              "feedbackIncorrect": "sat = s-a-t，中间有 a。"
+            },
+            {
+              "id": "S007_s4_q2",
+              "type": "word_has_phoneme",
+              "playWordId": "w_sit",
+              "playText": null,
+              "targetPhonemeId": "ph_a",
+              "prompt": "sit 里有没有 /æ/ 音？",
+              "options": ["有", "没有"],
+              "correctAnswer": "没有",
+              "difficulty": 1,
+              "feedbackCorrect": "没错！sit 中间是 /ɪ/ 不是 /æ/！",
+              "feedbackIncorrect": "sit = s-i-t，中间是 i 不是 a。"
+            },
+            {
+              "id": "S007_s4_q3",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_a",
+              "playText": null,
+              "prompt": "短元音 /æ/ 是哪个字母？",
+              "options": ["a", "i", "e"],
+              "correctAnswer": "a",
+              "difficulty": 1,
+              "feedbackCorrect": "对！/æ/ 就是字母 a！",
+              "feedbackIncorrect": "张嘴发音 /æ/ 对应字母 a。"
+            },
+            {
+              "id": "S007_s4_q4",
+              "type": "word_middle_sound",
+              "playWordId": "w_tap",
+              "playText": null,
+              "prompt": "tap 中间的音是哪个字母？",
+              "options": ["t", "a", "p"],
+              "correctAnswer": "a",
+              "difficulty": 1,
+              "feedbackCorrect": "对！tap 中间是 a。",
+              "feedbackIncorrect": "tap = t-a-p，中间是 a。"
+            }
+          ]
+        },
+        "completionRule": "回答至少3题正确"
+      },
+      {
+        "id": "S007_s5",
+        "type": "mini_game",
+        "order": 5,
+        "title": "单词钓鱼",
+        "instruction": "钓出包含短元音 a 的单词鱼！",
+        "content": {
+          "gameType": "word_fishing",
+          "rounds": 1,
+          "config": {
+            "wordIds": ["w_sat", "w_pat", "w_tap", "w_sap", "w_at", "w_sit", "w_pit", "w_tip"],
+            "targetRule": "contain_phoneme",
+            "targetPhonemeId": "ph_a",
+            "fishCount": 8,
+            "durationSeconds": 60,
+            "showWordText": true,
+            "highlightTarget": true
+          }
+        },
+        "completionRule": "至少钓到3条正确的鱼"
+      },
+      {
+        "id": "S007_s6",
+        "type": "lesson_reward",
+        "order": 6,
+        "title": "课程完成",
+        "instruction": "恭喜完成本课！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "你掌握了短元音 a 的拼读！-at 和 -ap 词族的单词你都能读了！",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "S008"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "S008": {
+    "id": "S008",
+    "title": "短元音 I 拼读",
+    "type": "main",
+    "order": 8,
+    "objectives": "掌握 -it 和 -ip 词族，强化短元音 i 的拼读能力",
+    "targetPhonemeIds": ["ph_i"],
+    "targetWordIds": ["w_sit", "w_pit", "w_tip", "w_sip", "w_it"],
+    "wordFamily": "wf_it",
+    "prerequisiteLessonIds": ["S007"],
+    "estimatedTime": 10,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S008_s1",
+        "type": "phoneme_intro",
+        "order": 1,
+        "title": "复习短元音 I",
+        "instruction": "复习短元音 /ɪ/，认识 -it 和 -ip 词族",
+        "content": {
+          "phonemeId": "ph_i",
+          "showLetterName": false,
+          "showMouthTip": true,
+          "showExampleWords": true,
+          "autoPlayAudio": true,
+          "focusWordFamily": "wf_it"
+        },
+        "completionRule": "点击确认已复习"
+      },
+      {
+        "id": "S008_s2",
+        "type": "blend_word",
+        "order": 2,
+        "title": "拼读 -it 词族",
+        "instruction": "-it 词族：it, sit, pit，结尾都是 -it！",
+        "content": {
+          "wordId": "w_sit",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "normal",
+          "showAnimation": true,
+          "wordFamilyMode": true,
+          "additionalWords": ["w_pit", "w_it"]
+        },
+        "completionRule": "完整跟读所有例词"
+      },
+      {
+        "id": "S008_s3",
+        "type": "segment_word",
+        "order": 3,
+        "title": "拆分 sip",
+        "instruction": "把 sip 拆分成 s-i-p，注意中间是 i",
+        "content": {
+          "wordId": "w_sip",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "S008_s4",
+        "type": "audio_choice",
+        "order": 4,
+        "title": "短元音 I 辨析",
+        "instruction": "听单词，辨别是否包含 /ɪ/ 音",
+        "content": {
+          "questions": [
+            {
+              "id": "S008_s4_q1",
+              "type": "word_has_phoneme",
+              "playWordId": "w_sit",
+              "playText": null,
+              "targetPhonemeId": "ph_i",
+              "prompt": "sit 里有没有 /ɪ/ 音？",
+              "options": ["有", "没有"],
+              "correctAnswer": "有",
+              "difficulty": 1,
+              "feedbackCorrect": "对！sit 中间就是 /ɪ/！",
+              "feedbackIncorrect": "sit = s-i-t，中间有 i。"
+            },
+            {
+              "id": "S008_s4_q2",
+              "type": "word_has_phoneme",
+              "playWordId": "w_sat",
+              "playText": null,
+              "targetPhonemeId": "ph_i",
+              "prompt": "sat 里有没有 /ɪ/ 音？",
+              "options": ["有", "没有"],
+              "correctAnswer": "没有",
+              "difficulty": 1,
+              "feedbackCorrect": "没错！sat 中间是 /æ/ 不是 /ɪ/！",
+              "feedbackIncorrect": "sat = s-a-t，中间是 a 不是 i。"
+            },
+            {
+              "id": "S008_s4_q3",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_i",
+              "playText": null,
+              "prompt": "短元音 /ɪ/ 是哪个字母？",
+              "options": ["a", "i", "e"],
+              "correctAnswer": "i",
+              "difficulty": 1,
+              "feedbackCorrect": "对！/ɪ/ 就是字母 i！",
+              "feedbackIncorrect": "短促 /ɪ/ 对应字母 i。"
+            },
+            {
+              "id": "S008_s4_q4",
+              "type": "word_middle_sound",
+              "playWordId": "w_tip",
+              "playText": null,
+              "prompt": "tip 中间的音是哪个字母？",
+              "options": ["t", "i", "p"],
+              "correctAnswer": "i",
+              "difficulty": 1,
+              "feedbackCorrect": "对！tip 中间是 i。",
+              "feedbackIncorrect": "tip = t-i-p，中间是 i。"
+            }
+          ]
+        },
+        "completionRule": "回答至少3题正确"
+      },
+      {
+        "id": "S008_s5",
+        "type": "mini_game",
+        "order": 5,
+        "title": "单词钓鱼",
+        "instruction": "钓出包含短元音 i 的单词鱼！",
+        "content": {
+          "gameType": "word_fishing",
+          "rounds": 1,
+          "config": {
+            "wordIds": ["w_sit", "w_pit", "w_tip", "w_sip", "w_it", "w_sat", "w_pat", "w_tap"],
+            "targetRule": "contain_phoneme",
+            "targetPhonemeId": "ph_i",
+            "fishCount": 8,
+            "durationSeconds": 60,
+            "showWordText": true,
+            "highlightTarget": true
+          }
+        },
+        "completionRule": "至少钓到3条正确的鱼"
+      },
+      {
+        "id": "S008_s6",
+        "type": "lesson_reward",
+        "order": 6,
+        "title": "课程完成",
+        "instruction": "恭喜完成本课！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "你掌握了短元音 i 的拼读！-it 和 -ip 词族的单词你都能读了！sat 和 sit 你分清了吗？",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "S009"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "S009": {
+    "id": "S009",
+    "title": "SATPI 综合拼读",
+    "type": "main",
+    "order": 9,
+    "objectives": "综合运用 s/a/t/p/i 五个字母音，快速拼读各类 CVC 单词",
+    "targetPhonemeIds": ["ph_s", "ph_a", "ph_t", "ph_p", "ph_i"],
+    "targetWordIds": ["w_sat", "w_sit", "w_tap", "w_tip", "w_pat", "w_pit", "w_sap", "w_sip"],
+    "prerequisiteLessonIds": ["S008"],
+    "estimatedTime": 10,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S009_s1",
+        "type": "audio_choice",
+        "order": 1,
+        "title": "综合听力挑战",
+        "instruction": "听音选出正确的字母或单词",
+        "content": {
+          "questions": [
+            {
+              "id": "S009_s1_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_s",
+              "playText": null,
+              "prompt": "这是哪个字母？",
+              "options": ["s", "p", "t"],
+              "correctAnswer": "s",
+              "difficulty": 1,
+              "feedbackCorrect": "对！",
+              "feedbackIncorrect": "嘶嘶声是 s。"
+            },
+            {
+              "id": "S009_s1_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_a",
+              "playText": null,
+              "prompt": "这是哪个字母？",
+              "options": ["i", "a", "o"],
+              "correctAnswer": "a",
+              "difficulty": 1,
+              "feedbackCorrect": "对！",
+              "feedbackIncorrect": "张大嘴是 a。"
+            },
+            {
+              "id": "S009_s1_q3",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_t",
+              "playText": null,
+              "prompt": "这是哪个字母？",
+              "options": ["p", "t", "k"],
+              "correctAnswer": "t",
+              "difficulty": 1,
+              "feedbackCorrect": "对！",
+              "feedbackIncorrect": "舌尖爆破是 t。"
+            },
+            {
+              "id": "S009_s1_q4",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_p",
+              "playText": null,
+              "prompt": "这是哪个字母？",
+              "options": ["b", "d", "p"],
+              "correctAnswer": "p",
+              "difficulty": 1,
+              "feedbackCorrect": "对！",
+              "feedbackIncorrect": "双唇爆破是 p。"
+            },
+            {
+              "id": "S009_s1_q5",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_i",
+              "playText": null,
+              "prompt": "这是哪个字母？",
+              "options": ["a", "i", "e"],
+              "correctAnswer": "i",
+              "difficulty": 1,
+              "feedbackCorrect": "对！",
+              "feedbackIncorrect": "短促 /ɪ/ 是 i。"
+            }
+          ]
+        },
+        "completionRule": "回答至少4题正确"
+      },
+      {
+        "id": "S009_s2",
+        "type": "blend_word",
+        "order": 2,
+        "title": "快速拼读",
+        "instruction": "快速拼读这些单词",
+        "content": {
+          "wordId": "w_sat",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "normal",
+          "showAnimation": true,
+          "additionalWords": ["w_sit", "w_tap", "w_tip"]
+        },
+        "completionRule": "完整跟读所有单词"
+      },
+      {
+        "id": "S009_s3",
+        "type": "segment_word",
+        "order": 3,
+        "title": "快速拆分",
+        "instruction": "听单词，快速拆分成音素",
+        "content": {
+          "wordId": "w_spat",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true,
+          "timed": true,
+          "timeLimitSeconds": 30
+        },
+        "completionRule": "在时间内正确拆分"
+      },
+      {
+        "id": "S009_s4",
+        "type": "pronunciation",
+        "order": 4,
+        "title": "综合朗读",
+        "instruction": "大声朗读 sat 和 sit，你能分清吗？",
+        "content": {
+          "wordId": "w_sat",
+          "showGuide": true,
+          "recordAudio": true,
+          "showWaveform": true,
+          "provideModelAudio": true,
+          "scoringEnabled": true,
+          "additionalWords": ["w_sit"]
+        },
+        "completionRule": "完成录音并获得评分"
+      },
+      {
+        "id": "S009_s5",
+        "type": "lesson_reward",
+        "order": 5,
+        "title": "课程完成",
+        "instruction": "恭喜完成本课！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "太厉害了！你已经能熟练运用 s, a, t, p, i 五个字母音拼读单词了！",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "S010"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "S010": {
+    "id": "S010",
+    "title": "单元阅读",
+    "type": "main",
+    "order": 10,
+    "objectives": "运用所学拼读能力，阅读解码小故事，体验独立阅读的成就感",
+    "targetPhonemeIds": [],
+    "targetWordIds": ["w_sat", "w_sit", "w_tap", "w_pat", "w_it", "w_at"],
+    "prerequisiteLessonIds": ["S009"],
+    "estimatedTime": 10,
+    "rewardStars": 3,
+    "energyReward": 10,
+    "steps": [
+      {
+        "id": "S010_s1",
+        "type": "decodable_reading",
+        "order": 1,
+        "title": "阅读 Sat and Sit",
+        "instruction": "自己读一读这个小故事吧！",
+        "content": {
+          "readerId": "dr_sat_sit",
+          "showHighlight": true,
+          "allowAudio": true,
+          "showComprehension": true,
+          "highlightTargetWords": true,
+          "readAloudMode": true,
+          "encourageSelfRead": true
+        },
+        "completionRule": "完成阅读并答对理解题"
+      },
+      {
+        "id": "S010_s2",
+        "type": "decodable_reading",
+        "order": 2,
+        "title": "阅读 Tap and Pat",
+        "instruction": "再来读一个故事，这次更快了！",
+        "content": {
+          "readerId": "dr_tap_pat",
+          "showHighlight": true,
+          "allowAudio": true,
+          "showComprehension": true,
+          "highlightTargetWords": true,
+          "readAloudMode": true,
+          "encourageSelfRead": true
+        },
+        "completionRule": "完成阅读并答对理解题"
+      },
+      {
+        "id": "S010_s3",
+        "type": "pronunciation",
+        "order": 3,
+        "title": "朗读练习",
+        "instruction": "大声朗读 sat，展示你的拼读能力！",
+        "content": {
+          "wordId": "w_sat",
+          "showGuide": true,
+          "recordAudio": true,
+          "showWaveform": true,
+          "provideModelAudio": false,
+          "scoringEnabled": true
+        },
+        "completionRule": "完成录音并获得评分"
+      },
+      {
+        "id": "S010_s4",
+        "type": "lesson_reward",
+        "order": 4,
+        "title": "课程完成",
+        "instruction": "恭喜完成全部主课程！",
+        "content": {
+          "stars": 3,
+          "energyReward": 10,
+          "message": "你太棒了！不仅能拼读单词，还能自己读小故事了！接下来做一些复习和测试吧！",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "R001"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "R001": {
+    "id": "R001",
+    "title": "第一次复习 (S/A/T)",
+    "type": "review",
+    "order": 11,
+    "objectives": "复习巩固 s/a/t 三个字母音及对应的 CVC 拼读",
+    "targetPhonemeIds": ["ph_s", "ph_a", "ph_t"],
+    "targetWordIds": ["w_sat", "w_sit", "w_tap", "w_pat"],
+    "prerequisiteLessonIds": ["S010"],
+    "estimatedTime": 8,
+    "rewardStars": 3,
+    "energyReward": 8,
+    "steps": [
+      {
+        "id": "R001_s1",
+        "type": "audio_choice",
+        "order": 1,
+        "title": "复习听力",
+        "instruction": "听音选字母，看看你还记得吗？",
+        "content": {
+          "questions": [
+            {
+              "id": "R001_s1_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_s",
+              "playText": null,
+              "prompt": "第1题：哪个字母？",
+              "options": ["s", "a", "t"],
+              "correctAnswer": "s",
+              "difficulty": 1,
+              "feedbackCorrect": "记得很好！",
+              "feedbackIncorrect": "这是 /s/ 音。"
+            },
+            {
+              "id": "R001_s1_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_a",
+              "playText": null,
+              "prompt": "第2题：哪个字母？",
+              "options": ["a", "i", "o"],
+              "correctAnswer": "a",
+              "difficulty": 1,
+              "feedbackCorrect": "没错！",
+              "feedbackIncorrect": "张大嘴是 /æ/。"
+            },
+            {
+              "id": "R001_s1_q3",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_t",
+              "playText": null,
+              "prompt": "第3题：哪个字母？",
+              "options": ["p", "t", "k"],
+              "correctAnswer": "t",
+              "difficulty": 1,
+              "feedbackCorrect": "对！",
+              "feedbackIncorrect": "舌尖爆破 /t/。"
+            },
+            {
+              "id": "R001_s1_q4",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_s",
+              "playText": null,
+              "prompt": "第4题：哪个字母？",
+              "options": ["t", "a", "s"],
+              "correctAnswer": "s",
+              "difficulty": 1,
+              "feedbackCorrect": "很好！",
+              "feedbackIncorrect": "嘶嘶声是 s。"
+            },
+            {
+              "id": "R001_s1_q5",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_s", "ph_a", "ph_t"],
+              "playText": null,
+              "prompt": "第5题：s-a-t 拼出来是什么？",
+              "options": ["sat", "pat", "sit"],
+              "correctAnswer": "sat",
+              "difficulty": 2,
+              "feedbackCorrect": "不错！s-a-t = sat！",
+              "feedbackIncorrect": "s-a-t = sat。"
+            },
+            {
+              "id": "R001_s1_q6",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_p", "ph_a", "ph_t"],
+              "playText": null,
+              "prompt": "第6题：p-a-t 拼出来是什么？",
+              "options": ["sit", "pat", "tap"],
+              "correctAnswer": "pat",
+              "difficulty": 2,
+              "feedbackCorrect": "对！p-a-t = pat！",
+              "feedbackIncorrect": "p-a-t = pat。"
+            },
+            {
+              "id": "R001_s1_q7",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_a",
+              "playText": null,
+              "prompt": "第7题：哪个字母？",
+              "options": ["s", "i", "a"],
+              "correctAnswer": "a",
+              "difficulty": 1,
+              "feedbackCorrect": "对了！",
+              "feedbackIncorrect": "这是短元音 a。"
+            },
+            {
+              "id": "R001_s1_q8",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_t", "ph_a", "ph_p"],
+              "playText": null,
+              "prompt": "第8题：t-a-p 拼出来是什么？",
+              "options": ["pat", "sat", "tap"],
+              "correctAnswer": "tap",
+              "difficulty": 2,
+              "feedbackCorrect": "对！t-a-p = tap！",
+              "feedbackIncorrect": "t-a-p = tap。"
+            }
+          ]
+        },
+        "completionRule": "回答至少6题正确"
+      },
+      {
+        "id": "R001_s2",
+        "type": "blend_word",
+        "order": 2,
+        "title": "拼读复习",
+        "instruction": "复习拼读 sat 和 pat",
+        "content": {
+          "wordId": "w_sat",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "fast",
+          "showAnimation": false,
+          "additionalWords": ["w_pat"]
+        },
+        "completionRule": "完整跟读所有单词"
+      },
+      {
+        "id": "R001_s3",
+        "type": "segment_word",
+        "order": 3,
+        "title": "拆分复习",
+        "instruction": "听单词 tap，拆分成音素",
+        "content": {
+          "wordId": "w_tap",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "R001_s4",
+        "type": "mini_game",
+        "order": 4,
+        "title": "打地鼠",
+        "instruction": "来玩打地鼠，复习 s/a/t 的发音！",
+        "content": {
+          "gameType": "whack_mole",
+          "rounds": 3,
+          "config": {
+            "phonemeIds": ["ph_s", "ph_a", "ph_t"],
+            "distractorPhonemeIds": [],
+            "moleCount": 5,
+            "durationPerRound": 25,
+            "targetPhonemeId": null,
+            "showPhonemeLetter": true,
+            "playAudioOnAppear": true,
+            "randomTarget": true,
+            "speedMultiplier": 1.2
+          }
+        },
+        "completionRule": "3轮每轮至少答对2题"
+      },
+      {
+        "id": "R001_s5",
+        "type": "lesson_reward",
+        "order": 5,
+        "title": "复习完成",
+        "instruction": "第一次复习完成！",
+        "content": {
+          "stars": 3,
+          "energyReward": 8,
+          "message": "复习得不错！s/a/t 的发音和拼读都很熟练了，继续加油！",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "R002"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "R002": {
+    "id": "R002",
+    "title": "第二次复习 (P/I)",
+    "type": "review",
+    "order": 12,
+    "objectives": "复习巩固 p/i 两个字母音及对应的 CVC 拼读",
+    "targetPhonemeIds": ["ph_p", "ph_i"],
+    "targetWordIds": ["w_pit", "w_tip", "w_sip", "w_sap"],
+    "prerequisiteLessonIds": ["R001"],
+    "estimatedTime": 8,
+    "rewardStars": 3,
+    "energyReward": 8,
+    "steps": [
+      {
+        "id": "R002_s1",
+        "type": "audio_choice",
+        "order": 1,
+        "title": "复习听力",
+        "instruction": "听音选字母，复习 p 和 i",
+        "content": {
+          "questions": [
+            {
+              "id": "R002_s1_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_p",
+              "playText": null,
+              "prompt": "第1题：哪个字母？",
+              "options": ["b", "p", "t"],
+              "correctAnswer": "p",
+              "difficulty": 1,
+              "feedbackCorrect": "对！",
+              "feedbackIncorrect": "双唇爆破 /p/。"
+            },
+            {
+              "id": "R002_s1_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_i",
+              "playText": null,
+              "prompt": "第2题：哪个字母？",
+              "options": ["a", "i", "e"],
+              "correctAnswer": "i",
+              "difficulty": 1,
+              "feedbackCorrect": "对！",
+              "feedbackIncorrect": "短促 /ɪ/ 是 i。"
+            },
+            {
+              "id": "R002_s1_q3",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_p",
+              "playText": null,
+              "prompt": "第3题：哪个字母？",
+              "options": ["s", "a", "p"],
+              "correctAnswer": "p",
+              "difficulty": 1,
+              "feedbackCorrect": "好！",
+              "feedbackIncorrect": "这是 /p/。"
+            },
+            {
+              "id": "R002_s1_q4",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_i",
+              "playText": null,
+              "prompt": "第4题：哪个字母？",
+              "options": ["p", "t", "i"],
+              "correctAnswer": "i",
+              "difficulty": 1,
+              "feedbackCorrect": "不错！",
+              "feedbackIncorrect": "这是 /ɪ/。"
+            },
+            {
+              "id": "R002_s1_q5",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_p", "ph_i", "ph_t"],
+              "playText": null,
+              "prompt": "第5题：p-i-t 拼出来是什么？",
+              "options": ["pat", "pit", "tip"],
+              "correctAnswer": "pit",
+              "difficulty": 2,
+              "feedbackCorrect": "对！p-i-t = pit！",
+              "feedbackIncorrect": "p-i-t = pit。"
+            },
+            {
+              "id": "R002_s1_q6",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_t", "ph_i", "ph_p"],
+              "playText": null,
+              "prompt": "第6题：t-i-p 拼出来是什么？",
+              "options": ["pit", "tip", "sip"],
+              "correctAnswer": "tip",
+              "difficulty": 2,
+              "feedbackCorrect": "对！t-i-p = tip！",
+              "feedbackIncorrect": "t-i-p = tip。"
+            },
+            {
+              "id": "R002_s1_q7",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_s", "ph_i", "ph_p"],
+              "playText": null,
+              "prompt": "第7题：s-i-p 拼出来是什么？",
+              "options": ["sap", "sip", "sit"],
+              "correctAnswer": "sip",
+              "difficulty": 2,
+              "feedbackCorrect": "对！s-i-p = sip！",
+              "feedbackIncorrect": "s-i-p = sip。"
+            },
+            {
+              "id": "R002_s1_q8",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_s", "ph_a", "ph_p"],
+              "playText": null,
+              "prompt": "第8题：s-a-p 拼出来是什么？",
+              "options": ["sip", "sap", "sat"],
+              "correctAnswer": "sap",
+              "difficulty": 2,
+              "feedbackCorrect": "对！s-a-p = sap！",
+              "feedbackIncorrect": "s-a-p = sap。"
+            }
+          ]
+        },
+        "completionRule": "回答至少6题正确"
+      },
+      {
+        "id": "R002_s2",
+        "type": "blend_word",
+        "order": 2,
+        "title": "拼读复习",
+        "instruction": "复习拼读 sip 和 tip",
+        "content": {
+          "wordId": "w_sip",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": true,
+          "blendSpeed": "fast",
+          "showAnimation": false,
+          "additionalWords": ["w_tip"]
+        },
+        "completionRule": "完整跟读所有单词"
+      },
+      {
+        "id": "R002_s3",
+        "type": "segment_word",
+        "order": 3,
+        "title": "拆分复习",
+        "instruction": "听单词 pit，拆分成音素",
+        "content": {
+          "wordId": "w_pit",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true
+        },
+        "completionRule": "正确拆分所有3个音素"
+      },
+      {
+        "id": "R002_s4",
+        "type": "mini_game",
+        "order": 4,
+        "title": "单词钓鱼",
+        "instruction": "钓出包含 /p/ 或 /ɪ/ 的单词鱼！",
+        "content": {
+          "gameType": "word_fishing",
+          "rounds": 1,
+          "config": {
+            "wordIds": ["w_pat", "w_pit", "w_tap", "w_tip", "w_sap", "w_sip", "w_sit", "w_sat", "w_spat", "w_past"],
+            "targetRule": "contain_phoneme",
+            "targetPhonemeId": "ph_p",
+            "fishCount": 10,
+            "durationSeconds": 45,
+            "showWordText": true,
+            "highlightTarget": true
+          }
+        },
+        "completionRule": "至少钓到4条正确的鱼"
+      },
+      {
+        "id": "R002_s5",
+        "type": "lesson_reward",
+        "order": 5,
+        "title": "复习完成",
+        "instruction": "第二次复习完成！",
+        "content": {
+          "stars": 3,
+          "energyReward": 8,
+          "message": "复习得很棒！p/i 的发音也掌握得很好，准备好迎接单元测试了吗？",
+          "showAnimation": true,
+          "showConfetti": true,
+          "nextLessonPrompt": true,
+          "nextLessonId": "A001"
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  },
+  "A001": {
+    "id": "A001",
+    "title": "单元测试",
+    "type": "assessment",
+    "order": 13,
+    "objectives": "全面检测 s/a/t/p/i 五个字母音的掌握情况及 CVC 拼读能力",
+    "targetPhonemeIds": ["ph_s", "ph_a", "ph_t", "ph_p", "ph_i"],
+    "targetWordIds": [
+      "w_sat", "w_sit", "w_sap", "w_sip", "w_tap", "w_tip",
+      "w_pat", "w_pit", "w_at", "w_it", "w_as", "w_is",
+      "w_pass", "w_past", "w_taps", "w_tips", "w_sits", "w_spat"
+    ],
+    "prerequisiteLessonIds": ["R002"],
+    "estimatedTime": 12,
+    "rewardStars": 3,
+    "energyReward": 30,
+    "bonusBadgeId": "badge_satpi_master",
+    "steps": [
+      {
+        "id": "A001_s1",
+        "type": "audio_choice",
+        "order": 1,
+        "title": "听力测试",
+        "instruction": "仔细听，选出正确答案",
+        "content": {
+          "questions": [
+            {
+              "id": "A001_s1_q1",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_s",
+              "playText": null,
+              "prompt": "第1题：听，这是哪个字母？",
+              "options": ["a", "s", "p"],
+              "correctAnswer": "s",
+              "difficulty": 1,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            },
+            {
+              "id": "A001_s1_q2",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_p",
+              "playText": null,
+              "prompt": "第2题：听，这是哪个字母？",
+              "options": ["t", "a", "p"],
+              "correctAnswer": "p",
+              "difficulty": 1,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            },
+            {
+              "id": "A001_s1_q3",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_i",
+              "playText": null,
+              "prompt": "第3题：听，这是哪个字母？",
+              "options": ["i", "a", "s"],
+              "correctAnswer": "i",
+              "difficulty": 1,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            },
+            {
+              "id": "A001_s1_q4",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_t",
+              "playText": null,
+              "prompt": "第4题：听，这是哪个字母？",
+              "options": ["p", "t", "a"],
+              "correctAnswer": "t",
+              "difficulty": 1,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            },
+            {
+              "id": "A001_s1_q5",
+              "type": "sound_to_letter",
+              "playPhonemeId": "ph_a",
+              "playText": null,
+              "prompt": "第5题：听，这是哪个字母？",
+              "options": ["i", "a", "s"],
+              "correctAnswer": "a",
+              "difficulty": 1,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            },
+            {
+              "id": "A001_s1_q6",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_s", "ph_a", "ph_t"],
+              "playText": null,
+              "prompt": "第6题：s-a-t 拼出来是？",
+              "options": ["sit", "sat", "pat"],
+              "correctAnswer": "sat",
+              "difficulty": 2,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            },
+            {
+              "id": "A001_s1_q7",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_t", "ph_a", "ph_p"],
+              "playText": null,
+              "prompt": "第7题：t-a-p 拼出来是？",
+              "options": ["pit", "tap", "pat"],
+              "correctAnswer": "tap",
+              "difficulty": 2,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            },
+            {
+              "id": "A001_s1_q8",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_s", "ph_i", "ph_t"],
+              "playText": null,
+              "prompt": "第8题：s-i-t 拼出来是？",
+              "options": ["sat", "sit", "sip"],
+              "correctAnswer": "sit",
+              "difficulty": 2,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            },
+            {
+              "id": "A001_s1_q9",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_p", "ph_i", "ph_t"],
+              "playText": null,
+              "prompt": "第9题：p-i-t 拼出来是？",
+              "options": ["pat", "pit", "tip"],
+              "correctAnswer": "pit",
+              "difficulty": 2,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            },
+            {
+              "id": "A001_s1_q10",
+              "type": "blend_to_word",
+              "phonemeSequence": ["ph_s", "ph_i", "ph_p"],
+              "playText": null,
+              "prompt": "第10题：s-i-p 拼出来是？",
+              "options": ["sap", "sip", "sit"],
+              "correctAnswer": "sip",
+              "difficulty": 2,
+              "feedbackCorrect": "正确！",
+              "feedbackIncorrect": ""
+            }
+          ]
+        },
+        "completionRule": "回答至少6题正确"
+      },
+      {
+        "id": "A001_s2",
+        "type": "blend_word",
+        "order": 2,
+        "title": "拼读测试",
+        "instruction": "拼读单词 spat（s-p-a-t），试试看",
+        "content": {
+          "wordId": "w_spat",
+          "showBreakdown": true,
+          "highlightPhonemes": true,
+          "autoPlay": false,
+          "blendSpeed": "normal",
+          "showAnimation": true,
+          "assessMode": true
+        },
+        "completionRule": "独立完成拼读"
+      },
+      {
+        "id": "A001_s3",
+        "type": "segment_word",
+        "order": 3,
+        "title": "拆分测试",
+        "instruction": "听单词 taps，拆分成音素",
+        "content": {
+          "wordId": "w_taps",
+          "showVisual": true,
+          "dragToSegment": true,
+          "autoCheck": true,
+          "showPhonemeBlocks": true,
+          "assessMode": true
+        },
+        "completionRule": "正确拆分所有4个音素"
+      },
+      {
+        "id": "A001_s4",
+        "type": "assessment_result",
+        "order": 4,
+        "title": "测试结果",
+        "instruction": "查看你的单元测试成绩",
+        "content": {
+          "passThreshold": 0.6,
+          "baseStars": 3,
+          "energyReward": 30,
+          "bonusBadgeId": "badge_satpi_master",
+          "showDetailedReport": true,
+          "showPerSkillBreakdown": true,
+          "rewardMessage": "恭喜通过单元测试！获得 SATPI 拼读大师徽章！",
+          "failMessage": "还需要加油哦！建议复习后再测一次。",
+          "retryAllowed": true,
+          "maxRetries": 3
+        },
+        "completionRule": "自动完成"
+      }
+    ]
+  }
+}
