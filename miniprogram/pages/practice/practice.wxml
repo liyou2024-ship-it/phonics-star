@@ -1,0 +1,99 @@
+<view class="page">
+  <!-- Header -->
+  <view class="page-header">
+    <text class="page-title">🎯 练习中心</text>
+  </view>
+
+  <!-- Mode Tabs -->
+  <view class="mode-tabs">
+    <view wx:for="{{modes}}" wx:key="key" wx:for-item="m"
+      class="mode-tab {{activeMode === m.key ? 'active' : ''}}"
+      data-key="{{m.key}}" bindtap="onModeTap"
+    >
+      <text>{{m.icon}} {{m.label}}</text>
+    </view>
+  </view>
+
+  <!-- Loading -->
+  <view wx:if="{{loading}}" class="loading-state">
+    <text>加载中...</text>
+  </view>
+
+  <!-- Error -->
+  <view wx:elif="{{error}}" class="error-state">
+    <text class="error-text">{{error}}</text>
+    <view class="retry-btn" bindtap="onRetryLoad">重试</view>
+  </view>
+
+  <!-- Select Phase -->
+  <view wx:elif="{{phase === 'select'}}" class="select-phase">
+    <view class="select-card">
+      <text class="select-icon">
+        <block wx:if="{{activeMode === 'listen'}}">👂</block>
+        <block wx:elif="{{activeMode === 'spell'}}">✍️</block>
+        <block wx:elif="{{activeMode === 'family'}}">📖</block>
+        <block wx:else>🔧</block>
+      </text>
+      <text class="select-desc" wx:if="{{activeMode === 'listen'}}">听一个字母发音，从选项中选出正确的字母</text>
+      <text class="select-desc" wx:elif="{{activeMode === 'spell'}}">听一个单词发音，从字母中拼出正确的单词</text>
+      <text class="select-desc" wx:elif="{{activeMode === 'family'}}">找出同一词族的词、替换首音、归类练习</text>
+      <text class="select-desc" wx:else>针对你的薄弱音素进行强化复习</text>
+      <view class="start-btn" bindtap="onStartPractice">开始练习</view>
+    </view>
+  </view>
+
+  <!-- Question Phase -->
+  <view wx:elif="{{phase === 'question' && currentQuestion}}" class="question-phase">
+    <!-- Progress -->
+    <view class="progress-bar">
+      <view class="progress-fill" style="width: {{answered ? '100%' : (progress.split('/')[0] / progress.split('/')[1] * 100) + '%'}}"></view>
+    </view>
+    <text class="progress-text">{{progress}}</text>
+
+    <!-- Prompt -->
+    <view class="question-prompt">{{currentQuestion.prompt}}</view>
+
+    <!-- Play Audio Button -->
+    <view class="audio-btn {{currentQuestion.audioUrl ? '' : 'audio-disabled'}}" bindtap="onPlayAudio">
+      <text>🔊 播放声音</text>
+      <text wx:if="{{!currentQuestion.audioUrl}}" class="audio-tip">音频资源待配置</text>
+    </view>
+
+    <!-- Options Grid -->
+    <view class="options-grid">
+      <view wx:for="{{currentQuestion.options}}" wx:key="*this" wx:for-item="opt" wx:for-index="idx"
+        class="option-card {{answered ? (idx === currentQuestion.correctIndex ? 'option-correct' : (answered && isCorrect === false && idx === selectedAnswerIndex ? 'option-wrong' : '')) : ''}}"
+        data-index="{{idx}}" bindtap="onOptionTap"
+      >
+        <text class="option-text">{{opt}}</text>
+      </view>
+    </view>
+
+    <!-- Feedback -->
+    <view wx:if="{{answered}}" class="feedback-area {{feedbackClass}}">
+      <text class="feedback-icon">{{isCorrect ? '✅' : '❌'}}</text>
+      <text class="feedback-text">{{isCorrect ? '回答正确！' : '回答错误'}}</text>
+      <text class="explanation-text">{{explanation}}</text>
+      <view class="next-btn" bindtap="onNextQuestion">下一题</view>
+    </view>
+  </view>
+
+  <!-- Result Phase -->
+  <view wx:elif="{{phase === 'result'}}" class="result-phase">
+    <text class="result-icon">{{results.score >= 80 ? '🎉' : (results.score >= 60 ? '👍' : '💪')}}</text>
+    <text class="result-score">{{results.score}}分</text>
+    <text class="result-detail">答对 {{results.correct}} / {{results.total}} 题</text>
+    <view class="result-btns">
+      <view class="retry-btn" bindtap="onRetry">再练一次</view>
+      <view class="error-btn" bindtap="onErrorReview">错题重做</view>
+    </view>
+  </view>
+
+  <!-- Empty State (Error Review) -->
+  <view wx:elif="{{phase === 'empty'}}" class="empty-phase">
+    <empty-state icon="🎊" title="暂无错题" desc="太棒了！你还没有薄弱音素，继续保持！"></empty-state>
+    <view class="go-practice-btn" bindtap="onGoPractice">去做练习</view>
+  </view>
+
+  <bottom-nav activeTab="practice" bind:change="onTabChange"></bottom-nav>
+</view>
