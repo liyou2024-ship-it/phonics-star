@@ -1,0 +1,41 @@
+<view class="page">
+  <view wx:if="{{loading}}" class="state"><text>加载中...</text></view>
+  <view wx:elif="{{error}}" class="state"><empty-state icon="😵" title="加载失败" desc="{{error}}"></empty-state></view>
+  <view wx:else>
+    <view class="page-header">
+      <view class="avatar">{{userName.charAt(0)}}</view>
+      <text class="user-name">{{userName}}</text>
+    </view>
+    <view class="login-card">
+      <view class="login-info">
+        <text class="login-status">{{loginStatus}}</text>
+        <text class="login-tip" wx:if="{{userId}}">账号ID: {{userId}}</text>
+      </view>
+      <button class="login-btn" bindtap="onWechatLogin" loading="{{logging}}">
+        {{userId ? '重新登录' : '微信登录'}}
+      </button>
+    </view>
+
+    <!-- 家长模式横幅：开启后露出设置入口 -->
+    <view class="parent-banner" wx:if="{{parentMode}}">👨‍👩‍👧 家长模式已开启 · 已解锁设置</view>
+
+    <view class="info-cards">
+      <view class="info-card"><text class="icv">{{streak}}</text><text class="icl">连续学习(天)</text></view>
+      <view class="info-card"><text class="icv">{{totalStars}}</text><text class="icl">星星</text></view>
+      <view class="info-card"><text class="icv">{{completedCount}}</text><text class="icl">完成课程</text></view>
+    </view>
+    <view class="menu-list">
+      <view class="menu-item" bindtap="onGoToParentReport">
+        <text>📊</text><text>家长报告</text><text>→</text>
+      </view>
+      <view class="menu-item" bindtap="onToggleParentMode">
+        <text>👨‍👩‍👧</text><text>切换家长模式</text><text>{{parentMode ? '✅' : '→'}}</text>
+      </view>
+      <view class="menu-item" wx:if="{{parentMode}}" bindtap="onOpenSettings">
+        <text>⚙️</text><text>设置</text><text>→</text>
+      </view>
+    </view>
+  </view>
+
+  <bottom-nav activeTab="profile" bind:change="onTabChange"></bottom-nav>
+</view>
