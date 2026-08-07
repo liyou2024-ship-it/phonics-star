@@ -1,0 +1,9 @@
+序号,resourceId,对应单词,单词含义,文件名,规格,阻断reviewing,阻断published,当前状态
+1,img_w_sat,sat,坐(过去式),sat.webp,512×512 WebP ≤150KB,否（Emoji回退）,是,missing
+2,img_w_sit,sit,坐,sit.webp,512×512 WebP ≤150KB,否（Emoji回退）,是,missing
+3,img_w_tap,tap,轻敲,tap.webp,512×512 WebP ≤150KB,否（Emoji回退）,是,missing
+4,img_w_pat,pat,轻拍,pat.webp,512×512 WebP ≤150KB,否（Emoji回退）,是,missing
+5,img_w_pit,pit,坑,pit.webp,512×512 WebP ≤150KB,否（Emoji回退）,是,missing
+6,img_w_tip,tip,尖端,tip.webp,512×512 WebP ≤150KB,否（Emoji回退）,是,missing
+7,img_w_sip,sip,小口喝,sip.webp,512×512 WebP ≤150KB,否（Emoji回退）,是,missing
+8,img_w_sap,sap,树液,sap.webp,512×512 WebP ≤150KB,否（Emoji回退）,是,missing
