@@ -1,0 +1,78 @@
+<view class="phoneme-train">
+  <!-- HUD -->
+  <view class="hud">
+    <text class="hud-station">第 {{currentStation}}/{{totalStations}} 站</text>
+    <text class="hud-score">得分: {{score}}</text>
+  </view>
+
+  <view wx:if="{{!gameOver}}" class="game-area">
+    <!-- Target Hint -->
+    <view class="station-header">
+      <text class="station-label">拼出单词</text>
+      <view class="replay-btn" bindtap="onReplayAudio">
+        <text>🔊 听发音</text>
+      </view>
+    </view>
+
+    <!-- Feedback Toast -->
+    <view wx:if="{{feedbackVisible}}" class="feedback-toast {{feedbackType}}">
+      <text class="feedback-emoji">{{feedbackType === 'correct' ? '✅' : '❌'}}</text>
+      <text class="feedback-word">{{feedbackWord}}</text>
+    </view>
+
+    <!-- Letter Tiles -->
+    <view class="letter-tiles">
+      <view
+        wx:for="{{letterTiles}}"
+        wx:key="index"
+        wx:for-item="tile"
+        data-index="{{index}}"
+        class="letter-tile {{tile ? '' : 'tile-used'}}"
+        bindtap="onAddToTrain"
+      >
+        <text wx:if="{{tile}}" class="tile-letter">{{tile}}</text>
+      </view>
+    </view>
+
+    <!-- Train Track -->
+    <view class="train-track">
+      <view class="train-engine">🚂</view>
+      <view class="track-cars">
+        <view
+          wx:for="{{trainCars}}"
+          wx:key="index"
+          wx:for-item="car"
+          data-index="{{index}}"
+          class="train-car"
+          bindtap="onRemoveFromTrain"
+        >
+          <text class="car-letter">{{car.letter}}</text>
+        </view>
+        <view wx:for="{{3 - trainCars.length}}" wx:key="*this" class="train-car-empty"></view>
+      </view>
+    </view>
+
+    <!-- Buttons -->
+    <view class="train-actions">
+      <view class="action-btn submit-btn" bindtap="onSubmit">
+        <text>确认</text>
+      </view>
+      <view class="action-btn reset-btn" bindtap="onReset">
+        <text>重置</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Game Over -->
+  <view wx:if="{{gameOver}}" class="game-over">
+    <text class="go-title">火车到站！</text>
+    <view class="go-summary">
+      <text class="go-score">得分: {{score}}</text>
+      <text class="go-stat">正确: {{correctCount}} | 错误: {{wrongCount}}</text>
+      <text class="go-stat">最高连击: {{maxCombo}}</text>
+    </view>
+    <view class="go-btn" bindtap="onRestart">
+      <text>再来一局</text>
+    </view>
+  </view>
+</view>
