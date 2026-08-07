@@ -1,0 +1,25 @@
+<view class="segmenter">
+  <view wx:if="{{completed}}" class="done"><text>🎉 拆音完成！</text></view>
+  <view wx:else>
+    <view class="sg-header"><text>单词：</text><text class="sg-word">{{words[currentIdx].text}}</text><text class="sg-progress">{{currentIdx + 1}}/{{words.length}}</text></view>
+    <view class="sg-slots">
+      <view wx:for="{{words[currentIdx].phonemeIds}}" wx:key="index" class="sg-slot">
+        <text wx:if="{{selectedPhonemes[index]}}">{{selectedPhonemes[index]}}</text>
+        <text wx:else class="empty">_</text>
+      </view>
+    </view>
+    <view class="sg-options">
+      <view wx:for="{{words[currentIdx].options}}" wx:key="index" class="sg-opt" data-id="{{item}}" bindtap="onSelectPhoneme">
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class="sg-actions">
+      <button bindtap="onUndo">↩ 撤销</button>
+      <button bindtap="onReset">🔄 重置</button>
+      <button class="submit" bindtap="onSubmit" disabled="{{selectedPhonemes.length !== words[currentIdx].phonemeIds.length}}">✅ 提交</button>
+    </view>
+    <view wx:if="{{showResult}}" class="sg-feedback {{isCorrect ? 'ok' : 'err'}}">
+      <text>{{isCorrect ? '✅ 正确！' : '❌ 顺序不对，再试一次'}}</text>
+    </view>
+  </view>
+</view>
