@@ -1,0 +1,17 @@
+resourceId,类型,对应单词,文本内容,预期文件名,预期目录,口音,录制方式,当前状态,是否阻断发布,录制要点
+audio_w_sat_n,正常发音（可用TTS）,w_sat,sat 正常发音,sat-normal.mp3,/assets/audio/words,us,商业授权TTS + 人工抽检,missing,是,语速适合儿童
+audio_w_sat_b,慢速拼读（必须人工）,w_sat,sat 慢速拼读 /音素合成/,sat-blend.mp3,/assets/audio/words,us,人工录制或人工审核（必须）,missing,是,音素合成不是字母名称拼读
+audio_w_sit_n,正常发音（可用TTS）,w_sit,sit 正常发音,sit-normal.mp3,/assets/audio/words,us,商业授权TTS + 人工抽检,missing,是,语速适合儿童
+audio_w_sit_b,慢速拼读（必须人工）,w_sit,sit 慢速拼读 /音素合成/,sit-blend.mp3,/assets/audio/words,us,人工录制或人工审核（必须）,missing,是,音素合成不是字母名称拼读
+audio_w_tap_n,正常发音（可用TTS）,w_tap,tap 正常发音,tap-normal.mp3,/assets/audio/words,us,商业授权TTS + 人工抽检,missing,是,语速适合儿童
+audio_w_tap_b,慢速拼读（必须人工）,w_tap,tap 慢速拼读 /音素合成/,tap-blend.mp3,/assets/audio/words,us,人工录制或人工审核（必须）,missing,是,音素合成不是字母名称拼读
+audio_w_pat_n,正常发音（可用TTS）,w_pat,pat 正常发音,pat-normal.mp3,/assets/audio/words,us,商业授权TTS + 人工抽检,missing,是,语速适合儿童
+audio_w_pat_b,慢速拼读（必须人工）,w_pat,pat 慢速拼读 /音素合成/,pat-blend.mp3,/assets/audio/words,us,人工录制或人工审核（必须）,missing,是,音素合成不是字母名称拼读
+audio_w_pit_n,正常发音（可用TTS）,w_pit,pit 正常发音,pit-normal.mp3,/assets/audio/words,us,商业授权TTS + 人工抽检,missing,是,语速适合儿童
+audio_w_pit_b,慢速拼读（必须人工）,w_pit,pit 慢速拼读 /音素合成/,pit-blend.mp3,/assets/audio/words,us,人工录制或人工审核（必须）,missing,是,音素合成不是字母名称拼读
+audio_w_tip_n,正常发音（可用TTS）,w_tip,tip 正常发音,tip-normal.mp3,/assets/audio/words,us,商业授权TTS + 人工抽检,missing,是,语速适合儿童
+audio_w_tip_b,慢速拼读（必须人工）,w_tip,tip 慢速拼读 /音素合成/,tip-blend.mp3,/assets/audio/words,us,人工录制或人工审核（必须）,missing,是,音素合成不是字母名称拼读
+audio_w_sip_n,正常发音（可用TTS）,w_sip,sip 正常发音,sip-normal.mp3,/assets/audio/words,us,商业授权TTS + 人工抽检,missing,是,语速适合儿童
+audio_w_sip_b,慢速拼读（必须人工）,w_sip,sip 慢速拼读 /音素合成/,sip-blend.mp3,/assets/audio/words,us,人工录制或人工审核（必须）,missing,是,音素合成不是字母名称拼读
+audio_w_sap_n,正常发音（可用TTS）,w_sap,sap 正常发音,sap-normal.mp3,/assets/audio/words,us,商业授权TTS + 人工抽检,missing,是,语速适合儿童
+audio_w_sap_b,慢速拼读（必须人工）,w_sap,sap 慢速拼读 /音素合成/,sap-blend.mp3,/assets/audio/words,us,人工录制或人工审核（必须）,missing,是,音素合成不是字母名称拼读
