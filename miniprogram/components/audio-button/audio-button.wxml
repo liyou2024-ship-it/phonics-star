@@ -1,0 +1,4 @@
+<button class="audio-btn audio-btn--{{type}}" bindtap="handleTap" disabled="{{disabled}}">
+  <text>{{icon}}</text>
+  <text wx:if="{{text}}">{{text}}</text>
+</button>
