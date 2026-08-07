@@ -1,0 +1,10 @@
+.stepper{display:flex;flex-wrap:wrap;gap:12rpx}
+.stage{flex:1;min-width:180rpx;background:#fff;border-radius:20rpx;padding:20rpx;text-align:center;box-shadow:0 2rpx 12rpx rgba(0,0,0,0.06)}
+.stage.current{border:2rpx solid #7C3AED}
+.stage.locked{opacity:0.5}
+.stage-header{display:flex;flex-direction:column;align-items:center;gap:8rpx;margin-bottom:12rpx}
+.stage-icon{font-size:48rpx}
+.stage-name{font-size:26rpx;font-weight:700;color:#1F2937}
+.stage-progress{font-size:22rpx;color:#6B7280;margin-bottom:8rpx}
+.stage-current-badge{background:#7C3AED;color:#fff;font-size:20rpx;padding:4rpx 16rpx;border-radius:20rpx;margin-top:8rpx;display:inline-block}
+.stage-lock{font-size:48rpx;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
