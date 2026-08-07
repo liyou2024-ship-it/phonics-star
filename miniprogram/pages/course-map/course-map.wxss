@@ -1,0 +1,21 @@
+.page{padding:24rpx 24rpx 120rpx;background:#FAFAFA;min-height:100vh}
+.state{display:flex;align-items:center;justify-content:center;height:60vh;font-size:30rpx;color:#9CA3AF}
+.page-header{margin-bottom:24rpx}
+.page-title{font-size:36rpx;font-weight:800;color:#1F2937;display:block}
+.page-subtitle{font-size:26rpx;color:#9CA3AF;margin-top:8rpx;display:block}
+.level-card{background:#fff;border-radius:24rpx;padding:24rpx;margin-bottom:20rpx;box-shadow:0 2rpx 12rpx rgba(0,0,0,0.04)}
+.level-header{display:flex;align-items:center;gap:16rpx;margin-bottom:20rpx}
+.level-icon{font-size:56rpx}
+.level-info{flex:1}
+.level-name{font-size:32rpx;font-weight:800;color:#1F2937;display:block}
+.level-desc{font-size:24rpx;color:#6B7280;margin-top:4rpx;display:block}
+.level-lock{font-size:40rpx}
+.unit-section{margin-top:20rpx}
+.unit-title{font-size:26rpx;font-weight:700;color:#6B7280;display:block;margin-bottom:12rpx}
+.lesson-grid{display:grid;grid-template-columns:1fr 1fr;gap:12rpx}
+.lesson-node{background:#F9FAFB;border-radius:16rpx;padding:20rpx 16rpx;text-align:center}
+.lesson-node.done{background:#F0FDF4}
+.lesson-node.current{border:2rpx solid #7C3AED;background:#F5F3FF}
+.node-title{font-size:26rpx;font-weight:700;color:#1F2937;display:block;margin-bottom:8rpx}
+.node-current{font-size:22rpx;color:#7C3AED;font-weight:700}
+.node-start{font-size:22rpx;color:#A78BFA}
