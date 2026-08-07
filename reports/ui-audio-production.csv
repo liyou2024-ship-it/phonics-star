@@ -1,0 +1,4 @@
+resourceId,类型,用途,预期文件名,预期目录,制作方式,当前状态,是否阻断发布
+audio_ui_correct,UI音效,正确反馈音效,correct.mp3,/assets/audio/ui,自行制作或商业授权素材,missing,否
+audio_ui_incorrect,UI音效,错误反馈音效,incorrect.mp3,/assets/audio/ui,自行制作或商业授权素材,missing,否
+audio_ui_complete,UI音效,课程完成音效,complete.mp3,/assets/audio/ui,自行制作或商业授权素材,missing,否
