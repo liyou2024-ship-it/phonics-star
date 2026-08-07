@@ -1,0 +1,13 @@
+.tile {
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 16rpx;
+  font-weight: 700;
+  text-transform: lowercase;
+  transition: all 0.2s;
+}
+.tile--normal { width: 80rpx; height: 80rpx; font-size: 32rpx; }
+.tile--large { width: 120rpx; height: 120rpx; font-size: 48rpx; }
+.tile--vowel { background: #EDE9FE; color: #7C3AED; border: 3rpx solid #C4B5FD; }
+.tile--consonant { background: #DBEAFE; color: #2563EB; border: 3rpx solid #93C5FD; }
+.tile--selected { background: #7C3AED; color: #fff; border-color: #7C3AED; transform: scale(1.08); }
+.tile--disabled { opacity: 0.4; }
