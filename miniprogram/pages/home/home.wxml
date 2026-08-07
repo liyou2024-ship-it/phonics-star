@@ -1,0 +1,91 @@
+<view class="page">
+  <!-- 能力评估 CTA：始终可见，不依赖数据加载 -->
+  <view class="home-section">
+    <view class="assess-cta" bindtap="onGoToAssessment">
+      <view class="assess-cta-text">
+        <text class="assess-cta-title">📊 开始能力评估</text>
+        <text class="assess-cta-desc">测一测孩子的拼读水平，智能推荐学习路径</text>
+      </view>
+      <text class="assess-cta-arrow">▶</text>
+    </view>
+  </view>
+
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading-state">
+    <text>加载中...</text>
+  </view>
+
+  <!-- 错误状态 -->
+  <view wx:elif="{{error}}" class="error-state">
+    <empty-state icon="😵" title="加载失败" desc="{{error}}"></empty-state>
+  </view>
+
+  <!-- 正常内容 -->
+  <view wx:else>
+    <!-- 顶部 -->
+    <view class="home-header">
+      <view class="home-greeting">
+        <text class="greeting-text">Hi, {{userName}}!</text>
+        <text class="greeting-stage">{{currentStage}}</text>
+      </view>
+      <view class="home-stats">
+        <view class="stat-item">
+          <text>⭐</text><text>{{stars}}</text>
+        </view>
+        <view class="stat-item">
+          <text>🔥</text><text>{{streak}}天</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 进度 -->
+    <view class="home-progress card">
+      <progress-bar value="{{completionRate}}" max="{{100}}" label="学习进度"></progress-bar>
+    </view>
+
+    <!-- 今日课程 -->
+    <view class="home-section">
+      <text class="section-title">📋 今日任务</text>
+      <view class="today-card" bindtap="onContinueLearning">
+        <text class="today-icon">📖</text>
+        <view class="today-info">
+          <text class="today-label">继续学习</text>
+          <text class="today-lesson">{{todayLesson}}</text>
+          <text class="today-desc">预计 8-12 分钟</text>
+        </view>
+        <text class="today-arrow">▶</text>
+      </view>
+    </view>
+
+    <!-- 每日复习 -->
+    <view class="home-section">
+      <text class="section-title">🔄 每日复习 ({{reviewCount}}题)</text>
+      <button class="btn btn-secondary" bindtap="onGoToPractice">🎯 开始复习</button>
+    </view>
+
+    <!-- 快捷入口 -->
+    <view class="home-section">
+      <text class="section-title">🎮 练习专区</text>
+      <view class="quick-actions">
+        <view class="quick-action" bindtap="onGoToCourseMap">
+          <text class="action-icon">📚</text>
+          <text class="action-label">课程地图</text>
+        </view>
+        <view class="quick-action" bindtap="onGoToPractice">
+          <text class="action-icon">🎯</text>
+          <text class="action-label">练习中心</text>
+        </view>
+        <view class="quick-action" bindtap="onGoToGrowth">
+          <text class="action-icon">🌟</text>
+          <text class="action-label">成长中心</text>
+        </view>
+        <view class="quick-action" bindtap="onGoToPractice">
+          <text class="action-icon">🗣️</text>
+          <text class="action-label">发音跟读</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <bottom-nav activeTab="home" bind:change="onTabChange"></bottom-nav>
+</view>
