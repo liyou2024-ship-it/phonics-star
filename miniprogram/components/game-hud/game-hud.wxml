@@ -1,0 +1,17 @@
+<view class="hud">
+  <view class="hud__item">
+    <text class="hud__label">关卡</text>
+    <text class="hud__value">{{round}}/{{maxRounds}}</text>
+  </view>
+  <view class="hud__item hud__item--center">
+    <text class="hud__label">分数</text>
+    <text class="hud__value hud__value--score">{{score}}</text>
+  </view>
+  <view class="hud__item">
+    <text class="hud__label">时间</text>
+    <text class="hud__value">{{timeLeft}}s</text>
+  </view>
+  <view class="hud__combo" wx:if="{{comboVisible}}">
+    <text>🔥 x{{combo}}</text>
+  </view>
+</view>
