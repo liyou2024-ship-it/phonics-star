@@ -1,0 +1,36 @@
+.lesson-reward{position:relative;padding:32rpx 0;display:flex;flex-direction:column;align-items:center;overflow:hidden}
+
+/* 庆祝背景 */
+.celebrate-bg{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,#FEF3C7 0%,#FFF7ED 50%,#FFF 100%);z-index:0}
+
+/* 星星揭示 */
+.stars-section{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;margin-bottom:40rpx;padding-top:40rpx}
+.reward-title{font-size:40rpx;font-weight:900;color:#1F2937;margin-bottom:32rpx}
+.stars-row{display:flex;gap:24rpx;margin-bottom:16rpx}
+.star-item{width:100rpx;height:100rpx;display:flex;align-items:center;justify-content:center;transition:transform 0.5s cubic-bezier(0.34,1.56,0.64,1),opacity 0.5s}
+.star-item:not(.revealed){opacity:0.3;transform:scale(0.5)}
+.star-item.revealed{opacity:1;transform:scale(1);animation:star-pop 0.5s cubic-bezier(0.34,1.56,0.64,1)}
+.star-icon{font-size:72rpx}
+@keyframes star-pop{0%{transform:scale(0) rotate(-30deg)}60%{transform:scale(1.3) rotate(5deg)}100%{transform:scale(1) rotate(0deg)}}
+.star-count{font-size:28rpx;font-weight:700;color:#F59E0B}
+
+/* 能量 */
+.energy-section{position:relative;z-index:1;display:flex;align-items:center;gap:20rpx;background:rgba(255,255,255,0.8);border-radius:24rpx;padding:28rpx 48rpx;margin-bottom:32rpx;box-shadow:0 4rpx 16rpx rgba(0,0,0,0.06)}
+.energy-icon{font-size:44rpx}
+.energy-info{display:flex;flex-direction:column}
+.energy-value{font-size:40rpx;font-weight:900;color:#F59E0B}
+.energy-label{font-size:22rpx;color:#9CA3AF}
+
+/* 徽章 */
+.badges-section{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;margin-bottom:32rpx}
+.section-label{font-size:26rpx;font-weight:700;color:#374151;margin-bottom:16rpx}
+.badges-row{display:flex;gap:24rpx;flex-wrap:wrap;justify-content:center}
+.badge-item{display:flex;flex-direction:column;align-items:center;background:rgba(255,255,255,0.9);border-radius:20rpx;padding:20rpx 28rpx;box-shadow:0 4rpx 12rpx rgba(0,0,0,0.06)}
+.badge-icon{font-size:48rpx;margin-bottom:8rpx}
+.badge-name{font-size:22rpx;color:#6B7280;font-weight:600}
+
+/* 首次完成 */
+.first-complete{position:relative;z-index:1;background:linear-gradient(135deg,#FEF3C7,#FDE68A);border-radius:16rpx;padding:16rpx 32rpx;margin-bottom:32rpx;font-size:28rpx;font-weight:700;color:#92400E}
+
+/* 完成按钮 */
+.finish-btn{position:relative;z-index:1;width:80%;background:linear-gradient(135deg,#7C3AED,#A78BFA);color:#fff;border:none;border-radius:40rpx;padding:24rpx;font-size:32rpx;font-weight:800;box-shadow:0 8rpx 24rpx rgba(124,58,237,0.35);margin-top:16rpx}
