@@ -1,0 +1,11 @@
+resourceId,类型,对应音素,文本内容,预期文件名,预期目录,口音,录制方式,当前状态,是否阻断发布,录制要点
+audio_ph_s,字母音,ph_s,/s/,s.mp3,/assets/audio/phonemes,us,人工录制（必须）,missing,是,辅音不附加元音 /t/≠tuh /p/≠puh
+audio_ph_a,字母音,ph_a,/a/,a.mp3,/assets/audio/phonemes,us,人工录制（必须）,missing,是,辅音不附加元音 /t/≠tuh /p/≠puh
+audio_ph_t,字母音,ph_t,/t/,t.mp3,/assets/audio/phonemes,us,人工录制（必须）,missing,是,辅音不附加元音 /t/≠tuh /p/≠puh
+audio_ph_p,字母音,ph_p,/p/,p.mp3,/assets/audio/phonemes,us,人工录制（必须）,missing,是,辅音不附加元音 /t/≠tuh /p/≠puh
+audio_ph_i,字母音,ph_i,/i/,i.mp3,/assets/audio/phonemes,us,人工录制（必须）,missing,是,辅音不附加元音 /t/≠tuh /p/≠puh
+audio_ln_s,字母名称,ph_s,字母S名称,s.mp3,/assets/audio/letter-names,us,人工录制或人工审核（必须）,missing,是,与字母音同一发音人
+audio_ln_a,字母名称,ph_a,字母A名称,a.mp3,/assets/audio/letter-names,us,人工录制或人工审核（必须）,missing,是,与字母音同一发音人
+audio_ln_t,字母名称,ph_t,字母T名称,t.mp3,/assets/audio/letter-names,us,人工录制或人工审核（必须）,missing,是,与字母音同一发音人
+audio_ln_p,字母名称,ph_p,字母P名称,p.mp3,/assets/audio/letter-names,us,人工录制或人工审核（必须）,missing,是,与字母音同一发音人
+audio_ln_i,字母名称,ph_i,字母I名称,i.mp3,/assets/audio/letter-names,us,人工录制或人工审核（必须）,missing,是,与字母音同一发音人
