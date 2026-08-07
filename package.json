@@ -1,0 +1,20 @@
+{
+  "name": "phonics-star",
+  "version": "0.1.0",
+  "description": "拼读星球 - 小学自然拼读微信小程序",
+  "main": "miniprogram/app.ts",
+  "scripts": {
+    "tsc": "tsc --noEmit",
+    "tsc:watch": "tsc --noEmit --watch",
+    "lint": "eslint miniprogram --ext .ts",
+    "build:npm": "cd miniprogram && npm install --production"
+  },
+  "dependencies": {
+    "miniprogram-api-typings": "^3.12.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "keywords": ["wechat", "miniprogram", "phonics", "education"],
+  "license": "MIT"
+}
