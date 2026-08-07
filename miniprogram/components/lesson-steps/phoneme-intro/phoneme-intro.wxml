@@ -1,0 +1,46 @@
+<view class="phoneme-intro">
+  <!-- 加载 -->
+  <view wx:if="{{error}}" class="state-error">
+    <text>😵 {{error}}</text>
+  </view>
+
+  <view wx:else>
+    <!-- 字母卡片 -->
+    <view class="intro-card" bindtap="onPlaySound">
+      <view class="intro-letters">
+        <text class="intro-capital">{{phoneme.displayName ? phoneme.displayName.slice(-1) : '?'}}</text>
+      </view>
+      <text class="intro-symbol">{{phoneme.symbol || ''}}</text>
+      <text class="intro-play-hint">{{hasPlayed ? '✅ 已听过' : '👆 点击听发音'}}</text>
+    </view>
+
+    <!-- 口型提示 -->
+    <view wx:if="{{phoneme.mouthTip}}" class="intro-mouth-tip">
+      <text class="tip-icon">👄</text>
+      <text class="tip-text">{{phoneme.mouthTip}}</text>
+    </view>
+
+    <!-- 示例词 -->
+    <view class="intro-words">
+      <text class="words-title">📖 示例单词</text>
+      <view class="words-list">
+        <view
+          wx:for="{{words}}" wx:key="id" wx:for-item="w"
+          class="word-item" data-word="{{w}}" bindtap="onPlayWord"
+        >
+          <text class="word-text">{{w.text}}</text>
+          <text class="word-meaning">{{w.meaning}}</text>
+          <text class="word-play">🔊</text>
+        </view>
+      </view>
+      <view wx:if="{{words.length === 0}}" class="words-empty">
+        <text>暂无示例词数据</text>
+      </view>
+    </view>
+
+    <!-- 完成按钮 -->
+    <button class="complete-btn" bindtap="onComplete">
+      我学会了 ▶
+    </button>
+  </view>
+</view>
