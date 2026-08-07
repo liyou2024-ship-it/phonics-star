@@ -1,0 +1,17 @@
+.slots { display: flex; gap: 16rpx; justify-content: center; }
+.slot {
+  width: 80rpx; height: 80rpx;
+  border-radius: 16rpx;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32rpx; font-weight: 700;
+  transition: all 0.2s;
+}
+.slot--empty {
+  border: 3rpx dashed #D1D5DB;
+  color: #9CA3AF; background: #F9FAFB;
+}
+.slot--filled {
+  background: #EDE9FE; color: #7C3AED;
+  border: 3rpx solid #7C3AED;
+}
+.slot__text { text-transform: lowercase; }
