@@ -1,0 +1,60 @@
+<view class="decodable-reader">
+  <!-- 错误 -->
+  <view wx:if="{{error && sentences.length === 0}}" class="state-error">
+    <text>😵 {{error}}</text>
+  </view>
+
+  <view wx:else>
+    <!-- 进度条 -->
+    <view class="progress-bar">
+      <view class="progress-fill" style="width:{{totalWords > 0 ? clickedWordCount / totalWords * 100 : 0}}%"></view>
+    </view>
+    <view class="progress-text">已点击 {{clickedWordCount}} / {{totalWords}} 个单词</view>
+
+    <!-- 阅读内容 -->
+    <view class="reader-content">
+      <view
+        wx:for="{{sentences}}" wx:key="index" wx:for-item="sentence"
+        class="sentence-block"
+      >
+        <view class="sentence-row">
+          <text
+            wx:for="{{sentence.words}}" wx:key="index" wx:for-item="word"
+            class="word-tap {{word.clicked ? 'clicked' : ''}} {{highlightedWordIndex === word.index ? 'highlighted' : ''}}"
+            data-word="{{word.text}}"
+            data-sentence-idx="{{index}}"
+            data-word-idx="{{word.index}}"
+            bindtap="onReadWord"
+          >{{word.text}}</text>
+        </view>
+        <view class="sentence-actions">
+          <view
+            wx:if="{{!sentence.read}}"
+            class="read-sentence-btn"
+            data-index="{{index}}"
+            bindtap="onReadSentence"
+          >
+            <text>🔊 朗读整句</text>
+          </view>
+          <text wx:else class="sentence-done">✅</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- Sight words 参考 -->
+    <view wx:if="{{sightWords.length > 0}}" class="sight-words-bar">
+      <text class="sw-label">📋 已学单词:</text>
+      <text
+        wx:for="{{sightWords}}" wx:key="*this"
+        class="sw-tag"
+      >{{item}}</text>
+    </view>
+
+    <!-- 完成按钮 -->
+    <view class="complete-section">
+      <button class="complete-btn" bindtap="onComplete">
+        {{readComplete ? '✅ 已完成' : '📖 读完了'}}
+      </button>
+    </view>
+  </view>
+</view>
