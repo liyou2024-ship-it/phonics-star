@@ -1,0 +1,51 @@
+<view class="whack-mole">
+  <!-- HUD -->
+  <view class="hud">
+    <text class="hud-round">第 {{currentRound}}/{{totalRounds}} 轮</text>
+    <text class="hud-score">得分: {{score}}</text>
+    <text class="hud-combo">连击: {{combo}}</text>
+  </view>
+
+  <!-- Game Area -->
+  <view wx:if="{{!gameOver}}" class="game-area">
+    <view class="target-hint">
+      <text class="hint-text">听声音，找到对应的字母！</text>
+      <view class="replay-btn" bindtap="onReplayAudio">
+        <text>🔊 再听一次</text>
+      </view>
+    </view>
+
+    <!-- Feedback Toast -->
+    <view wx:if="{{feedbackVisible}}" class="feedback-toast {{feedbackType}}">
+      <text class="feedback-emoji">{{feedbackType === 'correct' ? '✅' : '❌'}}</text>
+      <text class="feedback-letter">{{feedbackLetter}}</text>
+    </view>
+
+    <!-- Mole Cards -->
+    <view class="mole-grid">
+      <view
+        wx:for="{{moles}}"
+        wx:key="letter"
+        wx:for-item="mole"
+        data-index="{{index}}"
+        class="mole-card {{mole.hit ? (mole.isTarget ? 'hit-correct' : 'hit-wrong') : ''}}"
+        bindtap="onHitMole"
+      >
+        <text class="mole-letter">{{mole.letter}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Game Over -->
+  <view wx:if="{{gameOver}}" class="game-over">
+    <text class="go-title">游戏结束！</text>
+    <view class="go-summary">
+      <text class="go-score">得分: {{score}}</text>
+      <text class="go-stat">正确: {{correctCount}} | 错误: {{wrongCount}}</text>
+      <text class="go-stat">最高连击: {{maxCombo}}</text>
+    </view>
+    <view class="go-btn" bindtap="onRestart">
+      <text>再来一局</text>
+    </view>
+  </view>
+</view>
