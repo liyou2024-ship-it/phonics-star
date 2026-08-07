@@ -1,0 +1,51 @@
+<view class="lesson-reward">
+  <!-- 庆祝背景 -->
+  <view class="celebrate-bg"></view>
+
+  <!-- 星星揭示 -->
+  <view class="stars-section">
+    <text class="reward-title">🎉 课程完成！</text>
+    <view class="stars-row">
+      <view
+        wx:for="{{[1,2,3]}}" wx:key="*this"
+        class="star-item {{starRevealed[item-1] ? 'revealed' : ''}}"
+      >
+        <text class="star-icon">{{starRevealed[item-1] ? '⭐' : '✩'}}</text>
+      </view>
+    </view>
+    <text class="star-count">{{stars}} / 3 星</text>
+  </view>
+
+  <!-- 能量奖励 -->
+  <view class="energy-section">
+    <text class="energy-icon">⚡</text>
+    <view class="energy-info">
+      <text class="energy-value">+{{energy}}</text>
+      <text class="energy-label">能量</text>
+    </view>
+  </view>
+
+  <!-- 徽章 -->
+  <view wx:if="{{badges.length > 0}}" class="badges-section">
+    <text class="section-label">🏅 获得徽章</text>
+    <view class="badges-row">
+      <view
+        wx:for="{{badges}}" wx:key="name"
+        class="badge-item"
+      >
+        <text class="badge-icon">{{item.icon}}</text>
+        <text class="badge-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 首次完成提示 -->
+  <view wx:if="{{isFirstComplete}}" class="first-complete">
+    <text>🎊 首次完成本课！</text>
+  </view>
+
+  <!-- 完成按钮 -->
+  <button class="finish-btn" bindtap="onFinish">
+    完成课程 🎓
+  </button>
+</view>
