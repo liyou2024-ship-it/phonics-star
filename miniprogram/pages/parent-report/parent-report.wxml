@@ -1,0 +1,172 @@
+<view class="page">
+  <!-- ===== 时间范围切换 ===== -->
+  <view class="time-tabs">
+    <view
+      wx:for="{{timeRanges}}"
+      wx:key="key"
+      class="time-tab {{timeRange === item.key ? 'time-tab--active' : ''}}"
+      data-range="{{item.key}}"
+      bindtap="onTimeRangeTap"
+    >
+      {{item.label}}
+    </view>
+  </view>
+
+  <!-- ===== Loading ===== -->
+  <view wx:if="{{loading}}" class="state-view">
+    <text class="state-text">加载中...</text>
+  </view>
+
+  <!-- ===== Error ===== -->
+  <view wx:elif="{{error}}" class="state-view">
+    <empty-state icon="😵" title="加载失败" desc="{{error}}">
+      <view class="retry-btn" bindtap="onRetry">重试</view>
+    </empty-state>
+  </view>
+
+  <!-- ===== Empty ===== -->
+  <view wx:elif="{{empty}}" class="state-view">
+    <empty-state icon="📊" title="暂无学习数据" desc="完成一节课程后即可生成报告"></empty-state>
+  </view>
+
+  <!-- ===== Normal ===== -->
+  <view wx:else>
+    <!-- 总体概览卡片 -->
+    <view class="card">
+      <text class="card-title">总体概览</text>
+      <view class="stats-grid">
+        <view class="stat-item">
+          <text class="stat-value">{{studyDuration}}</text>
+          <text class="stat-label">学习时长(分钟)</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{activeDays}}</text>
+          <text class="stat-label">活跃天数</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{completedCourses}}</text>
+          <text class="stat-label">完成课程</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{accuracy}}%</text>
+          <text class="stat-label">答题正确率</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 学习详情卡片 -->
+    <view class="card">
+      <text class="card-title">学习详情</text>
+      <view class="stats-grid">
+        <view class="stat-item">
+          <text class="stat-value">{{practiceSessions}}</text>
+          <text class="stat-label">练习局数</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{gameSessions}}</text>
+          <text class="stat-label">游戏完成</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{totalAnswers}}</text>
+          <text class="stat-label">总答题数</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{pronunciationCount}}</text>
+          <text class="stat-label">跟读次数</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 已掌握 -->
+    <view class="card">
+      <text class="card-title">已掌握</text>
+      <view class="mastered-row">
+        <view class="mastered-item">
+          <text class="mastered-value">{{masteredPhonemes}}</text>
+          <text class="mastered-label">音素</text>
+        </view>
+        <view class="mastered-divider"></view>
+        <view class="mastered-item">
+          <text class="mastered-value">{{masteredWords}}</text>
+          <text class="mastered-label">单词</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 需要巩固：弱音素 Top 3 -->
+    <view class="card" wx:if="{{weakPhonemes.length > 0}}">
+      <text class="card-title">需要巩固的音素</text>
+      <view class="weak-list">
+        <view
+          wx:for="{{weakPhonemes}}"
+          wx:key="phonemeId"
+          class="weak-item weak-item--{{item.weakScore > 6 ? 'high' : item.weakScore > 3 ? 'medium' : 'low'}}"
+        >
+          <view class="weak-header">
+            <text class="weak-name">{{item.displayName}}</text>
+            <text class="weak-symbol">{{item.symbol}}</text>
+            <text wx:if="{{item.isMock}}" class="weak-mock-tag">(模拟)</text>
+          </view>
+          <view class="weak-details">
+            <text wx:if="{{item.listenErrors > 0}}" class="weak-detail">听音错误 {{item.listenErrors}} 次</text>
+            <text wx:if="{{item.blendErrors > 0}}" class="weak-detail">拼读错误 {{item.blendErrors}} 次</text>
+            <text wx:if="{{item.segmentErrors > 0}}" class="weak-detail">拆音错误 {{item.segmentErrors}} 次</text>
+            <text wx:if="{{item.pronunciationWeak > 0}}" class="weak-detail">跟读弱项 {{item.pronunciationWeak}} 次</text>
+          </view>
+          <text class="weak-score">弱项分: {{item.weakScore}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 本周课程完成情况 -->
+    <view class="card" wx:if="{{completedCourseList.length > 0}}">
+      <text class="card-title">本周课程完成情况</text>
+      <view class="course-list">
+        <view wx:for="{{completedCourseList}}" wx:key="lessonId" class="course-item">
+          <view class="course-info">
+            <text class="course-name">{{item.name}}</text>
+            <text class="course-score">得分 {{item.score}}</text>
+          </view>
+          <star-rating count="{{item.stars}}" max="{{3}}" size="small"></star-rating>
+        </view>
+      </view>
+    </view>
+
+    <!-- 连续学习 & 奖励 -->
+    <view class="card">
+      <text class="card-title">学习激励</text>
+      <view class="stats-grid">
+        <view class="stat-item">
+          <text class="stat-value">{{streak}}天</text>
+          <text class="stat-label">连续学习</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{stars}}</text>
+          <text class="stat-label">星星</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-value">{{energy}}</text>
+          <text class="stat-label">能量</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 家长建议 -->
+    <view class="card card-suggestions">
+      <text class="card-title">家长建议</text>
+      <view wx:if="{{suggestions.length > 0}}" class="suggestion-list">
+        <view wx:for="{{suggestions}}" wx:key="*this" class="suggestion-item suggestion-item--{{item.priority}}">
+          <text class="suggestion-text">{{item.text}}</text>
+        </view>
+      </view>
+      <view wx:else class="no-suggestion">
+        <text>暂无特别建议，继续保持学习节奏</text>
+      </view>
+    </view>
+
+    <!-- 数据说明 -->
+    <view class="data-note" wx:if="{{hasMockEvaluations}}">
+      <text class="note-text">注：部分发音评估数据为模拟评测数据，仅供参考</text>
+    </view>
+  </view>
+</view>
