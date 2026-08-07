@@ -1,0 +1,94 @@
+<view class="pron-practice">
+  <!-- 未录音：大麦克风按钮 -->
+  <view wx:if="{{!hasRecorded}}" class="record-section">
+    <view
+      class="mic-btn {{isRecording ? 'recording' : ''}}"
+      bindtap="{{isRecording ? 'onStopRecord' : 'onStartRecord'}}"
+    >
+      <text class="mic-icon">🎤</text>
+      <text class="mic-label">{{isRecording ? '点击停止' : '点击录音'}}</text>
+    </view>
+    <view wx:if="{{isRecording}}" class="recording-indicator">
+      <view class="pulse-ring"></view>
+      <text class="duration-text">{{recordDuration}}s</text>
+    </view>
+  </view>
+
+  <!-- 已录音：播放/评测/重试 -->
+  <view wx:if="{{hasRecorded && !evalResult}}" class="recorded-section">
+    <text class="section-title">✅ 录音完成 ({{recordDuration}}s)</text>
+    <view class="action-row">
+      <button class="action-btn play-btn" bindtap="onPlayRecord">🔊 播放录音</button>
+      <button
+        class="action-btn eval-btn"
+        bindtap="onEvaluate"
+        disabled="{{evaluating}}"
+        loading="{{evaluating}}"
+      >📊 开始评测</button>
+    </view>
+    <view class="retry-btn" bindtap="onRetry">
+      <text>🔄 重新录音</text>
+    </view>
+  </view>
+
+  <!-- 评测中 -->
+  <view wx:if="{{evaluating}}" class="evaluating-section">
+    <view class="loading-spinner"></view>
+    <text class="eval-loading-text">评测中...</text>
+  </view>
+
+  <!-- 评测结果 -->
+  <view wx:if="{{evalResult}}" class="eval-result-section">
+    <!-- 总分 -->
+    <view class="score-circle">
+      <text class="score-number">{{evalResult.overallScore}}</text>
+      <text class="score-label">分</text>
+    </view>
+    <text class="feedback-text">{{evalResult.feedback}}</text>
+
+    <!-- 分项得分 -->
+    <view class="detail-scores">
+      <view class="detail-item">
+        <text class="detail-label">完整度</text>
+        <text class="detail-value">{{evalResult.completenessScore}}</text>
+      </view>
+      <view class="detail-item">
+        <text class="detail-label">流利度</text>
+        <text class="detail-value">{{evalResult.fluencyScore}}</text>
+      </view>
+      <view class="detail-item">
+        <text class="detail-label">准确度</text>
+        <text class="detail-value">{{evalResult.accuracyScore}}</text>
+      </view>
+    </view>
+
+    <!-- 音素结果 -->
+    <view class="phoneme-list">
+      <text class="section-title">音素详情</text>
+      <view
+        wx:for="{{evalResult.phonemeResults}}" wx:key="phonemeId"
+        class="phoneme-item"
+      >
+        <view class="phoneme-header">
+          <text class="phoneme-symbol">{{item.symbol}}</text>
+          <text class="phoneme-pass {{item.passed ? 'pass' : 'fail'}}">
+            {{item.passed ? '✅' : '❌'}}
+          </text>
+        </view>
+        <view class="accuracy-bar-bg">
+          <view class="accuracy-bar-fill {{item.passed ? 'fill-pass' : 'fill-fail'}}"
+            style="width:{{item.accuracy}}%"
+          ></view>
+        </view>
+        <text class="accuracy-text">{{item.accuracy}}%</text>
+        <text class="phoneme-feedback">{{item.feedback}}</text>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="bottom-actions">
+      <button class="retry-outline-btn" bindtap="onRetry">🔄 再试一次</button>
+      <button class="complete-btn" bindtap="onComplete">✅ 完成</button>
+    </view>
+  </view>
+</view>
