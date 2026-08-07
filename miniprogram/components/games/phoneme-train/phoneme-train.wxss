@@ -1,0 +1,50 @@
+.phoneme-train{padding:24rpx;min-height:100vh;background:linear-gradient(180deg,#F0FDF4 0%,#DCFCE7 50%,#BBF7D0 100%)}
+
+.hud{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.9);border-radius:16rpx;padding:16rpx 24rpx;margin-bottom:24rpx;backdrop-filter:blur(4px)}
+.hud-station{font-size:28rpx;font-weight:700;color:#065F46}
+.hud-score{font-size:28rpx;font-weight:700;color:#DC2626}
+
+.station-header{text-align:center;margin-bottom:24rpx}
+.station-label{font-size:32rpx;font-weight:700;color:#065F46;display:block}
+.replay-btn{margin-top:12rpx;display:inline-flex;align-items:center;gap:8rpx;background:#059669;color:#fff;padding:12rpx 28rpx;border-radius:32rpx;font-size:26rpx}
+
+.feedback-toast{position:fixed;top:40%;left:50%;transform:translate(-50%,-50%);z-index:100;display:flex;flex-direction:column;align-items:center;padding:32rpx 48rpx;border-radius:24rpx;animation:popIn 0.3s ease}
+.feedback-toast.correct{background:#D1FAE5;box-shadow:0 4rpx 20rpx rgba(16,185,129,0.3)}
+.feedback-toast.wrong{background:#FEE2E2;box-shadow:0 4rpx 20rpx rgba(239,68,68,0.3)}
+.feedback-emoji{font-size:64rpx}
+.feedback-word{font-size:48rpx;font-weight:800;margin-top:8rpx;color:#1F2937}
+
+@keyframes popIn{0%{transform:translate(-50%,-50%) scale(0.5);opacity:0}100%{transform:translate(-50%,-50%) scale(1);opacity:1}}
+
+/* Letter Tiles */
+.letter-tiles{display:flex;justify-content:center;gap:20rpx;margin-bottom:32rpx}
+.letter-tile{width:120rpx;height:120rpx;border-radius:20rpx;display:flex;align-items:center;justify-content:center;box-shadow:0 4rpx 16rpx rgba(0,0,0,0.1);cursor:pointer;transition:transform 0.15s}
+.letter-tile:nth-child(1){background:linear-gradient(135deg,#F59E0B,#FCD34D)}
+.letter-tile:nth-child(2){background:linear-gradient(135deg,#EC4899,#F472B6)}
+.letter-tile:nth-child(3){background:linear-gradient(135deg,#8B5CF6,#A78BFA)}
+.letter-tile:active{transform:scale(0.92)}
+.letter-tile.tile-used{background:#E5E7EB;opacity:0.3}
+.tile-letter{font-size:48rpx;font-weight:800;color:#fff;text-shadow:0 2rpx 4rpx rgba(0,0,0,0.15)}
+
+/* Train Track */
+.train-track{display:flex;align-items:center;padding:24rpx 16rpx;margin-bottom:32rpx;background:rgba(255,255,255,0.6);border-radius:20rpx;overflow-x:auto}
+.train-engine{font-size:48rpx;margin-right:8rpx;flex-shrink:0}
+.track-cars{display:flex;align-items:center;gap:4rpx;flex:1}
+.track-cars::before{content:'';width:100%;height:4rpx;background:repeating-linear-gradient(90deg,#9CA3AF 0,#9CA3AF 8rpx,transparent 8rpx,transparent 16rpx);position:absolute;top:50%;left:0;z-index:0}
+.train-car{width:100rpx;height:80rpx;background:linear-gradient(135deg,#FEF3C7,#FDE68A);border-radius:12rpx;display:flex;align-items:center;justify-content:center;box-shadow:0 4rpx 12rpx rgba(0,0,0,0.08);cursor:pointer;flex-shrink:0;margin:0 4rpx;position:relative;z-index:1;border:2rpx solid #F59E0B}
+.train-car:active{transform:scale(0.92)}
+.train-car-empty{width:100rpx;height:80rpx;border:2rpx dashed #D1D5DB;border-radius:12rpx;flex-shrink:0;margin:0 4rpx}
+.car-letter{font-size:36rpx;font-weight:800;color:#92400E}
+
+/* Actions */
+.train-actions{display:flex;justify-content:center;gap:24rpx}
+.action-btn{padding:20rpx 56rpx;border-radius:40rpx;font-size:30rpx;font-weight:700;cursor:pointer}
+.submit-btn{background:linear-gradient(135deg,#059669,#10B981);color:#fff;box-shadow:0 4rpx 16rpx rgba(5,150,105,0.3)}
+.reset-btn{background:#F3F4F6;color:#6B7280;box-shadow:0 2rpx 8rpx rgba(0,0,0,0.06)}
+
+.game-over{display:flex;flex-direction:column;align-items:center;padding:48rpx 32rpx}
+.go-title{font-size:40rpx;font-weight:800;color:#1F2937;margin-bottom:32rpx}
+.go-summary{display:flex;flex-direction:column;align-items:center;gap:12rpx;margin-bottom:40rpx;background:#fff;padding:32rpx 48rpx;border-radius:20rpx;box-shadow:0 2rpx 12rpx rgba(0,0,0,0.06)}
+.go-score{font-size:48rpx;font-weight:800;color:#DC2626}
+.go-stat{font-size:28rpx;color:#6B7280}
+.go-btn{background:linear-gradient(135deg,#059669,#10B981);color:#fff;padding:20rpx 64rpx;border-radius:40rpx;font-size:32rpx;font-weight:700;box-shadow:0 4rpx 16rpx rgba(5,150,105,0.3)}
