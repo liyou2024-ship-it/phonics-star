@@ -1,0 +1,18 @@
+<view class="summary">
+  <view class="summary__score-circle">
+    <text class="summary__percent">{{percentage}}%</text>
+    <text class="summary__label">正确率</text>
+  </view>
+  <view class="summary__stats">
+    <text class="summary__stat">✅ 正确 {{correctCount}} / {{totalQuestions}}</text>
+    <text class="summary__stat">⏱ {{timeDisplay}}</text>
+  </view>
+  <view class="summary__stars">
+    <text wx:for="{{stars}}" wx:key="*this">⭐</text>
+    <text wx:for="{{3 - stars}}" wx:key="*this" class="summary__star-empty">☆</text>
+  </view>
+  <view class="summary__actions">
+    <button class="summary__btn summary__btn--retry" bind:tap="onRetry">再来一次</button>
+    <button class="summary__btn summary__btn--home" bind:tap="onHome">返回首页</button>
+  </view>
+</view>
