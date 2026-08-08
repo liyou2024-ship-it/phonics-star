@@ -12,6 +12,13 @@
 /** 微信云托管环境 ID（来自云开发控制台） */
 export const CLOUD_ENV = 'prod-d0gmqqe4yc47dd703';
 
+/**
+ * 云托管「服务名称」——⚠️ 必须与云托管控制台一致！
+ * 查法：云托管控制台 → 服务管理 → 服务列表 → 「服务名称」那一列。
+ * 不传/传错 → 网关报 -601031 INVALID_PATH（找不到服务）。
+ */
+export const CLOUD_SERVICE = 'xiaomuchi-zypd';
+
 const cloud: any = (wx as any).cloud;
 
 /** 幂等初始化云（app.ts / 各次调用前都会尝试，重复调用安全） */
@@ -53,9 +60,14 @@ export function cloudCall<T = any>(opts: CloudCallOptions): Promise<T> {
     }
     cloud.callContainer({
       config: { env: CLOUD_ENV },
+      // apiVersion:2 规避「首次失败后 callContainer 缓存 INVALID_PATH、后续不再真正发请求」的坑
+      apiVersion: 2,
       path: opts.path,
       method: opts.method || 'POST',
-      header: Object.assign({ 'content-type': 'application/json' }, opts.header || {}),
+      header: Object.assign(
+        { 'content-type': 'application/json', 'X-WX-SERVICE': CLOUD_SERVICE },
+        opts.header || {}
+      ),
       data: opts.data,
       success: (res: any) => {
         const body: CloudResult<T> | undefined = res && res.data;
