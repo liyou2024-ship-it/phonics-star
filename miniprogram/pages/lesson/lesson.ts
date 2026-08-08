@@ -50,6 +50,15 @@ Page({
     const componentPath = getStepComponent(step.type);
     if (!componentPath) {
       console.error(`Unknown step type: ${step.type}`);
+      // 安全网：未知步骤不阻断整节课，给出"跳过"出口
+      this.setData({
+        currentComponent: '__unsupported__',
+        currentComponentProps: {
+          step,
+          lesson,
+          state: session.stepStates[currentStepIndex],
+        },
+      });
       return;
     }
 
@@ -101,5 +110,11 @@ Page({
 
   onBack() {
     wx.navigateBack();
+  },
+
+  /** 未知步骤的安全出口：跳过，不阻断整节课 */
+  onSkipStep() {
+    const result = { score: 100, attempts: 1, duration: 0 } as StepResult;
+    this.onStepComplete({ detail: result } as unknown as WechatMiniprogram.CustomEvent);
   },
 });
