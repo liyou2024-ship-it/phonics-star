@@ -1,0 +1,11 @@
+module.exports = [
+  { "id":"badge_first_lesson",  "name":"初识拼读", "icon":"📖", "description":"完成第1节课",          "category":"milestone" },
+  { "id":"badge_ten_lessons",   "name":"学霸",     "icon":"🎓", "description":"完成10节课",             "category":"milestone" },
+  { "id":"badge_streak_3",      "name":"坚持不懈", "icon":"🔥", "description":"连续学习3天",             "category":"streak" },
+  { "id":"badge_streak_7",      "name":"学习达人", "icon":"🌟", "description":"连续学习7天",             "category":"streak" },
+  { "id":"badge_all_stars",     "name":"满分之星", "icon":"💎", "description":"累计获得10次三颗星",      "category":"skill" },
+  { "id":"badge_first_family",  "name":"家族之王", "icon":"👑", "description":"完成第一个词族学习",      "category":"milestone" },
+  { "id":"badge_ten_words",     "name":"词汇达人", "icon":"📝", "description":"掌握10个单词",             "category":"skill" },
+  { "id":"badge_first_reading", "name":"小小读者", "icon":"📚", "description":"完成第一篇可解码阅读",    "category":"milestone" },
+  { "id":"badge_all_letters",   "name":"字母大师", "icon":"🔤", "description":"掌握全部26个字母音",      "category":"skill" }
+];
