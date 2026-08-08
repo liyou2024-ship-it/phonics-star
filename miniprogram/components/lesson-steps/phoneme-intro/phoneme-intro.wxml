@@ -8,7 +8,7 @@
     <!-- 字母卡片 -->
     <view class="intro-card" bindtap="onPlaySound">
       <view class="intro-letters">
-        <text class="intro-capital">{{phoneme.displayName ? phoneme.displayName.slice(-1) : '?'}}</text>
+        <text class="intro-capital">{{displayLetter || '?'}}</text>
       </view>
       <text class="intro-symbol">{{phoneme.symbol || ''}}</text>
       <text class="intro-play-hint">{{hasPlayed ? '✅ 已听过' : '👆 点击听发音'}}</text>
