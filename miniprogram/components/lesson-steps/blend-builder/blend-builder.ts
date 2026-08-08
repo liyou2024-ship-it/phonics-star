@@ -11,6 +11,10 @@ interface PhonemeBlock {
   sound: string;
 }
 
+interface DisplayPhoneme extends PhonemeBlock {
+  selected: boolean;
+}
+
 Component({
   properties: {
     step: { type: Object, value: {} },
@@ -23,6 +27,7 @@ Component({
     currentWordIndex: 0,
     selectedIndices: [] as number[],
     allPhonemes: [] as PhonemeBlock[],
+    displayPhonemes: [] as DisplayPhoneme[],
     blended: false,
     completed: false,
     error: '',
@@ -35,6 +40,17 @@ Component({
   },
 
   methods: {
+    rebuildDisplayPhonemes() {
+      const { targetWords, currentWordIndex, selectedIndices } = this.data;
+      const word = targetWords[currentWordIndex];
+      if (!word) {
+        this.setData({ displayPhonemes: [] });
+        return;
+      }
+      const displayPhonemes = word.phonemes.map((p, i) => ({ ...p, selected: selectedIndices.indexOf(i) > -1 }));
+      this.setData({ displayPhonemes });
+    },
+
     loadWords() {
       const { lesson } = this.properties;
       const wordIds = lesson?.targetWordIds || [];
@@ -52,6 +68,7 @@ Component({
             { text: 'sun', phonemes: [{letter:'s',sound:'/s/'},{letter:'u',sound:'/ʌ/'},{letter:'n',sound:'/n/'}], sounds: ['/s/','/ʌ/','/n/'] },
           ],
         });
+        this.rebuildDisplayPhonemes();
         return;
       }
 
@@ -65,6 +82,7 @@ Component({
       }));
 
       this.setData({ targetWords });
+      this.rebuildDisplayPhonemes();
     },
 
     /** 选择音块 */
@@ -78,6 +96,7 @@ Component({
 
       const newSelected = [...selectedIndices, index];
       this.setData({ selectedIndices: newSelected });
+      this.rebuildDisplayPhonemes();
 
       // 点击时播放对应声音（如果有音频）
       if (allPhonemes[index]?.sound) {
@@ -109,6 +128,7 @@ Component({
     /** 重置 */
     onReset() {
       this.setData({ selectedIndices: [], blended: false });
+      this.rebuildDisplayPhonemes();
     },
 
     /** 下一词 */
@@ -132,6 +152,7 @@ Component({
           selectedIndices: [],
           blended: false,
         });
+        this.rebuildDisplayPhonemes();
       }, 800);
     },
   },
