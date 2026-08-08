@@ -5,12 +5,15 @@
 import { storage } from '../../services/storage';
 import { eventBus } from '../../utils/event-bus';
 import { getPhonemeById } from '../../services/course';
+import { audio } from '../../services/audio';
 
 interface Question {
   type: string;
   prompt: string;
   options: string[];
   correctIndex: number;
+  /** 听音题的音频（音素发音），如 /assets/audio/phonemes/s.mp3 */
+  audioUrl?: string;
 }
 
 Page({
@@ -37,13 +40,15 @@ Page({
     // 听音辨字母 (6题)
     for (let i = 0; i < 6; i++) {
       const letter = targetLetters[i % 5];
-      const others = allLetters.filter(l => l !== letter).sort(() => Math.random() - 0.5).slice(0, 3);
-      const options = [letter, ...others].sort(() => Math.random() - 0.5);
+      const upper = letter.toUpperCase();
+      const others = allLetters.filter(l => l !== letter).sort(() => Math.random() - 0.5).slice(0, 3).map(l => l.toUpperCase());
+      const options = [upper, ...others].sort(() => Math.random() - 0.5);
       questions.push({
         type: 'sound_to_letter',
-        prompt: `听到声音后选择正确的字母（${letter.toUpperCase()}）`,
+        prompt: `听到声音后选择正确的字母（${upper}）`,
         options,
-        correctIndex: options.indexOf(letter),
+        correctIndex: options.indexOf(upper),
+        audioUrl: `/assets/audio/phonemes/${letter}.mp3`,
       });
     }
 
@@ -53,7 +58,7 @@ Page({
       { word: 'tip', letters: ['t','i','p'], distractors: ['s','a'] },
     ];
     blendWords.forEach(w => {
-      const options = [...w.letters, ...w.distractors].sort(() => Math.random() - 0.5);
+      const options = [...w.letters, ...w.distractors].map(l => l.toUpperCase()).sort(() => Math.random() - 0.5);
       questions.push({
         type: 'blend_word',
         prompt: `选出组成 "${w.word}" 的字母（按顺序）`,
@@ -65,7 +70,7 @@ Page({
     // 拆音 (2题)
     const segmentWords = ['sit', 'pat'];
     segmentWords.forEach(w => {
-      const letters = w.split('');
+      const letters = w.split('').map(l => l.toUpperCase());
       const distractors = ['x','m','k'].filter(l => !letters.includes(l));
       const options = [...letters, ...distractors].sort(() => Math.random() - 0.5);
       questions.push({
@@ -79,8 +84,23 @@ Page({
     this.setData({ questions });
   },
 
+  /** 播放当前题目的音频（仅 sound_to_letter 听音题有 audioUrl） */
+  playCurrentAudio() {
+    const q = this.data.questions[this.data.currentIndex] as any;
+    if (q && q.audioUrl) {
+      audio.play(q.audioUrl).catch(() => {});
+    }
+  },
+
+  /** 手动重听当前题目音频 */
+  onReplayAudio() {
+    this.playCurrentAudio();
+  },
+
   onStart() {
-    this.setData({ phase: 'testing', startTime: Date.now(), answers: [] });
+    this.setData({ phase: 'testing', startTime: Date.now(), answers: [] }, () => {
+      this.playCurrentAudio();
+    });
   },
 
   onSelectAnswer(e: any) {
@@ -101,7 +121,9 @@ Page({
       this.finishTest();
     } else {
       setTimeout(() => {
-        this.setData({ currentIndex: this.data.currentIndex + 1 });
+        this.setData({ currentIndex: this.data.currentIndex + 1 }, () => {
+          this.playCurrentAudio();
+        });
       }, 600);
     }
   },
@@ -125,6 +147,8 @@ Page({
     const records = storage.get<any[]>('assessment_records') || [];
     records.push({ date: new Date().toISOString(), result });
     storage.set('assessment_records', records);
+    // 标记已完成评估 -> 首页「开始能力评估」提示窗口不再显示
+    storage.set('assessment_completed', true);
 
     eventBus.emit('assessment_completed', { result });
 
