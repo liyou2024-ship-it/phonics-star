@@ -1,0 +1,251 @@
+module.exports = [
+  {
+    "id":"L001","unitId":"unit_alphabet_1","title":"字母音 S, A, T",
+    "objectives":"学习s、a、t三个字母最常见的发音",
+    "targetPhonemeIds":["ph_s","ph_a","ph_t"],
+    "targetWordIds":["w_sun","w_ant","w_top"],
+    "steps":[
+      {"id":"L001_s1","type":"phoneme_intro","instruction":"认识字母 S 的发音","content":{"phonemeId":"ph_s"},"completionRule":"观看发音动画并点击确认"},
+      {"id":"L001_s2","type":"sound_discrimination","instruction":"听到/s/音，选出字母S","content":{"phonemeId":"ph_s"},"completionRule":"正确选择字母S"},
+      {"id":"L001_s3","type":"phoneme_blending","instruction":"拖动音块拼出 sun","content":{"wordId":"w_sun"},"completionRule":"成功拼出单词 sun"},
+      {"id":"L001_s4","type":"pronunciation","instruction":"跟读 sun","content":{"wordId":"w_sun"},"completionRule":"完成跟读并获得评估反馈"},
+      {"id":"L001_s5","type":"mini_game","instruction":"打地鼠游戏","content":{"gameType":"whack_mole","phonemeId":"ph_s"},"completionRule":"成功击倒3个目标地鼠"},
+      {"id":"L001_s6","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励弹窗"}
+    ],
+    "reward":{"baseStars":3,"energyReward":10},
+    "prerequisiteLessonIds":[]
+  },
+  {
+    "id":"L002","unitId":"unit_alphabet_1","title":"字母音 P, I, N",
+    "objectives":"学习p、i、n三个字母最常见的发音",
+    "targetPhonemeIds":["ph_p","ph_i","ph_n"],
+    "targetWordIds":["w_pig","w_big","w_net"],
+    "steps":[
+      {"id":"L002_s1","type":"phoneme_intro","instruction":"认识字母 P 的发音","content":{"phonemeId":"ph_p"},"completionRule":"观看发音动画"},
+      {"id":"L002_s2","type":"sound_discrimination","instruction":"听到/p/音，选出字母P","content":{"phonemeId":"ph_p"},"completionRule":"正确选择"},
+      {"id":"L002_s3","type":"mini_game","instruction":"打地鼠游戏","content":{"gameType":"whack_mole","phonemeId":"ph_p"},"completionRule":"击倒3个目标"},
+      {"id":"L002_s4","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":10},
+    "prerequisiteLessonIds":["L001"]
+  },
+  {
+    "id":"L003","unitId":"unit_alphabet_1","title":"字母音 M, D, G",
+    "objectives":"学习m、d、g三个字母最常见的发音",
+    "targetPhonemeIds":["ph_m","ph_d","ph_g"],
+    "targetWordIds":["w_map","w_dog","w_big"],
+    "steps":[
+      {"id":"L003_s1","type":"phoneme_intro","instruction":"认识字母 M 的发音","content":{"phonemeId":"ph_m"},"completionRule":"观看发音动画"},
+      {"id":"L003_s2","type":"sound_discrimination","instruction":"听到/m/音，选出字母M","content":{"phonemeId":"ph_m"},"completionRule":"正确选择"},
+      {"id":"L003_s3","type":"mini_game","instruction":"打地鼠游戏","content":{"gameType":"whack_mole","phonemeId":"ph_m"},"completionRule":"击倒3个目标"},
+      {"id":"L003_s4","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":10},
+    "prerequisiteLessonIds":["L002"]
+  },
+  {
+    "id":"L004","unitId":"unit_alphabet_2","title":"字母音 O, C, K",
+    "objectives":"学习o、c、k三个字母最常见的发音",
+    "targetPhonemeIds":["ph_o","ph_c","ph_k"],
+    "targetWordIds":["w_dog","w_cat","w_kit"],
+    "steps":[
+      {"id":"L004_s1","type":"phoneme_intro","instruction":"认识字母 O 的发音","content":{"phonemeId":"ph_o"},"completionRule":"观看发音动画"},
+      {"id":"L004_s2","type":"sound_discrimination","instruction":"听到/ɒ/音，选出字母O","content":{"phonemeId":"ph_o"},"completionRule":"正确选择"},
+      {"id":"L004_s3","type":"mini_game","instruction":"打地鼠游戏","content":{"gameType":"whack_mole","phonemeId":"ph_o"},"completionRule":"击倒3个目标"},
+      {"id":"L004_s4","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":10},
+    "prerequisiteLessonIds":["L003"]
+  },
+  {
+    "id":"L005","unitId":"unit_alphabet_2","title":"字母音 E, R, H",
+    "objectives":"学习e、r、h三个字母最常见的发音",
+    "targetPhonemeIds":["ph_e","ph_r","ph_h"],
+    "targetWordIds":["w_bed","w_rat","w_hat"],
+    "steps":[
+      {"id":"L005_s1","type":"phoneme_intro","instruction":"认识字母 E 的发音","content":{"phonemeId":"ph_e"},"completionRule":"观看发音动画"},
+      {"id":"L005_s2","type":"sound_discrimination","instruction":"听到/e/音，选出字母E","content":{"phonemeId":"ph_e"},"completionRule":"正确选择"},
+      {"id":"L005_s3","type":"mini_game","instruction":"打地鼠游戏","content":{"gameType":"whack_mole","phonemeId":"ph_e"},"completionRule":"击倒3个目标"},
+      {"id":"L005_s4","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":10},
+    "prerequisiteLessonIds":["L004"]
+  },
+  {
+    "id":"L006","unitId":"unit_alphabet_2","title":"字母音 B, F, L",
+    "objectives":"学习b、f、l三个字母最常见的发音",
+    "targetPhonemeIds":["ph_b","ph_f","ph_l"],
+    "targetWordIds":["w_bat","w_fox","w_leg"],
+    "steps":[
+      {"id":"L006_s1","type":"phoneme_intro","instruction":"认识字母 B 的发音","content":{"phonemeId":"ph_b"},"completionRule":"观看发音动画"},
+      {"id":"L006_s2","type":"sound_discrimination","instruction":"听到/b/音，选出字母B","content":{"phonemeId":"ph_b"},"completionRule":"正确选择"},
+      {"id":"L006_s3","type":"mini_game","instruction":"打地鼠游戏","content":{"gameType":"whack_mole","phonemeId":"ph_b"},"completionRule":"击倒3个目标"},
+      {"id":"L006_s4","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":10},
+    "prerequisiteLessonIds":["L005"]
+  },
+  {
+    "id":"L007","unitId":"unit_alphabet_3","title":"字母音 U, J, V",
+    "objectives":"学习u、j、v三个字母最常见的发音",
+    "targetPhonemeIds":["ph_u","ph_j","ph_v"],
+    "targetWordIds":["w_sun","w_jam","w_van"],
+    "steps":[
+      {"id":"L007_s1","type":"phoneme_intro","instruction":"认识字母 U 的发音","content":{"phonemeId":"ph_u"},"completionRule":"观看发音动画"},
+      {"id":"L007_s2","type":"sound_discrimination","instruction":"听到/ʌ/音，选出字母U","content":{"phonemeId":"ph_u"},"completionRule":"正确选择"},
+      {"id":"L007_s3","type":"mini_game","instruction":"打地鼠游戏","content":{"gameType":"whack_mole","phonemeId":"ph_u"},"completionRule":"击倒3个目标"},
+      {"id":"L007_s4","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":10},
+    "prerequisiteLessonIds":["L006"]
+  },
+  {
+    "id":"L008","unitId":"unit_alphabet_3","title":"字母音 W, X, Y, Z, Q",
+    "objectives":"学习w、x、y、z、q五个字母的发音",
+    "targetPhonemeIds":["ph_w","ph_x","ph_y","ph_z","ph_q"],
+    "targetWordIds":["w_wet","w_box","w_yes","w_zip","w_queen"],
+    "steps":[
+      {"id":"L008_s1","type":"phoneme_intro","instruction":"认识字母 W 的发音","content":{"phonemeId":"ph_w"},"completionRule":"观看发音动画"},
+      {"id":"L008_s2","type":"sound_discrimination","instruction":"听到/w/音，选出字母W","content":{"phonemeId":"ph_w"},"completionRule":"正确选择"},
+      {"id":"L008_s3","type":"mini_game","instruction":"打地鼠游戏","content":{"gameType":"whack_mole","phonemeId":"ph_w"},"completionRule":"击倒3个目标"},
+      {"id":"L008_s4","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":10},
+    "prerequisiteLessonIds":["L007"]
+  },
+  {
+    "id":"L101","unitId":"unit_cvc_1","title":"-at 词族",
+    "objectives":"掌握-at词族的拼读规律，能独立拼读cat、bat、hat、mat、rat、sat",
+    "targetPhonemeIds":["ph_a","ph_c","ph_b","ph_h","ph_m","ph_r","ph_s","ph_t"],
+    "targetWordIds":["w_cat","w_bat","w_hat","w_mat","w_rat","w_sat","w_fat"],
+    "steps":[
+      {"id":"L101_s1","type":"phoneme_intro","instruction":"认识 -at 词族","content":{"familyId":"wf_at"},"completionRule":"观看词族介绍"},
+      {"id":"L101_s2","type":"word_segmenting","instruction":"把 cat 拆成 /c/ /a/ /t/","content":{"wordId":"w_cat"},"completionRule":"完成单词拆音"},
+      {"id":"L101_s3","type":"phoneme_blending","instruction":"拖动音块拼出 hat","content":{"wordId":"w_hat"},"completionRule":"成功拼出单词"},
+      {"id":"L101_s4","type":"pronunciation","instruction":"跟读下列单词","content":{"wordIds":["w_cat","w_hat","w_mat"]},"completionRule":"完成3个单词跟读"},
+      {"id":"L101_s5","type":"mini_game","instruction":"单词钓鱼游戏","content":{"gameType":"word_fishing","familyId":"wf_at"},"completionRule":"钓到3条鱼"},
+      {"id":"L101_s6","type":"decodable_reading","instruction":"阅读 A Cat on a Mat","content":{"readerId":"dr_cat_on_mat"},"completionRule":"完成阅读"},
+      {"id":"L101_s7","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"bonusBadgeId":"badge_first_family","energyReward":20},
+    "prerequisiteLessonIds":["L008"]
+  },
+  {
+    "id":"L102","unitId":"unit_cvc_1","title":"-an 词族",
+    "objectives":"掌握-an词族的拼读规律",
+    "targetPhonemeIds":["ph_a","ph_m","ph_c","ph_f","ph_p","ph_v","ph_n"],
+    "targetWordIds":["w_man","w_can","w_fan","w_pan","w_van"],
+    "steps":[
+      {"id":"L102_s1","type":"word_segmenting","instruction":"把 man 拆成 /m/ /a/ /n/","content":{"wordId":"w_man"},"completionRule":"完成单词拆音"},
+      {"id":"L102_s2","type":"phoneme_blending","instruction":"拖动音块拼出 fan","content":{"wordId":"w_fan"},"completionRule":"成功拼出单词"},
+      {"id":"L102_s3","type":"mini_game","instruction":"单词钓鱼游戏","content":{"gameType":"word_fishing","familyId":"wf_an"},"completionRule":"钓到3条鱼"},
+      {"id":"L102_s4","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":15},
+    "prerequisiteLessonIds":["L101"]
+  },
+  {
+    "id":"L103","unitId":"unit_cvc_1","title":"-ap 词族",
+    "objectives":"掌握-ap词族的拼读规律",
+    "targetPhonemeIds":["ph_a","ph_m","ph_c","ph_n","ph_t","ph_p"],
+    "targetWordIds":["w_map","w_cap","w_nap","w_tap"],
+    "steps":[
+      {"id":"L103_s1","type":"word_segmenting","instruction":"把 map 拆成 /m/ /a/ /p/","content":{"wordId":"w_map"},"completionRule":"完成单词拆音"},
+      {"id":"L103_s2","type":"mini_game","instruction":"单词钓鱼游戏","content":{"gameType":"word_fishing","familyId":"wf_ap"},"completionRule":"钓到3条鱼"},
+      {"id":"L103_s3","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":15},
+    "prerequisiteLessonIds":["L102"]
+  },
+  {
+    "id":"L201","unitId":"unit_cvc_2","title":"-ig 词族",
+    "objectives":"掌握-ig词族的拼读规律",
+    "targetPhonemeIds":["ph_i","ph_b","ph_p","ph_d","ph_w","ph_g"],
+    "targetWordIds":["w_big","w_pig","w_dig","w_wig"],
+    "steps":[
+      {"id":"L201_s1","type":"word_segmenting","instruction":"把 big 拆成 /b/ /i/ /g/","content":{"wordId":"w_big"},"completionRule":"完成单词拆音"},
+      {"id":"L201_s2","type":"mini_game","instruction":"单词钓鱼游戏","content":{"gameType":"word_fishing","familyId":"wf_ig"},"completionRule":"钓到3条鱼"},
+      {"id":"L201_s3","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":15},
+    "prerequisiteLessonIds":["L103"]
+  },
+  {
+    "id":"L202","unitId":"unit_cvc_2","title":"-in 词族",
+    "objectives":"掌握-in词族的拼读规律",
+    "targetPhonemeIds":["ph_i","ph_p","ph_w","ph_f","ph_b","ph_n"],
+    "targetWordIds":["w_pin","w_win","w_fin","w_bin"],
+    "steps":[
+      {"id":"L202_s1","type":"word_segmenting","instruction":"把 pin 拆成 /p/ /i/ /n/","content":{"wordId":"w_pin"},"completionRule":"完成单词拆音"},
+      {"id":"L202_s2","type":"mini_game","instruction":"单词钓鱼游戏","content":{"gameType":"word_fishing","familyId":"wf_in"},"completionRule":"钓到3条鱼"},
+      {"id":"L202_s3","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":15},
+    "prerequisiteLessonIds":["L201"]
+  },
+  {
+    "id":"L203","unitId":"unit_cvc_2","title":"-it 词族",
+    "objectives":"掌握-it词族的拼读规律",
+    "targetPhonemeIds":["ph_i","ph_s","ph_h","ph_f","ph_b","ph_k","ph_t"],
+    "targetWordIds":["w_sit","w_hit","w_fit","w_bit","w_kit"],
+    "steps":[
+      {"id":"L203_s1","type":"word_segmenting","instruction":"把 sit 拆成 /s/ /i/ /t/","content":{"wordId":"w_sit"},"completionRule":"完成单词拆音"},
+      {"id":"L203_s2","type":"mini_game","instruction":"单词钓鱼游戏","content":{"gameType":"word_fishing","familyId":"wf_it"},"completionRule":"钓到3条鱼"},
+      {"id":"L203_s3","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":15},
+    "prerequisiteLessonIds":["L202"]
+  },
+  {
+    "id":"L301","unitId":"unit_cvc_3","title":"-op 词族",
+    "objectives":"掌握-op词族的拼读规律",
+    "targetPhonemeIds":["ph_o","ph_h","ph_t","ph_m","ph_p"],
+    "targetWordIds":["w_hop","w_top","w_mop","w_pop"],
+    "steps":[
+      {"id":"L301_s1","type":"word_segmenting","instruction":"把 hop 拆成 /h/ /o/ /p/","content":{"wordId":"w_hop"},"completionRule":"完成单词拆音"},
+      {"id":"L301_s2","type":"mini_game","instruction":"单词钓鱼游戏","content":{"gameType":"word_fishing","familyId":"wf_op"},"completionRule":"钓到3条鱼"},
+      {"id":"L301_s3","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":15},
+    "prerequisiteLessonIds":["L203"]
+  },
+  {
+    "id":"L302","unitId":"unit_cvc_3","title":"-og 词族",
+    "objectives":"掌握-og词族的拼读规律",
+    "targetPhonemeIds":["ph_o","ph_d","ph_l","ph_f","ph_j","ph_g"],
+    "targetWordIds":["w_dog","w_log","w_fog","w_jog"],
+    "steps":[
+      {"id":"L302_s1","type":"word_segmenting","instruction":"把 dog 拆成 /d/ /o/ /g/","content":{"wordId":"w_dog"},"completionRule":"完成单词拆音"},
+      {"id":"L302_s2","type":"mini_game","instruction":"单词钓鱼游戏","content":{"gameType":"word_fishing","familyId":"wf_og"},"completionRule":"钓到3条鱼"},
+      {"id":"L302_s3","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":15},
+    "prerequisiteLessonIds":["L301"]
+  },
+  {
+    "id":"L401","unitId":"unit_cvc_3","title":"-un 词族",
+    "objectives":"掌握-un词族的拼读规律",
+    "targetPhonemeIds":["ph_u","ph_s","ph_r","ph_f","ph_b","ph_n"],
+    "targetWordIds":["w_sun","w_run","w_fun","w_bun"],
+    "steps":[
+      {"id":"L401_s1","type":"word_segmenting","instruction":"把 sun 拆成 /s/ /u/ /n/","content":{"wordId":"w_sun"},"completionRule":"完成单词拆音"},
+      {"id":"L401_s2","type":"mini_game","instruction":"单词钓鱼游戏","content":{"gameType":"word_fishing","familyId":"wf_un"},"completionRule":"钓到3条鱼"},
+      {"id":"L401_s3","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":15},
+    "prerequisiteLessonIds":["L302"]
+  },
+  {
+    "id":"L402","unitId":"unit_cvc_3","title":"-ut 词族",
+    "objectives":"掌握-ut词族的拼读规律",
+    "targetPhonemeIds":["ph_u","ph_c","ph_h","ph_n","ph_b","ph_t"],
+    "targetWordIds":["w_cut","w_hut","w_nut","w_but"],
+    "steps":[
+      {"id":"L402_s1","type":"word_segmenting","instruction":"把 cut 拆成 /c/ /u/ /t/","content":{"wordId":"w_cut"},"completionRule":"完成单词拆音"},
+      {"id":"L402_s2","type":"decodable_reading","instruction":"阅读 The Sun Is Up","content":{"readerId":"dr_sun_up"},"completionRule":"完成阅读"},
+      {"id":"L402_s3","type":"lesson_reward","instruction":"获取奖励","content":{},"completionRule":"查看奖励"}
+    ],
+    "reward":{"baseStars":3,"energyReward":20},
+    "prerequisiteLessonIds":["L401"]
+  }
+];
