@@ -102,9 +102,10 @@
         bind:complete="onStepComplete"
       ></lesson-reward>
 
-      <!-- Fallback -->
-      <view wx:else class="step-fallback">
-        <text>未知步骤类型</text>
+      <!-- Fallback: 仅当遇到未知步骤类型，提供跳过出口避免卡死 -->
+      <view wx:elif="{{currentComponent === '__unsupported__'}}" class="step-fallback">
+        <text>该步骤（{{currentComponentProps.step.type}}）暂不支持</text>
+        <button bindtap="onSkipStep">跳过此步骤</button>
       </view>
     </view>
   </view>
