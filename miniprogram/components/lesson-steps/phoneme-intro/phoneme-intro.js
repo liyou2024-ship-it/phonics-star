@@ -15,6 +15,7 @@ Component({
     data: {
         phoneme: null,
         words: [],
+        displayLetter: '',
         hasPlayed: false,
         loading: false,
         error: '',
@@ -42,7 +43,11 @@ Component({
                 .map((id) => (0, course_1.getWordById)(id))
                 .filter((x) => x != null)
                 .slice(0, 3);
-            this.setData({ phoneme, words });
+            this.setData({
+                phoneme,
+                words,
+                displayLetter: (phoneme.displayName || '').slice(-1).toUpperCase(),
+            });
         },
         /** 播放音素音频 */
         onPlaySound() {
