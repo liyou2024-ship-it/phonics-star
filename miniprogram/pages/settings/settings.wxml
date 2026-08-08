@@ -1,6 +1,6 @@
 <view class="page">
   <view class="page-header">
-    <view class="avatar">{{userId ? userId.charAt(0) : '?'}}</view>
+    <view class="avatar">{{userId ? userIdInitial : '?'}}</view>
     <text class="title">账户设置</text>
     <text class="sub">{{loginStatus}}</text>
   </view>
