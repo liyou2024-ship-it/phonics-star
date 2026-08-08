@@ -17,6 +17,7 @@ Component({
         currentWordIndex: 0,
         selectedIndices: [],
         allPhonemes: [],
+        displayPhonemes: [],
         blended: false,
         completed: false,
         error: '',
@@ -27,6 +28,16 @@ Component({
         },
     },
     methods: {
+        rebuildDisplayPhonemes() {
+            const { targetWords, currentWordIndex, selectedIndices } = this.data;
+            const word = targetWords[currentWordIndex];
+            if (!word) {
+                this.setData({ displayPhonemes: [] });
+                return;
+            }
+            const displayPhonemes = word.phonemes.map((p, i) => ({ ...p, selected: selectedIndices.indexOf(i) > -1 }));
+            this.setData({ displayPhonemes });
+        },
         loadWords() {
             const { lesson } = this.properties;
             const wordIds = lesson?.targetWordIds || [];
@@ -43,6 +54,7 @@ Component({
                         { text: 'sun', phonemes: [{ letter: 's', sound: '/s/' }, { letter: 'u', sound: '/ʌ/' }, { letter: 'n', sound: '/n/' }], sounds: ['/s/', '/ʌ/', '/n/'] },
                     ],
                 });
+                this.rebuildDisplayPhonemes();
                 return;
             }
             const targetWords = words.map((w) => ({
@@ -54,6 +66,7 @@ Component({
                 sounds: w.phonemeIds.map(() => '/ /'),
             }));
             this.setData({ targetWords });
+            this.rebuildDisplayPhonemes();
         },
         /** 选择音块 */
         onSelectPhoneme(e) {
@@ -66,6 +79,7 @@ Component({
                 return;
             const newSelected = [...selectedIndices, index];
             this.setData({ selectedIndices: newSelected });
+            this.rebuildDisplayPhonemes();
             // 点击时播放对应声音（如果有音频）
             if (allPhonemes[index]?.sound) {
                 try {
@@ -94,6 +108,7 @@ Component({
         /** 重置 */
         onReset() {
             this.setData({ selectedIndices: [], blended: false });
+            this.rebuildDisplayPhonemes();
         },
         /** 下一词 */
         nextWord() {
@@ -115,6 +130,7 @@ Component({
                     selectedIndices: [],
                     blended: false,
                 });
+                this.rebuildDisplayPhonemes();
             }, 800);
         },
     },
