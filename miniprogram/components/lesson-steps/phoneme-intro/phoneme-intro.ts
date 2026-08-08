@@ -16,6 +16,7 @@ Component({
   data: {
     phoneme: null as any,
     words: [] as any[],
+    displayLetter: '',
     hasPlayed: false,
     loading: false,
     error: '',
@@ -48,7 +49,11 @@ Component({
         .filter((x): x is NonNullable<typeof x> => x != null)
         .slice(0, 3);
 
-      this.setData({ phoneme, words });
+      this.setData({
+        phoneme,
+        words,
+        displayLetter: (phoneme.displayName || '').slice(-1).toUpperCase(),
+      });
     },
 
     /** 播放音素音频 */
