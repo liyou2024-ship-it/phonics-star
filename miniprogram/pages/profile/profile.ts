@@ -7,6 +7,7 @@ import { ensureLogin, getStoredUser } from '../../services/auth.service';
 Page({
   data: {
     userName: '',
+    userNameInitial: '',
     avatarUrl: '',
     streak: 0,
     totalStars: 0,
@@ -28,8 +29,10 @@ Page({
       const completedCount = Object.values(progress.lessonProgressMap).filter(
         (lp) => lp.status === 'completed'
       ).length;
+      const nickname = user.profile.nickname || '?';
       this.setData({
-        userName: user.profile.nickname,
+        userName: nickname,
+        userNameInitial: nickname.charAt(0).toUpperCase(),
         avatarUrl: user.profile.avatarUrl,
         streak: progress.streak,
         totalStars: rewards.totalStars,
@@ -58,8 +61,10 @@ Page({
     ensureLogin()
       .then((profile) => {
         userStore.setProfile(profile);
+        const nick = profile.nickname || '?';
         this.setData({
-          userName: profile.nickname,
+          userName: nick,
+          userNameInitial: nick.charAt(0).toUpperCase(),
           userId: profile.id,
           loginStatus: '已通过微信登录',
           logging: false,
