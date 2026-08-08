@@ -1,0 +1,40 @@
+module.exports = {
+  "packId": "starter-satpi",
+  "name": "拼读起步 SATPI",
+  "description": "首个试学单元，学习 s/a/t/p/i 五个字母音及基础 CVC 拼读",
+  "version": "1.0.0",
+  "status": "ready",
+  "targetAge": "5-7岁",
+  "targetGrade": "一年级",
+  "accent": "us",
+  "totalLessons": 13,
+  "totalWords": 24,
+  "totalPhonemes": 5,
+  "wordFamilies": [
+    "-at",
+    "-it",
+    "-ap",
+    "-ip"
+  ],
+  "estimatedDuration": "120分钟",
+  "createdAt": "2026-08-06",
+  "author": "content-team",
+  "reviewers": [],
+  "prerequisites": [],
+  "lessonSequence": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "R001",
+    "R002",
+    "A001"
+  ],
+  "statusNote": "课程交互完整，资源齐备（51个资源全部 imported，音频 0 缺失、0 阻断）。23 个非阻断配图走 Emoji/字母回退，可进内测验收。"
+};
