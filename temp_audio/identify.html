@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="UTF-8"><title>音频识别 - SATPI</title>
+<style>
+body{font-family:-apple-system,sans-serif;max-width:700px;margin:20px auto;background:#fafafa}
+h2{color:#7C3AED}
+.note{background:#FEF3C7;padding:12px;border-radius:8px;margin-bottom:16px}
+.item{display:flex;align-items:center;gap:12px;padding:12px;background:#fff;margin:8px 0;border-radius:12px}
+audio{height:32px;flex:1;min-width:200px}
+select{padding:8px;border-radius:8px;border:2px solid #D1D5DB;font-size:15px}
+.done-btn{display:block;width:100%;margin-top:20px;padding:16px;background:#7C3AED;color:#fff;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer}
+.result{background:#F0FDF4;padding:16px;border-radius:12px;margin-top:20px;white-space:pre-wrap;font-family:monospace;font-size:13px}
+</style></head>
+<body>
+<h2>🎵 音频识别 - SATPI 课程包</h2>
+<div class="note">⚠️ 这些是你的<b>原始录音</b>，未做任何处理。请逐条播放，选择对应的音素或单词。</div>
+
+<div id="items"></div>
+<button class="done-btn" onclick="generate()">📋 生成映射</button>
+<pre class="result" id="result"></pre>
+
+<script>
+const FILES = ["rec_0","rec_2","rec_3","rec_4","rec_5","rec_6","rec_7","rec_8","rec_9","rec_10","rec_11","rec_12","rec_13"];
+const OPTIONS = [
+  {v:"ph_s",t:"/s/ 音素"}, {v:"ph_a",t:"/æ/ 音素"}, {v:"ph_t",t:"/t/ 音素"},
+  {v:"ph_p",t:"/p/ 音素"}, {v:"ph_i",t:"/ɪ/ 音素"},
+  {v:"bl_sat",t:"sat 拼读"}, {v:"bl_sit",t:"sit 拼读"}, {v:"bl_tap",t:"tap 拼读"},
+  {v:"bl_pat",t:"pat 拼读"}, {v:"bl_pit",t:"pit 拼读"}, {v:"bl_tip",t:"tip 拼读"},
+  {v:"bl_sip",t:"sip 拼读"}, {v:"bl_sap",t:"sap 拼读"},
+];
+let html='';
+FILES.forEach(f=>{
+  let opts='<option value="">--选择--</option>';
+  OPTIONS.forEach(o=>{opts+=`<option value="${o.v}">${o.t}</option>`;});
+  html+=`<div class="item"><audio controls src="${f}.m4a"></audio><select id="sel_${f}">${opts}</select><span style="font-size:11px;color:#999;min-width:80px">${f}.m4a</span></div>`;
+});
+document.getElementById('items').innerHTML=html;
+function generate(){
+  let out='';
+  FILES.forEach(f=>{
+    let v=document.getElementById('sel_'+f).value;
+    let t=v?OPTIONS.find(o=>o.v===v)?.t:'未选择';
+    out+=`${f} → ${t}\n`;
+  });
+  document.getElementById('result').textContent=out;
+}
+</script>
+</body></html>
