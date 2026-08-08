@@ -5,6 +5,7 @@ import { rewardStore } from '../../modules/rewards/reward.store';
 import { getReviewCount } from '../../modules/review/review.service';
 import { ROUTES } from '../../config/routes';
 import { LEVEL_NAMES } from '../../utils/constants';
+import { storage } from '../../services/storage';
 
 Page({
   data: {
@@ -19,6 +20,8 @@ Page({
     completionRate: 0,
     loading: true,
     error: '',
+    // 是否显示首页「开始能力评估」提示窗口（完成评估后隐藏）
+    showAssessmentCta: true,
   },
 
   onLoad() {
@@ -58,6 +61,8 @@ Page({
         stars: rewards.totalStars,
         energy: rewards.energy,
         completionRate: progressStore.getCompletionRate(),
+        // 完成过评估则隐藏首页「开始能力评估」提示窗口
+        showAssessmentCta: !storage.get('assessment_completed'),
         loading: false,
       });
     } catch (err) {
