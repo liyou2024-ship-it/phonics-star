@@ -20,6 +20,7 @@ const GUEST = {
 Page({
     data: {
         userId: '',
+        userIdInitial: '',
         loginStatus: '',
         showPwdModal: false,
         oldPwd: '',
@@ -33,9 +34,11 @@ Page({
     },
     refreshLoginStatus() {
         const stored = (0, auth_service_1.getStoredUser)();
+        const id = stored ? stored.id : '';
         this.setData({
             loginStatus: stored ? '已通过微信登录' : '未登录',
-            userId: stored ? stored.id : '',
+            userId: id,
+            userIdInitial: id ? id.charAt(0).toUpperCase() : '',
         });
     },
     // ===== 修改密码 =====
