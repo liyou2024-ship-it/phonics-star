@@ -17,6 +17,7 @@
     <progress-bar value="{{currentIndex + 1}}" max="{{6}}" label="第 {{currentIndex + 1}}/6 题"></progress-bar>
 
     <view class="question-card">
+      <view class="q-audio-btn" wx:if="{{questions[currentIndex].audioUrl}}" bindtap="onReplayAudio">再听一次</view>
       <text class="q-prompt">{{questions[currentIndex].prompt}}</text>
       <view class="q-options">
         <view
@@ -25,7 +26,7 @@
           data-index="{{index}}"
           bindtap="onSelectAnswer"
         >
-          <text class="q-option-text">{{item.toUpperCase()}}</text>
+          <text class="q-option-text">{{item}}</text>
         </view>
       </view>
     </view>
