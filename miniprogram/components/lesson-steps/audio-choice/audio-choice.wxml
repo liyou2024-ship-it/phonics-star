@@ -25,8 +25,8 @@
         data-index="{{index}}"
         bindtap="onSelect"
       >
-        <text class="option-letter">{{item.toUpperCase()}}</text>
-        <text class="option-sound">/{{item}}/</text>
+        <text class="option-letter">{{item.letter}}</text>
+        <text class="option-sound">/{{item.sound}}/</text>
       </view>
     </view>
 
