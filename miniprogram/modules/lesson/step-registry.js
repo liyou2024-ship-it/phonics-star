@@ -19,6 +19,8 @@ const registry = [
     { type: 'mini_game', component: '/components/lesson-steps/game-step/game-step' },
     { type: 'decodable_reading', component: '/components/lesson-steps/decodable-reader/decodable-reader' },
     { type: 'lesson_reward', component: '/components/lesson-steps/lesson-reward/lesson-reward' },
+    // 课程包（SATPI）的"测试结果"步骤：暂复用奖励组件展示成绩/奖励，避免 unknown step type
+    { type: 'assessment_result', component: '/components/lesson-steps/lesson-reward/lesson-reward' },
 ];
 /** 根据步骤类型获取组件路径 */
 function getStepComponent(type) {
