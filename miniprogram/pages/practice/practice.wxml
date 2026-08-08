@@ -46,7 +46,7 @@
   <view wx:elif="{{phase === 'question' && currentQuestion}}" class="question-phase">
     <!-- Progress -->
     <view class="progress-bar">
-      <view class="progress-fill" style="width: {{answered ? '100%' : (progress.split('/')[0] / progress.split('/')[1] * 100) + '%'}}"></view>
+      <view class="progress-fill" style="width: {{answered ? '100%' : progressPercent + '%'}}"></view>
     </view>
     <text class="progress-text">{{progress}}</text>
 
