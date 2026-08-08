@@ -1,0 +1,67 @@
+module.exports = {
+  "ph_s": {
+    "id": "ph_s",
+    "phoneme": "/s/",
+    "letter": "S",
+    "letterLower": "s",
+    "type": "consonant",
+    "description": "清辅音 /s/，舌尖靠近上齿龈，气流从舌面中缝流出，声带不振动",
+    "mouthTip": "舌尖靠近上齿龈，嘴唇微微向两边拉开，像微笑一样，让气流从牙齿缝隙中流出，发出嘶嘶声",
+    "audioUrl": "/assets/audio/phonemes/s.mp3",
+    "exampleWordIds": ["w_sat", "w_sip"],
+    "imageUrl": "/assets/images/phonemes/s.webp",
+    "order": 1
+  },
+  "ph_a": {
+    "id": "ph_a",
+    "phoneme": "/æ/",
+    "letter": "A",
+    "letterLower": "a",
+    "type": "vowel",
+    "description": "短元音 /æ/，嘴巴张大，舌尖抵下齿，舌前部压低",
+    "mouthTip": "嘴巴张大，舌尖轻触下齿内侧，舌面前部向下压低，像医生检查喉咙时发'啊'的声音，但更短促",
+    "audioUrl": "/assets/audio/phonemes/a.mp3",
+    "exampleWordIds": ["w_at", "w_sat"],
+    "imageUrl": "/assets/images/phonemes/a.webp",
+    "order": 2
+  },
+  "ph_t": {
+    "id": "ph_t",
+    "phoneme": "/t/",
+    "letter": "T",
+    "letterLower": "t",
+    "type": "consonant",
+    "description": "清辅音 /t/，舌尖抵上齿龈，然后突然分开，声带不振动",
+    "mouthTip": "舌尖抵住上齿龈，憋住气流，然后突然松开，发出清脆的爆破声",
+    "audioUrl": "/assets/audio/phonemes/t.mp3",
+    "exampleWordIds": ["w_tap", "w_tip"],
+    "imageUrl": "/assets/images/phonemes/t.webp",
+    "order": 3
+  },
+  "ph_p": {
+    "id": "ph_p",
+    "phoneme": "/p/",
+    "letter": "P",
+    "letterLower": "p",
+    "type": "consonant",
+    "description": "清辅音 /p/，双唇紧闭，然后突然分开，气流冲出，声带不振动",
+    "mouthTip": "双唇紧闭，憋住气流，然后突然张开，让气流冲出，发出爆破声",
+    "audioUrl": "/assets/audio/phonemes/p.mp3",
+    "exampleWordIds": ["w_pat", "w_pit"],
+    "imageUrl": "/assets/images/phonemes/p.webp",
+    "order": 4
+  },
+  "ph_i": {
+    "id": "ph_i",
+    "phoneme": "/ɪ/",
+    "letter": "I",
+    "letterLower": "i",
+    "type": "vowel",
+    "description": "短元音 /ɪ/，嘴巴微张，舌尖抵下齿，舌前部抬高但比 /i:/ 低",
+    "mouthTip": "嘴巴微微张开，舌尖轻触下齿内侧，舌面前部稍微抬起，发出短促轻快的'衣'音，比长音更放松",
+    "audioUrl": "/assets/audio/phonemes/i.mp3",
+    "exampleWordIds": ["w_sit", "w_it"],
+    "imageUrl": "/assets/images/phonemes/i.webp",
+    "order": 5
+  }
+};
