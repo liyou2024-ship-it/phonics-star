@@ -13,6 +13,7 @@ Page({
     lessonId: '',
     engineState: null as EngineState | null,
     currentComponent: '',
+    currentComponentName: '',
     currentComponentProps: {} as Record<string, unknown>,
     stepResults: [] as StepResult[],
   },
@@ -53,6 +54,7 @@ Page({
       // 安全网：未知步骤不阻断整节课，给出"跳过"出口
       this.setData({
         currentComponent: '__unsupported__',
+        currentComponentName: '__unsupported__',
         currentComponentProps: {
           step,
           lesson,
@@ -62,8 +64,10 @@ Page({
       return;
     }
 
+    const currentComponentName = componentPath.split('/').filter(Boolean).pop() || '';
     this.setData({
       currentComponent: componentPath,
+      currentComponentName,
       currentComponentProps: {
         step,
         lesson,
