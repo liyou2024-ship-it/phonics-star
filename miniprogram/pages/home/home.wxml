@@ -1,6 +1,6 @@
 <view class="page">
-  <!-- 能力评估 CTA：始终可见，不依赖数据加载 -->
-  <view class="home-section">
+  <!-- 能力评估 CTA：完成评估后自动隐藏 -->
+  <view class="home-section" wx:if="{{showAssessmentCta}}">
     <view class="assess-cta" bindtap="onGoToAssessment">
       <view class="assess-cta-text">
         <text class="assess-cta-title">📊 开始能力评估</text>
