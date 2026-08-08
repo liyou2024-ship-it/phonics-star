@@ -7,9 +7,14 @@ import { audio } from '../../../services/audio';
 import { getPhonemeById } from '../../../services/course';
 import { shuffle } from '../../../utils/random';
 
+interface QuestionOption {
+  letter: string; // 显示用，大写
+  sound: string;  // 音标用，小写
+}
+
 interface Question {
   phonemeId: string;
-  options: string[];
+  options: QuestionOption[];
   correctIndex: number;
 }
 
@@ -63,8 +68,9 @@ Component({
           .sort(() => Math.random() - 0.5)
           .slice(0, 3);
 
-        const options = shuffle([correctLetter, ...distractorLetters]);
-        const correctIndex = options.indexOf(correctLetter);
+        const letterOpts = shuffle([correctLetter, ...distractorLetters]);
+        const options = letterOpts.map(l => ({ letter: l.toUpperCase(), sound: l }));
+        const correctIndex = letterOpts.indexOf(correctLetter);
 
         questions.push({ phonemeId: phonemeIds[i], options, correctIndex });
       }
@@ -72,9 +78,9 @@ Component({
       if (questions.length === 0) {
         // 兜底：生成默认题目
         questions.push(
-          { phonemeId: 'ph_s', options: ['s', 'm', 't', 'a'], correctIndex: 0 },
-          { phonemeId: 'ph_s', options: ['p', 's', 'k', 'e'], correctIndex: 1 },
-          { phonemeId: 'ph_s', options: ['t', 'm', 's', 'r'], correctIndex: 2 },
+          { phonemeId: 'ph_s', options: [{ letter: 'S', sound: 's' }, { letter: 'M', sound: 'm' }, { letter: 'T', sound: 't' }, { letter: 'A', sound: 'a' }], correctIndex: 0 },
+          { phonemeId: 'ph_s', options: [{ letter: 'P', sound: 'p' }, { letter: 'S', sound: 's' }, { letter: 'K', sound: 'k' }, { letter: 'E', sound: 'e' }], correctIndex: 1 },
+          { phonemeId: 'ph_s', options: [{ letter: 'T', sound: 't' }, { letter: 'M', sound: 'm' }, { letter: 'S', sound: 's' }, { letter: 'R', sound: 'r' }], correctIndex: 2 },
         );
       }
 
