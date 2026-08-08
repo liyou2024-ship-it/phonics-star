@@ -8,6 +8,7 @@ const auth_service_1 = require("../../services/auth.service");
 Page({
     data: {
         userName: '',
+        userNameInitial: '',
         avatarUrl: '',
         streak: 0,
         totalStars: 0,
@@ -26,8 +27,10 @@ Page({
             const progress = progress_store_1.progressStore.getState();
             const rewards = reward_store_1.rewardStore.getState();
             const completedCount = Object.values(progress.lessonProgressMap).filter((lp) => lp.status === 'completed').length;
+            const nickname = user.profile.nickname || '?';
             this.setData({
-                userName: user.profile.nickname,
+                userName: nickname,
+                userNameInitial: nickname.charAt(0).toUpperCase(),
                 avatarUrl: user.profile.avatarUrl,
                 streak: progress.streak,
                 totalStars: rewards.totalStars,
@@ -56,8 +59,10 @@ Page({
         (0, auth_service_1.ensureLogin)()
             .then((profile) => {
             user_store_1.userStore.setProfile(profile);
+            const nick = profile.nickname || '?';
             this.setData({
-                userName: profile.nickname,
+                userName: nick,
+                userNameInitial: nick.charAt(0).toUpperCase(),
                 userId: profile.id,
                 loginStatus: '已通过微信登录',
                 logging: false,
