@@ -40,6 +40,7 @@ Page({
     explanation: '',
     feedbackClass: '',
     progress: '',
+    progressPercent: 0,
     results: { total: 0, correct: 0, score: 0 },
   },
 
@@ -79,6 +80,7 @@ Page({
         explanation: '',
         feedbackClass: '',
         progress: `1/${session.questions.length}`,
+        progressPercent: Math.round(100 / session.questions.length),
       });
     } catch (err) {
       this.setData({
@@ -130,6 +132,7 @@ Page({
       explanation: '',
       feedbackClass: '',
       progress: session ? `${session.currentIndex + 1}/${session.questions.length}` : '',
+      progressPercent: session ? Math.round(((session.currentIndex + 1) / session.questions.length) * 100) : 0,
     });
   },
 
