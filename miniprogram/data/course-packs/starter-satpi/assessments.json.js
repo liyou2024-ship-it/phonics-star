@@ -1,0 +1,183 @@
+module.exports = {
+  "A001": {
+    "id": "A001",
+    "title": "SATPI 单元测试",
+    "lessonId": "A001",
+    "passThreshold": 0.6,
+    "totalScore": 100,
+    "sections": [
+      {
+        "sectionId": "A001_sec1",
+        "title": "音素听辨 (Sound-to-Letter)",
+        "description": "听发音，选出对应的字母",
+        "weight": 0.4,
+        "questions": [
+          {
+            "id": "A001_sec1_q1",
+            "type": "sound_to_letter",
+            "skill": "phoneme_recognition",
+            "playPhonemeId": "ph_s",
+            "prompt": "听发音，选择正确的字母",
+            "options": ["a", "s", "p"],
+            "correctAnswer": "s",
+            "difficulty": 1,
+            "points": 10,
+            "explanation": "/s/ 对应字母 S，发出嘶嘶的声音"
+          },
+          {
+            "id": "A001_sec1_q2",
+            "type": "sound_to_letter",
+            "skill": "phoneme_recognition",
+            "playPhonemeId": "ph_p",
+            "prompt": "听发音，选择正确的字母",
+            "options": ["t", "a", "p"],
+            "correctAnswer": "p",
+            "difficulty": 1,
+            "points": 10,
+            "explanation": "/p/ 对应字母 P，双唇闭合后突然张开发出爆破音"
+          },
+          {
+            "id": "A001_sec1_q3",
+            "type": "sound_to_letter",
+            "skill": "phoneme_recognition",
+            "playPhonemeId": "ph_i",
+            "prompt": "听发音，选择正确的字母",
+            "options": ["i", "a", "s"],
+            "correctAnswer": "i",
+            "difficulty": 1,
+            "points": 10,
+            "explanation": "/ɪ/ 对应字母 I，短促的元音，嘴巴微张"
+          },
+          {
+            "id": "A001_sec1_q4",
+            "type": "sound_to_letter",
+            "skill": "phoneme_recognition",
+            "playPhonemeId": "ph_t",
+            "prompt": "听发音，选择正确的字母",
+            "options": ["p", "t", "a"],
+            "correctAnswer": "t",
+            "difficulty": 1,
+            "points": 10,
+            "explanation": "/t/ 对应字母 T，舌尖抵上齿龈后突然松开"
+          }
+        ]
+      },
+      {
+        "sectionId": "A001_sec2",
+        "title": "单音拼读 (Blending)",
+        "description": "听音素序列，拼读出完整单词",
+        "weight": 0.3,
+        "questions": [
+          {
+            "id": "A001_sec2_q1",
+            "type": "blend_to_word",
+            "skill": "blending",
+            "phonemeSequence": ["ph_s", "ph_a", "ph_t"],
+            "playPhonemesSequentially": true,
+            "prompt": "听 s-a-t，拼起来是什么单词？",
+            "options": ["sit", "sat", "pat"],
+            "correctAnswer": "sat",
+            "difficulty": 2,
+            "points": 10,
+            "explanation": "s-a-t 拼起来是 sat（坐）"
+          },
+          {
+            "id": "A001_sec2_q2",
+            "type": "blend_to_word",
+            "skill": "blending",
+            "phonemeSequence": ["ph_t", "ph_a", "ph_p"],
+            "playPhonemesSequentially": true,
+            "prompt": "听 t-a-p，拼起来是什么单词？",
+            "options": ["pit", "tap", "pat"],
+            "correctAnswer": "tap",
+            "difficulty": 2,
+            "points": 10,
+            "explanation": "t-a-p 拼起来是 tap（轻敲）"
+          },
+          {
+            "id": "A001_sec2_q3",
+            "type": "blend_to_word",
+            "skill": "blending",
+            "phonemeSequence": ["ph_s", "ph_i", "ph_t"],
+            "playPhonemesSequentially": true,
+            "prompt": "听 s-i-t，拼起来是什么单词？",
+            "options": ["sat", "sit", "sip"],
+            "correctAnswer": "sit",
+            "difficulty": 2,
+            "points": 10,
+            "explanation": "s-i-t 拼起来是 sit（坐）"
+          }
+        ]
+      },
+      {
+        "sectionId": "A001_sec3",
+        "title": "单词拆分 (Segmenting)",
+        "description": "听完整单词，拆分成音素序列",
+        "weight": 0.3,
+        "questions": [
+          {
+            "id": "A001_sec3_q1",
+            "type": "word_to_phonemes",
+            "skill": "segmenting",
+            "playWordId": "w_pit",
+            "prompt": "听单词 pit，它由哪几个音素组成？",
+            "options": [
+              ["/p/", "/a/", "/t/"],
+              ["/p/", "/ɪ/", "/t/"],
+              ["/t/", "/ɪ/", "/p/"]
+            ],
+            "correctAnswer": ["/p/", "/ɪ/", "/t/"],
+            "difficulty": 2,
+            "points": 10,
+            "explanation": "pit = /p/ + /ɪ/ + /t/，p-i-t"
+          },
+          {
+            "id": "A001_sec3_q2",
+            "type": "word_to_phonemes",
+            "skill": "segmenting",
+            "playWordId": "w_sip",
+            "prompt": "听单词 sip，它由哪几个音素组成？",
+            "options": [
+              ["/s/", "/ɪ/", "/p/"],
+              ["/s/", "/æ/", "/p/"],
+              ["/p/", "/ɪ/", "/s/"]
+            ],
+            "correctAnswer": ["/s/", "/ɪ/", "/p/"],
+            "difficulty": 2,
+            "points": 10,
+            "explanation": "sip = /s/ + /ɪ/ + /p/，s-i-p"
+          },
+          {
+            "id": "A001_sec3_q3",
+            "type": "word_to_phonemes",
+            "skill": "segmenting",
+            "playWordId": "w_taps",
+            "prompt": "听单词 taps，它由哪几个音素组成？",
+            "options": [
+              ["/t/", "/æ/", "/p/", "/s/"],
+              ["/t/", "/æ/", "/p/", "/t/"],
+              ["/p/", "/æ/", "/t/", "/s/"]
+            ],
+            "correctAnswer": ["/t/", "/æ/", "/p/", "/s/"],
+            "difficulty": 3,
+            "points": 10,
+            "explanation": "taps = /t/ + /æ/ + /p/ + /s/，t-a-p-s"
+          }
+        ]
+      }
+    ],
+    "scoring": {
+      "excellent": { "minScore": 90, "stars": 3, "label": "太棒了！" },
+      "good": { "minScore": 70, "stars": 2, "label": "很不错！" },
+      "pass": { "minScore": 60, "stars": 1, "label": "通过了！" },
+      "fail": { "minScore": 0, "stars": 0, "label": "继续加油！" }
+    },
+    "reward": {
+      "baseStars": 3,
+      "energyReward": 30,
+      "bonusBadgeId": "badge_satpi_master",
+      "bonusBadgeName": "SATPI 拼读大师",
+      "bonusBadgeDescription": "完成 SATPI 单元全部课程并通过测试"
+    }
+  }
+};
