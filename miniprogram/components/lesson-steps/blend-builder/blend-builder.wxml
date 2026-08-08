@@ -23,8 +23,8 @@
     <!-- 音块选择区 -->
     <view class="blend-phonemes">
       <view
-        wx:for="{{targetWords[currentWordIndex].phonemes}}" wx:key="index"
-        class="phoneme-btn {{selectedIndices.indexOf(index) > -1 ? 'active' : ''}}"
+        wx:for="{{displayPhonemes}}" wx:key="index"
+        class="phoneme-btn {{item.selected ? 'active' : ''}}"
         data-index="{{index}}"
         bindtap="onSelectPhoneme"
       >
