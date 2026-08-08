@@ -1,0 +1,346 @@
+module.exports = {
+  "w_sat": {
+    "id": "w_sat",
+    "text": "sat",
+    "meaning": "坐（过去式）",
+    "imageUrl": "/assets/images/words/sat.webp",
+    "audioUrl": "/assets/audio/words/sat-normal.mp3",
+    "phonemeIds": ["ph_s", "ph_a", "ph_t"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_s", "position": 0 },
+      { "graphemeId": "gr_a", "position": 1 },
+      { "graphemeId": "gr_t", "position": 2 }
+    ],
+    "familyId": "wf_at",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVC"
+  },
+  "w_sit": {
+    "id": "w_sit",
+    "text": "sit",
+    "meaning": "坐",
+    "imageUrl": "/assets/images/words/sit.webp",
+    "audioUrl": "/assets/audio/words/sit-normal.mp3",
+    "phonemeIds": ["ph_s", "ph_i", "ph_t"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_s", "position": 0 },
+      { "graphemeId": "gr_i", "position": 1 },
+      { "graphemeId": "gr_t", "position": 2 }
+    ],
+    "familyId": "wf_it",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVC"
+  },
+  "w_sap": {
+    "id": "w_sap",
+    "text": "sap",
+    "meaning": "树液",
+    "imageUrl": "/assets/images/words/sap.webp",
+    "audioUrl": "/assets/audio/words/sap-normal.mp3",
+    "phonemeIds": ["ph_s", "ph_a", "ph_p"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_s", "position": 0 },
+      { "graphemeId": "gr_a", "position": 1 },
+      { "graphemeId": "gr_p", "position": 2 }
+    ],
+    "familyId": "wf_ap",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVC"
+  },
+  "w_sip": {
+    "id": "w_sip",
+    "text": "sip",
+    "meaning": "小口喝，抿",
+    "imageUrl": "/assets/images/words/sip.webp",
+    "audioUrl": "/assets/audio/words/sip-normal.mp3",
+    "phonemeIds": ["ph_s", "ph_i", "ph_p"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_s", "position": 0 },
+      { "graphemeId": "gr_i", "position": 1 },
+      { "graphemeId": "gr_p", "position": 2 }
+    ],
+    "familyId": "wf_ip",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVC"
+  },
+  "w_tap": {
+    "id": "w_tap",
+    "text": "tap",
+    "meaning": "轻敲，轻拍",
+    "imageUrl": "/assets/images/words/tap.webp",
+    "audioUrl": "/assets/audio/words/tap-normal.mp3",
+    "phonemeIds": ["ph_t", "ph_a", "ph_p"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_t", "position": 0 },
+      { "graphemeId": "gr_a", "position": 1 },
+      { "graphemeId": "gr_p", "position": 2 }
+    ],
+    "familyId": "wf_ap",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVC"
+  },
+  "w_tip": {
+    "id": "w_tip",
+    "text": "tip",
+    "meaning": "尖端，小费",
+    "imageUrl": "/assets/images/words/tip.webp",
+    "audioUrl": "/assets/audio/words/tip-normal.mp3",
+    "phonemeIds": ["ph_t", "ph_i", "ph_p"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_t", "position": 0 },
+      { "graphemeId": "gr_i", "position": 1 },
+      { "graphemeId": "gr_p", "position": 2 }
+    ],
+    "familyId": "wf_ip",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVC"
+  },
+  "w_pat": {
+    "id": "w_pat",
+    "text": "pat",
+    "meaning": "轻拍",
+    "imageUrl": "/assets/images/words/pat.webp",
+    "audioUrl": "/assets/audio/words/pat-normal.mp3",
+    "phonemeIds": ["ph_p", "ph_a", "ph_t"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_p", "position": 0 },
+      { "graphemeId": "gr_a", "position": 1 },
+      { "graphemeId": "gr_t", "position": 2 }
+    ],
+    "familyId": "wf_at",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVC"
+  },
+  "w_pit": {
+    "id": "w_pit",
+    "text": "pit",
+    "meaning": "坑，核",
+    "imageUrl": "/assets/images/words/pit.webp",
+    "audioUrl": "/assets/audio/words/pit-normal.mp3",
+    "phonemeIds": ["ph_p", "ph_i", "ph_t"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_p", "position": 0 },
+      { "graphemeId": "gr_i", "position": 1 },
+      { "graphemeId": "gr_t", "position": 2 }
+    ],
+    "familyId": "wf_it",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVC"
+  },
+  "w_at": {
+    "id": "w_at",
+    "text": "at",
+    "meaning": "在（某处/某时）",
+    "imageUrl": "/assets/images/words/at.webp",
+    "audioUrl": "/assets/audio/words/at-normal.mp3",
+    "phonemeIds": ["ph_a", "ph_t"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_a", "position": 0 },
+      { "graphemeId": "gr_t", "position": 1 }
+    ],
+    "familyId": "wf_at",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "VC"
+  },
+  "w_it": {
+    "id": "w_it",
+    "text": "it",
+    "meaning": "它",
+    "imageUrl": "/assets/images/words/it.webp",
+    "audioUrl": "/assets/audio/words/it-normal.mp3",
+    "phonemeIds": ["ph_i", "ph_t"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_i", "position": 0 },
+      { "graphemeId": "gr_t", "position": 1 }
+    ],
+    "familyId": "wf_it",
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "VC"
+  },
+  "w_as": {
+    "id": "w_as",
+    "text": "as",
+    "meaning": "作为，如同",
+    "imageUrl": "/assets/images/words/as.webp",
+    "audioUrl": "/assets/audio/words/as-normal.mp3",
+    "phonemeIds": ["ph_a", "ph_s"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_a", "position": 0 },
+      { "graphemeId": "gr_s", "position": 1 }
+    ],
+    "familyId": null,
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "VC"
+  },
+  "w_is": {
+    "id": "w_is",
+    "text": "is",
+    "meaning": "是",
+    "imageUrl": "/assets/images/words/is.webp",
+    "audioUrl": "/assets/audio/words/is-normal.mp3",
+    "phonemeIds": ["ph_i", "ph_s"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_i", "position": 0 },
+      { "graphemeId": "gr_s", "position": 1 }
+    ],
+    "familyId": null,
+    "difficulty": 1,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "VC"
+  },
+  "w_pass": {
+    "id": "w_pass",
+    "text": "pass",
+    "meaning": "通过，传递",
+    "imageUrl": "/assets/images/words/pass.webp",
+    "audioUrl": "/assets/audio/words/pass-normal.mp3",
+    "phonemeIds": ["ph_p", "ph_a", "ph_s"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_p", "position": 0 },
+      { "graphemeId": "gr_a", "position": 1 },
+      { "graphemeId": "gr_s", "position": 2 },
+      { "graphemeId": "gr_s", "position": 3 }
+    ],
+    "familyId": null,
+    "difficulty": 2,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVCC"
+  },
+  "w_past": {
+    "id": "w_past",
+    "text": "past",
+    "meaning": "过去，经过",
+    "imageUrl": "/assets/images/words/past.webp",
+    "audioUrl": "/assets/audio/words/past-normal.mp3",
+    "phonemeIds": ["ph_p", "ph_a", "ph_s", "ph_t"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_p", "position": 0 },
+      { "graphemeId": "gr_a", "position": 1 },
+      { "graphemeId": "gr_s", "position": 2 },
+      { "graphemeId": "gr_t", "position": 3 }
+    ],
+    "familyId": null,
+    "difficulty": 2,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVCC"
+  },
+  "w_taps": {
+    "id": "w_taps",
+    "text": "taps",
+    "meaning": "轻敲（复数）",
+    "imageUrl": "/assets/images/words/taps.webp",
+    "audioUrl": "/assets/audio/words/taps-normal.mp3",
+    "phonemeIds": ["ph_t", "ph_a", "ph_p", "ph_s"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_t", "position": 0 },
+      { "graphemeId": "gr_a", "position": 1 },
+      { "graphemeId": "gr_p", "position": 2 },
+      { "graphemeId": "gr_s", "position": 3 }
+    ],
+    "familyId": "wf_ap",
+    "difficulty": 2,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVCC"
+  },
+  "w_tips": {
+    "id": "w_tips",
+    "text": "tips",
+    "meaning": "尖端（复数），建议",
+    "imageUrl": "/assets/images/words/tips.webp",
+    "audioUrl": "/assets/audio/words/tips-normal.mp3",
+    "phonemeIds": ["ph_t", "ph_i", "ph_p", "ph_s"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_t", "position": 0 },
+      { "graphemeId": "gr_i", "position": 1 },
+      { "graphemeId": "gr_p", "position": 2 },
+      { "graphemeId": "gr_s", "position": 3 }
+    ],
+    "familyId": "wf_ip",
+    "difficulty": 2,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVCC"
+  },
+  "w_sits": {
+    "id": "w_sits",
+    "text": "sits",
+    "meaning": "坐（第三人称单数）",
+    "imageUrl": "/assets/images/words/sits.webp",
+    "audioUrl": "/assets/audio/words/sits-normal.mp3",
+    "phonemeIds": ["ph_s", "ph_i", "ph_t", "ph_s"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_s", "position": 0 },
+      { "graphemeId": "gr_i", "position": 1 },
+      { "graphemeId": "gr_t", "position": 2 },
+      { "graphemeId": "gr_s", "position": 3 }
+    ],
+    "familyId": "wf_it",
+    "difficulty": 2,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CVCC"
+  },
+  "w_spat": {
+    "id": "w_spat",
+    "text": "spat",
+    "meaning": "吐口水（过去式），小争吵",
+    "imageUrl": "/assets/images/words/spat.webp",
+    "audioUrl": "/assets/audio/words/spat-normal.mp3",
+    "phonemeIds": ["ph_s", "ph_p", "ph_a", "ph_t"],
+    "graphemeMappings": [
+      { "graphemeId": "gr_s", "position": 0 },
+      { "graphemeId": "gr_p", "position": 1 },
+      { "graphemeId": "gr_a", "position": 2 },
+      { "graphemeId": "gr_t", "position": 3 }
+    ],
+    "familyId": "wf_at",
+    "difficulty": 2,
+    "isDecodable": true,
+    "irregularParts": [],
+    "syllableCount": 1,
+    "wordType": "CCVC"
+  }
+};
